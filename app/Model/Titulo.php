@@ -10,11 +10,16 @@
                                 'joinTable' => 'autors_titulos',
                                 'foreignKey' => 'titulo_id',
                                 'associationForeignKey' => 'autor_id'),
-                            "Categoria" => array(
-                                'className' => 'Categoria',
-                                'joinTable' => 'categorias_titulos',
+                            "Classificacao" => array(
+                                'className' => 'Classificacao',
+                                'joinTable' => 'classificacaos_titulos',
                                 'foreignKey' => 'titulo_id',
-                                'associationForeignKey' => 'categoria_id')
+                                'associationForeignKey' => 'classificacao_id'),
+                            "Assunto" => array(
+                                'className' => 'assunto',
+                                'joinTable' => 'assuntos_titulos',
+                                'foreignKey' => 'titulo_id',
+                                'associationForeignKey' => 'assunto_id')    
                             );///, "Assunto" );
     }
 ?>

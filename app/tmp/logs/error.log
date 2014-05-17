@@ -4914,3 +4914,526 @@ Stack Trace:
 #3 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
 #4 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2014-05-16 01:06:52 Error: [PDOException] SQLSTATE[P0001]: Raise exception: 7 ERROR:  ESTE LIVRO JÁ FOI DEVOLVIDO
+Request URL: /biblioteca/Emprestimos/devolver/23
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE empresti...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('UPDATE empresti...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('UPDATE empresti...')
+#4 [internal function]: DboSource->query('UPDATE empresti...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Model/Emprestimo.php(19): Model->query('UPDATE empresti...')
+#7 /opt/lampp/htdocs/biblioteca/app/Controller/EmprestimosController.php(52): Emprestimo->realizaDev('23')
+#8 [internal function]: EmprestimosController->devolver('23')
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#12 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-05-16 01:07:09 Error: [MissingViewException] View file "/opt/lampp/htdocs/biblioteca/app/View/Emprestimos/devolver.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/biblioteca/app/View/Emprestimos/devolver.ctp',
+)
+Request URL: /biblioteca/Emprestimos/devolver/24
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-16 01:08:22 Error: [MissingViewException] View file "/opt/lampp/htdocs/biblioteca/app/View/Emprestimos/devolver.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/biblioteca/app/View/Emprestimos/devolver.ctp',
+)
+Request URL: /biblioteca/Emprestimos/devolver/26
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-16 01:08:55 Error: [MissingViewException] View file "/opt/lampp/htdocs/biblioteca/app/View/Emprestimos/devolver.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/biblioteca/app/View/Emprestimos/devolver.ctp',
+)
+Request URL: /biblioteca/Emprestimos/devolver/27
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-16 01:13:22 Error: [PDOException] SQLSTATE[P0001]: Raise exception: 7 ERROR:  ESTE LIVRO JÁ FOI DEVOLVIDO
+Request URL: /biblioteca/Emprestimos/devolver/20
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE empresti...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('UPDATE empresti...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('UPDATE empresti...')
+#4 [internal function]: DboSource->query('UPDATE empresti...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Model/Emprestimo.php(19): Model->query('UPDATE empresti...')
+#7 /opt/lampp/htdocs/biblioteca/app/Controller/EmprestimosController.php(52): Emprestimo->realizaDev('20')
+#8 [internal function]: EmprestimosController->devolver('20')
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#12 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-05-16 01:16:05 Error: [MissingViewException] View file "/opt/lampp/htdocs/biblioteca/app/View/Emprestimos/devolver.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/opt/lampp/htdocs/biblioteca/app/View/Emprestimos/devolver.ctp',
+)
+Request URL: /biblioteca/Emprestimos/devolver/30
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#4 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-16 01:16:44 Error: [PDOException] SQLSTATE[P0001]: Raise exception: 7 ERROR:  ESTE LIVRO JÁ FOI DEVOLVIDO
+Request URL: /biblioteca/Emprestimos/devolver/30
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE empresti...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('UPDATE empresti...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('UPDATE empresti...')
+#4 [internal function]: DboSource->query('UPDATE empresti...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Model/Emprestimo.php(19): Model->query('UPDATE empresti...')
+#7 /opt/lampp/htdocs/biblioteca/app/Controller/EmprestimosController.php(52): Emprestimo->realizaDev('30')
+#8 [internal function]: EmprestimosController->devolver('30')
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#12 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-05-16 01:27:27 Error: [MissingControllerException] Controller class AAssuntosController could not be found.
+Exception Attributes: array (
+  'class' => 'AAssuntosController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/AAssuntos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 01:27:35 Error: [MissingControllerException] Controller class AAssuntosController could not be found.
+Exception Attributes: array (
+  'class' => 'AAssuntosController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/AAssuntos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 01:27:41 Error: [MissingControllerException] Controller class AssuntoController could not be found.
+Exception Attributes: array (
+  'class' => 'AssuntoController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/Assunto/add
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 01:28:24 Error: [MissingControllerException] Controller class AssuntoController could not be found.
+Exception Attributes: array (
+  'class' => 'AssuntoController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/Assunto/add
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 01:28:29 Error: [MissingControllerException] Controller class AssuntoController could not be found.
+Exception Attributes: array (
+  'class' => 'AssuntoController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/Assunto/add
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 01:30:35 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/TitulosController.php, line 66]
+2014-05-16 01:30:35 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /biblioteca/Titulos/add
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 66)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 66, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 66, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-16 01:30:44 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/TitulosController.php, line 66]
+2014-05-16 01:30:44 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /biblioteca/Titulos/add
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 66)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 66, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 66, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-16 01:34:55 Error: Fatal Error (1): Call to a member function save() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/AssuntosController.php, line 33]
+2014-05-16 01:34:55 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /biblioteca/Assuntos/edit/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 33, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 33, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-16 01:36:44 Error: Fatal Error (1): Call to a member function save() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/AssuntosController.php, line 33]
+2014-05-16 01:36:44 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /biblioteca/Assuntos/edit/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 33)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 33, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 33, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-16 01:37:29 Error: Fatal Error (1): Call to a member function read() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/AutorsController.php, line 61]
+2014-05-16 01:37:29 Error: [FatalErrorException] Call to a member function read() on a non-object
+Request URL: /biblioteca/Autors/view/Casamento
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 61)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 61, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 61, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-16 01:39:23 Error: [MissingTableException] Table assunto_titulos for model AssuntoTitulo was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'assunto_titulos',
+  'class' => 'AssuntoTitulo',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Livros
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('assunto_titulos')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(1355): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(864): Model->schema()
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(892): Model->__isset('AssuntoTitulo')
+#4 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3574): Model->__get('AssuntoTitulo')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(1592): Model->joinModel('AssuntoTitulo', Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(1187): DboSource->generateAssociationQuery(Object(Titulo), Object(AppModel), 'hasAndBelongsTo...', 'Assunto', Array, Array, true, Array)
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(1291): DboSource->queryAssociation(Object(Titulo), Object(AppModel), 'hasAndBelongsTo...', 'Assunto', Array, Array, true, Array, 0, Array)
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(1112): DboSource->queryAssociation(Object(Livro), Object(Titulo), 'belongsTo', 'Titulo', Array, Array, true, Array, 1, Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(2902): DboSource->read(Object(Livro), Array)
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(2874): Model->_readDataSource('all', Array)
+#11 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#12 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate('Livro', Array, Array)
+#13 /opt/lampp/htdocs/biblioteca/app/Controller/LivrosController.php(9): Controller->paginate('Livro')
+#14 [internal function]: LivrosController->index()
+#15 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#16 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#17 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#18 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2014-05-16 01:40:12 Error: Fatal Error (1): Call to a member function read() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/LivrosController.php, line 62]
+2014-05-16 01:40:12 Error: [FatalErrorException] Call to a member function read() on a non-object
+Request URL: /biblioteca/Livros/view/8
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 62)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 62, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 62, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-16 10:30:23 Error: Fatal Error (1): Call to a member function findById() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/EmprestimosController.php, line 30]
+2014-05-16 10:30:23 Error: [FatalErrorException] Call to a member function findById() on a non-object
+Request URL: /biblioteca/Emprestimos/edit/31
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 30)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 30, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 30, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-16 11:59:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/js/ui-multiselect.js
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 11:59:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/js/ui-multiselect.js
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 12:01:18 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/js/ui-multiselect.js
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 12:03:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/js/ui-multiselect.js
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 12:25:21 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jqmin.css
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 12:26:12 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jqmin2.css
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 12:26:12 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jqmin.css
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 12:30:07 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jqmin.css
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 12:30:07 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jqmin2.css
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 12:32:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/carousel.css
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 22:37:55 Error: [MissingModelException] Classificacaos
+Request URL: /biblioteca/Classificacaos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate('Classificacaos', Array, Array)
+#1 /opt/lampp/htdocs/biblioteca/app/Controller/ClassificacaosController.php(8): Controller->paginate('Classificacaos')
+#2 [internal function]: ClassificacaosController->index()
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClassificacaosController), Array)
+#4 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ClassificacaosController), Object(CakeRequest), Object(CakeResponse))
+#6 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-05-16 22:37:59 Error: [MissingModelException] Classificacaos
+Request URL: /biblioteca/Classificacaos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate('Classificacaos', Array, Array)
+#1 /opt/lampp/htdocs/biblioteca/app/Controller/ClassificacaosController.php(8): Controller->paginate('Classificacaos')
+#2 [internal function]: ClassificacaosController->index()
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClassificacaosController), Array)
+#4 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ClassificacaosController), Object(CakeRequest), Object(CakeResponse))
+#6 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-05-16 22:39:01 Error: [MissingModelException] Classificacaos
+Request URL: /biblioteca/Classificacaos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate('Classificacaos', Array, Array)
+#1 /opt/lampp/htdocs/biblioteca/app/Controller/ClassificacaosController.php(8): Controller->paginate('Classificacaos')
+#2 [internal function]: ClassificacaosController->index()
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClassificacaosController), Array)
+#4 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ClassificacaosController), Object(CakeRequest), Object(CakeResponse))
+#6 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-05-16 22:39:03 Error: [MissingModelException] Classificacaos
+Request URL: /biblioteca/Classificacaos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate('Classificacaos', Array, Array)
+#1 /opt/lampp/htdocs/biblioteca/app/Controller/ClassificacaosController.php(8): Controller->paginate('Classificacaos')
+#2 [internal function]: ClassificacaosController->index()
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClassificacaosController), Array)
+#4 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ClassificacaosController), Object(CakeRequest), Object(CakeResponse))
+#6 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-05-16 22:40:13 Error: [MissingControllerException] Controller class ClassificacaoController could not be found.
+Exception Attributes: array (
+  'class' => 'ClassificacaoController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/Classificacao/add
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 22:40:40 Error: [MissingControllerException] Controller class ClassificacaoController could not be found.
+Exception Attributes: array (
+  'class' => 'ClassificacaoController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/Classificacao/add
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 22:40:44 Error: [MissingControllerException] Controller class ClassificacaoController could not be found.
+Exception Attributes: array (
+  'class' => 'ClassificacaoController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/Classificacao/add
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-16 22:40:54 Error: Fatal Error (1): Call to a member function save() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/ClassificacaosController.php, line 14]
+2014-05-16 22:40:54 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /biblioteca/classificacaos/add
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 14)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 14, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 14, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-16 22:44:39 Error: [MissingTableException] Table categorias for model Categoria was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'categorias',
+  'class' => 'Categoria',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Titulos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('categorias')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(1063): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(2902): DboSource->read(Object(Titulo), Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(2874): Model->_readDataSource('all', Array)
+#4 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate('Titulo', Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/TitulosController.php(8): Controller->paginate('Titulo')
+#7 [internal function]: TitulosController->index()
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TitulosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TitulosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-16 22:46:11 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/TitulosController.php, line 60]
+2014-05-16 22:46:11 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /biblioteca/Titulos/add
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 60, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 60, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-16 22:47:22 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column Classificacao.categoria does not exist
+LINE 1: ...LECT "Classificacao"."id" AS "Classificacao__id", "Classific...
+                                                             ^
+Request URL: /biblioteca/Titulos/add
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT "Classif...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT "Classif...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT "Classif...', false)
+#4 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(2902): DboSource->read(Object(AppModel), Array)
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(2874): Model->_readDataSource('list', Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/TitulosController.php(61): Model->find('list', Array)
+#7 /opt/lampp/htdocs/biblioteca/app/Controller/TitulosController.php(22): TitulosController->getClassificacaos()
+#8 [internal function]: TitulosController->add()
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TitulosController), Array)
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TitulosController), Object(CakeRequest), Object(CakeResponse))
+#12 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-05-17 00:56:38 Error: Fatal Error (1): Call to undefined method TitulosController::getCategorias() in [/opt/lampp/htdocs/biblioteca/app/Controller/TitulosController.php, line 77]
+2014-05-17 00:56:38 Error: [FatalErrorException] Call to undefined method TitulosController::getCategorias()
+Request URL: /biblioteca/Titulos/view/14
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/opt/lampp/htdo...', 77)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/opt/lampp/htdo...', 77, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/opt/lampp/htdo...', 77, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-17 01:02:59 Error: Fatal Error (4): syntax error, unexpected '[', expecting ',' or ';' in [/opt/lampp/htdocs/biblioteca/app/View/Editoras/index.ctp, line 19]
+2014-05-17 01:02:59 Error: [FatalErrorException] syntax error, unexpected '[', expecting ',' or ';'
+Request URL: /biblioteca/Editoras
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 19, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 19, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-17 01:04:17 Error: Fatal Error (4): syntax error, unexpected '[', expecting ',' or ';' in [/opt/lampp/htdocs/biblioteca/app/View/Editoras/index.ctp, line 19]
+2014-05-17 01:04:17 Error: [FatalErrorException] syntax error, unexpected '[', expecting ',' or ';'
+Request URL: /biblioteca/Editoras
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 19, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 19, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-17 01:04:19 Error: Fatal Error (4): syntax error, unexpected '[', expecting ',' or ';' in [/opt/lampp/htdocs/biblioteca/app/View/Editoras/index.ctp, line 19]
+2014-05-17 01:04:19 Error: [FatalErrorException] syntax error, unexpected '[', expecting ',' or ';'
+Request URL: /biblioteca/Editoras
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 19, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 19, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-17 01:04:59 Error: Fatal Error (4): syntax error, unexpected '[', expecting ',' or ';' in [/opt/lampp/htdocs/biblioteca/app/View/Editoras/index.ctp, line 19]
+2014-05-17 01:04:59 Error: [FatalErrorException] syntax error, unexpected '[', expecting ',' or ';'
+Request URL: /biblioteca/Editoras
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 19, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 19, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-17 01:06:42 Error: Fatal Error (1): Call to a member function read() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/LivrosController.php, line 62]
+2014-05-17 01:06:42 Error: [FatalErrorException] Call to a member function read() on a non-object
+Request URL: /biblioteca/Livros/view/11
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 62)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 62, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 62, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -1,6 +1,6 @@
+
 <h1>Novo Livro</h1>
 <?php  
-
         echo    $this->Form->create('Livro',array( 'action' => 'add')),
                 $this->Form->input('titulo_id',array
                   ('options'=>$titulos, 'empty' => 'Selecione o titulo')),

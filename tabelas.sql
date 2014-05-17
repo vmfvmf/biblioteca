@@ -22,8 +22,8 @@ create table autors_titulos(titulo_id int,autor_id int,
 		foreign key (autor_id) references autors(id),
 		foreign key (titulo_id) references titulos(id))
 
-create table categorias_titulos(titulo_id int,categoria_id int,
-		foreign key (categoria_id) references categoria(id),
+create table classificacaos_titulos(titulo_id int,classificacao_id int,
+		foreign key (classificacao_id) references classificacaos(id),
 		foreign key (titulo_id) references titulos(id))
 
 create table assuntos_titulos(assunto_id int,titulo_id int,
@@ -31,7 +31,7 @@ create table assuntos_titulos(assunto_id int,titulo_id int,
 		foreign key (titulo_id) references titulos(id))
 
 
-create table categorias(id serial primary key, categoria varchar(80))
+create table classificacaos(id serial primary key, classificacao varchar(80))
 create table localizacaos(id serial primary key, nome varchar(80))
 create table idiomas(id serial primary key, nome varchar(80))
 create table assuntos(id serial primary key, assunto varchar(80))
@@ -63,9 +63,9 @@ CREATE TRIGGER trg_livro_devolvido
 CREATE or replace FUNCTION livro_devolvido() RETURNS TRIGGER AS
 	$$
 		BEGIN
-			IF (!OLD.data_devolucao isnull) THEN 
-				raise exception 'ESTE LIVRO JÁ FOI DEVOLVIDO'
-				USING ERRCODE = 'unique_violation';
+			IF (not OLD.data_devolucao isnull) THEN 
+				raise exception 'ESTE LIVRO JÁ FOI DEVOLVIDO';
+				/*USING ERRCODE = 'no_puede';*/
 				RETURN OLD;
 			ELSE 
 				update livros set disponivel = TRUE where id = OLD.livro_id;

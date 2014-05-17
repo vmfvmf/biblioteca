@@ -19,7 +19,8 @@
             }
             self::getLocalizacao();
             self::getAutors();
-            self::getCategorias();
+            self::getClassificacaos();
+            self::getAssuntos();
         }
         
         public function edit($id = null){
@@ -43,7 +44,7 @@
             }
             self::getLocalizacao();
             self::getAutors();
-            self::getCategorias();
+            self::getClassificacaos();
         }
         
         public function delete($id = null){
@@ -55,10 +56,16 @@
             }
         }
         
-        public function getCategorias(){
-            $categorias = $this->Titulo->Categoria->find('list',array('fields' => array( 'id', 'categoria'),
-                                'order'=>'categoria'));
-            $this->set(compact('categorias'));
+        public function getClassificacaos(){
+            $classificacaos = $this->Titulo->Classificacao->find('list',array('fields' => array( 'id', 'classificacao'),
+                                'order'=>'classificacao'));
+            $this->set(compact('classificacaos'));
+        }
+        
+        public function getAssuntos(){
+            $assuntos = $this->Titulo->Assunto->find('list',array('fields' => array( 'id', 'assunto'),
+                                'order'=>'assunto'));
+            $this->set(compact('assuntos'));
         }
         
         public function view($id = null){

@@ -16,7 +16,7 @@ $this->start('sidebar');
     
 <? foreach($autors as $autor){  ?>
         <tr>
-               <td><?=$this->Html->link($autor['Autor']['nome'],array('controller' => 'Autors', 'action' => 'view',$autor['Autor']['nome'])); ?></td>
+               <td><?=$autor['Autor']['nome']; ?></td>
                
                <td>
                     <?=$this->Html->link('Editar',array('controller' => 'Autors', 'action' => 'edit',$autor['Autor']['id'])); ?>

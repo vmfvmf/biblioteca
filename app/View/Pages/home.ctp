@@ -10,3 +10,9 @@
 <br/>
 <?=$this->Html->link('Alunos',array('controller' => 'Alunos', 'action' => 'index')); ?>
 <br/>
+<?=$this->Html->link('Assuntos',array('controller' => 'Assuntos', 'action' => 'index')); ?>
+<br/>
+<?=$this->Html->link('Classificações',array('controller' => 'Classificacaos', 'action' => 'index')); ?>
+<br/>
+<?=$this->Html->link('Editoras',array('controller' => 'Editoras', 'action' => 'index')); ?>
+<br/>

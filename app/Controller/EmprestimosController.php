@@ -49,10 +49,11 @@
         
         public function devolver($id = null){
             if($id){
-                if($this->Emprestimo->realizaDev($id)){ 
-                    $this->Session->setFlash(__('Emprestimo finalizado.'));
-                    //return $this->redirect(array('action' => 'index'));
+                if(!$this->Emprestimo->realizaDev($id)){
+                
                 }
+                $this->Session->setFlash("Livro devolvido com sucesso!");
+                $this->redirect(array('controller' => 'Emprestimos', 'action' => 'index'));
             }
         }
         
