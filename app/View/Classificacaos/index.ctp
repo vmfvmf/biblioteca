@@ -19,8 +19,8 @@ $this->start('sidebar');
                <td><?=$cas['Classificacao']['classificacao']?></td>
                
                <td>
-                    <?=$this->Html->link('Editar',array('controller' => 'Assuntos', 'action' => 'edit',$ass['Assunto']['id'])); ?>
-                  |  <?=$this->Html->link('Excluir',array('controller' => 'Assunto', 'action' => 'delete',$ass['Assunto']['id']), null, "Deseja excluir este assunto?"); ?>
+                    <?=$this->Html->link('Editar',array('controller' => 'Classificacaos', 'action' => 'edit',$cas['Classificacao']['id'])); ?>
+                  |  <?=$this->Html->link('Excluir',array('controller' => 'Classificacaos', 'action' => 'delete',$cas['Classificacao']['id']), null, "Deseja excluir esta Classificação?"); ?>
                  
 
                </td> 

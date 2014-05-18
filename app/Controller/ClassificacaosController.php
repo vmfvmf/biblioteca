@@ -22,17 +22,17 @@
             if (!$id) {
                 throw new NotFoundException(__('Invalid assunto'));
             }
-            $ass = $this->Assunto->findById($id);
+            $ass = $this->Classificacao->findById($id);
             if (!$ass) {
                 throw new NotFoundException(__('Invalid assunto'));
             }
             if ($this->request->is(array('$ass', 'put'))) {
-                $this->Assunto->id = $id;
-            if ($this->Assunto->save($this->request->data)) {
-                $this->Session->setFlash(__('Assunto atualizado.'));
+                $this->Classificacao->id = $id;
+            if ($this->Classificacao->save($this->request->data)) {
+                $this->Session->setFlash(__('Classificação atualizada.'));
                 return $this->redirect(array('action' => 'index'));
             }
-                $this->Session->setFlash(__('Não foi possível atualizar o assunto.'));
+                $this->Session->setFlash(__('Não foi possível atualizar o classificação.'));
             }
             if (!$this->request->data) {
                 $this->request->data = $ass;
@@ -41,10 +41,10 @@
         
         public function delete($id = null){
             if($id){
-                if($this->Titulo->delete($id)){
-                    $this->Session->setFlash("Titulo excluido com sucesso!");
+                if($this->Classificacao->delete($id)){
+                    $this->Session->setFlash("Classificação excluido com sucesso!");
                 }
-                $this->redirect(array('controller' => 'Titulos', 'action' => 'index'));
+                $this->redirect(array('controller' => 'Classificacaos', 'action' => 'index'));
             }
         }
         

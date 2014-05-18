@@ -59,9 +59,12 @@
         
         public function view($id = null){
             if($id){
-                $copia = $this->Copia->read(null, $id);
-                $this->set(compact("copia"));
-                //pr($escola);exit(0);
+                $this->paginate = array('limit' => 10, 'recursive' => 2,
+                    'order' => array( 'Livro.Titulo.titulo' => 'asc'),
+                    'conditions' => array('Livro.id =' => $id));
+                $livros = $this->paginate('Livro');
+                $this->set(compact("livros"));
+                //pr($livros);exit(0);
             }
         }
         

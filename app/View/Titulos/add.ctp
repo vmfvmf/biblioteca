@@ -1,7 +1,6 @@
 <h1>Novo Titulo</h1>
 <?php  
-    echo $this->Html->script('jquery-1.10.2', false);
-    echo $this->Html->script('jquery-ui-1.10.4', false);
+    echo $this->Html->script('jquery', false);
     echo $this->Html->script('jquery-ui-1.10.4.min', false);
     echo $this->Html->script('ui.multiselect', false);
     echo $this->Html->css('jquery-ui', null, array('inline' => false));

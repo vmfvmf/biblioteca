@@ -8,13 +8,11 @@
             $emprestimos = $this->paginate('Emprestimo');
                         
             $this->set(compact('emprestimos'));
-            //pr($emprestimos);exit(0);//    
         }
         
         public function add(){
             if ($this->data){
                 if($this->Emprestimo->save($this->data)){
-                    //$this->Emprestimo->realizaEmp($this->Emprestimo->id);
                     $this->Session->setFlash(__('Emprestimo realizado com sucesso.'));
                     return $this->redirect(array('action' => 'index'));
                 }
@@ -105,18 +103,5 @@
             }
         }
         
-     /*   function auto_complete() { 
-            $localizacaos = $this->Localizacao->find('all', array( 
-                'conditions' => array( 
-                    'Localizacao.nome LIKE' => $this->params['url']['autoCompleteText'].'%' 
-                ), 
-                'fields' => array('nome'), 
-                'limit' => 3, 
-                'recursive'=>-1, 
-            )); 
-            $localizacaos2 = Set::Extract($localizacaos,'{n}.Localizacao.nome'); 
-            $this->set('localizacaos', $localizacaos2); 
-            $this->layout = 'ajax';     
-          } */
     }      
 ?>

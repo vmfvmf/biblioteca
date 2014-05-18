@@ -1,7 +1,7 @@
-<h1>Editar Assunto</h1>
+<h1>Editar Classificação</h1>
 
 <?php  
        echo    $this->Form->create(),
-                       $this->Form->input('assunto'),
+                       $this->Form->input('classificacao'),
                        $this->Form->end('salvar');
 ?>
