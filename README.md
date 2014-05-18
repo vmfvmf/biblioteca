@@ -3,9 +3,7 @@ CakePHP
 
 [![CakePHP](http://cakephp.org/img/cake-logo.png)](http://www.cakephp.org)
 
-CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.
-Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
-
+Biblioger é um sistema simples para gerenciamento de bibliotecas. Conta com cadastro de livro, usuários e empréstimos. Criará relatórios de livros mais lidos, turma que mais lê livros, desempenho de alunos durante os anos letivos, entre outros.
 Some Handy Links
 ----------------
 
