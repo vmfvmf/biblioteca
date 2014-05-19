@@ -1,8 +1,12 @@
+<?php
+    echo $this->Html->link('BIBLIOTECA','../')   .' > '.
+        $this->Html->link('EMPRESTIMOS',array('controller' => 'Emprestimos', 'action' => 'index'))
+        .' > <b>NOVO</b>';
+?>
 <h1>Registro de Emprestimo</h1>
 <?php  
     echo $this->Html->script('jquery', false);
-    echo $this->Html->script('jquery-ui-1.10.4', false);
-    //echo $this->Html->script('jquery-1.10.2', false);
+    echo $this->Html->script('jquery-ui', false);
     echo $this->Html->css('jquery-ui', null, array('inline' => false));
     if(isset($livros)){
         echo    $this->Form->create('Emprestimo',array( 'action' => 'add')),
@@ -10,10 +14,9 @@
                   ('options'=>$livros, 'empty' => 'Selecione o livro')),
                 $this->Form->input('aluno_id',array('type' => 'hidden', 'value'=> '0', 'id' => 'aluno_id')),
                 $this->Form->input('aluno',array(
-                  //('options'=>$alunos, 'empty' => 'Selecione o aluno',
                     'id' => 'nome',
                     'type' => 'text', 'class' => 'autocomplete'
-                        ));
+                        )),
        
         $this->Form->end('cadastrar');
         
@@ -34,7 +37,6 @@
                     $( ".autocomplete" ).val( ui.item.label);
 			return false;}
             });});';
-        echo $scrip;
         $this->Html->scriptStart(array('inline' => false));
                     echo $scrip;
 

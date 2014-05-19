@@ -1,13 +1,16 @@
 <?php
 $this->set("title_for_layout", "Titulos");  
 $this->extend('/Common/view');
+$this->start('title');
+echo $this->Html->link('BIBLIOTECA','../')   .' > <b>TITULOS</b>';
+$this->end();
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Novo Titulo',array('controller' => 'Titulos', 'action' => 'add')); ?></li>
-<?php $this->end(); ?>
-<h1>Titulos<h1>
-
-
+<?php 
+    $this->end(); 
+?>
+<div id="main_div">
 <table>
     <tr>
             <td><b><?=$this->Paginator->sort('titulo','TITULO');?></b></td> 
@@ -38,6 +41,5 @@ $this->start('sidebar');
 <?  }  ?>
 </table>
 <br/>
-<?//=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>
-<br/>
-<br/>
+<?=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>
+</div>

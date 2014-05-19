@@ -1,13 +1,15 @@
 <?php
 $this->set("title_for_layout", "Alunos");  
 $this->extend('/Common/view');
+$this->start('title');
+echo $this->Html->link('BIBLIOTECA','../')   .' > <b>ALUNOS</b>';
+$this->end();
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Novo Aluno',array('controller' => 'Alunos', 'action' => 'add')); ?></li>
 <?php $this->end(); ?>
-<h1>Alunos<h1>
 
-
+<div id="main_div">
 <table>
     <tr>
             <td><b><?=$this->Paginator->sort('nome','ALUNO');?></b></td> 
@@ -29,6 +31,5 @@ $this->start('sidebar');
 <?  }  ?>
 </table>
 <br/>
-<?//=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>
-<br/>
-<br/>
+<?=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>
+</div>

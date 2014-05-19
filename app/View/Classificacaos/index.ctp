@@ -1,13 +1,17 @@
 <?php
 $this->set("title_for_layout", "Classificação");  
 $this->extend('/Common/view');
+$this->start('title');
+echo $this->Html->link('BIBLIOTECA','../')   .' > <b>CLASSIFICAÇÕES</b>';
+$this->end();
+
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Nova Classificação',array('controller' => 'Classificacaos', 'action' => 'add')); ?></li>
 <?php $this->end(); ?>
 <h1>Classificações<h1>
 
-
+        <div id="main_div" >
 <table>
     <tr>
             <td><b><?=$this->Paginator->sort('classificacao','CLASSIFICAÇÃO');?></b></td> 
@@ -28,6 +32,5 @@ $this->start('sidebar');
 <?  }  ?>
 </table>
 <br/>
-<?//=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>
-<br/>
-<br/>
+<?=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>
+</div>

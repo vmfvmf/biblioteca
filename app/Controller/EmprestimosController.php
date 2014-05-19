@@ -4,7 +4,7 @@
         public  $name = "Emprestimos";
         
         public function index() {
-            $this->paginate = array('limit' => 100, 'recursive' => 2);//, 'order' => array( 'Livro.' => 'asc'));
+            $this->paginate = array('limit' => 15, 'recursive' => 2);//, 'order' => array( 'Livro.' => 'asc'));
             $emprestimos = $this->paginate('Emprestimo');
                         
             $this->set(compact('emprestimos'));

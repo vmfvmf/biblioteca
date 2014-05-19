@@ -1,4 +1,9 @@
-<h1>Novo Livro</h1>
+<?php
+echo $this->Html->link('BIBLIOTECA','../')   .' > '.
+        $this->Html->link('LIVROS',array('controller' => 'Livros', 'action' => 'index'))
+        .' > <b>EDITAR</b>';
+?>
+<h1>Editar Livro</h1>
 <?php  
 
         echo    $this->Form->create('Livro',array( 'action' => 'edit')),

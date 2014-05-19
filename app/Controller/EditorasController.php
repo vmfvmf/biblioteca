@@ -14,7 +14,7 @@
         public function add(){
             if ($this->data){
                 if($this->Editora->save($this->data)){
-                    $this->Session->setFlash(__('Editora cadastrado.'));
+                    $this->Session->setFlash(__('Editora cadastrada.'));
                     return $this->redirect(array('action' => 'index'));
                 }
             }
@@ -22,19 +22,19 @@
         
         public function edit($id = null){
             if (!$id) {
-                throw new NotFoundException(__('Invalid assunto'));
+                throw new NotFoundException(__('Invalid editora'));
             }
-            $ass = $this->Assunto->findById($id);
+            $ass = $this->Editora->findById($id);
             if (!$ass) {
-                throw new NotFoundException(__('Invalid assunto'));
+                throw new NotFoundException(__('Invalid editora'));
             }
             if ($this->request->is(array('$ass', 'put'))) {
-                $this->Assunto->id = $id;
-            if ($this->Assunto->save($this->request->data)) {
-                $this->Session->setFlash(__('Assunto atualizado.'));
+                $this->Editora->id = $id;
+            if ($this->Editora->save($this->request->data)) {
+                $this->Session->setFlash(__('Editora atualizada.'));
                 return $this->redirect(array('action' => 'index'));
             }
-                $this->Session->setFlash(__('Não foi possível atualizar o assunto.'));
+                $this->Session->setFlash(__('Não foi possível atualizar a editora.'));
             }
             if (!$this->request->data) {
                 $this->request->data = $ass;

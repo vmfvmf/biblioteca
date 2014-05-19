@@ -1,13 +1,15 @@
 <?php
 $this->set("title_for_layout", "Autors");  
 $this->extend('/Common/view');
+$this->start('title');
+echo $this->Html->link('BIBLIOTECA','../')   .' > <b>AUTORES</b>';
+$this->end();
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Novo Autor',array('controller' => 'Autors', 'action' => 'add')); ?></li>
 <?php $this->end(); ?>
-<h1>Autores<h1>
 
-
+<div id="main_div" >
 <table>
     <tr>
             <td><b><?=$this->Paginator->sort('nome','AUTOR');?></b></td> 
@@ -28,6 +30,5 @@ $this->start('sidebar');
 <?  }  ?>
 </table>
 <br/>
-<?//=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>
-<br/>
-<br/>
+<?=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>
+</div>

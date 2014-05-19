@@ -1,3 +1,8 @@
+<?php
+echo $this->Html->link('BIBLIOTECA','../')   .' > '.
+        $this->Html->link('TITULOS',array('controller' => 'Titulos', 'action' => 'index'))
+        .' > <b>NOVO</b>';
+?>
 <h1>Novo Titulo</h1>
 <?php  
     echo $this->Html->script('jquery', false);
@@ -5,8 +10,6 @@
     echo $this->Html->script('ui.multiselect', false);
     echo $this->Html->css('jquery-ui', null, array('inline' => false));
     echo     $this->Html->css('ui.multiselect', null, array('inline' => false));
-    
-    //echo $this->Html->css('jquery-ui-1.10.4.min', null, array('inline' => false));
     
         echo    $this->Form->create('Titulo',array( 'action' => 'add')),
                        $this->Form->input('titulo'),
@@ -38,21 +41,8 @@
           )),
           $this->Form->input('localizacao_id',array('options'=>$localizacao, 'empty' => 'Selecione o titulo')),
           $this->Form->end('cadastrar');
-      /*    $this->AutoComplete->input( 
-                    'Localizacao.nome', 
-                    array( 
-                        'label' => 'Localização',
-                        'autoCompleteUrl'=>$this->Html->url(  
-                            array( 
-                                'controller'=>'Localizacao', 
-                                'action'=>'auto_complete', 
-                            ) 
-                        ), 
-                        'autoCompleteRequestItem'=>'autoCompleteText', 
-                    ) 
-                ),
-        */        
-                $this->Html->scriptStart(array('inline' => false));
+     
+        $this->Html->scriptStart(array('inline' => false));
                     echo '$(function(){$(".multiselect").multiselect();});';
 
                     $this->Html->scriptEnd();

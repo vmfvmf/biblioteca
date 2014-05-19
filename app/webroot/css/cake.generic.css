@@ -124,8 +124,14 @@ div.view {
 }
 div.actions {
 	float:left;
-	width:16%;
+	width:20%;
 	padding:10px 1.5%;
+        margin-left: 0px;
+        height:100%;
+}
+#main_div {
+    float: left;
+    width: 70%;
 }
 div.actions h3 {
 	padding-top:0;

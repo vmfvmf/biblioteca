@@ -24,27 +24,32 @@
         }
         
         public function edit($id = null){
-            if (!$id) {
+           if (!$id) {
                 throw new NotFoundException(__('Invalid titulo'));
             }
             $titulo = $this->Titulo->findById($id);
             if (!$titulo) {
-                throw new NotFoundException(__('Invalid TItulo'));
+                throw new NotFoundException(__('Invalid titulo'));
             }
-            if ($this->request->is(array('titulo', 'put'))) {
+            if ($this->request->is(array('$titulo', 'put'))) {
                 $this->Titulo->id = $id;
             if ($this->Titulo->save($this->request->data)) {
                 $this->Session->setFlash(__('Titulo atualizado.'));
                 return $this->redirect(array('action' => 'index'));
             }
-                $this->Session->setFlash(__('Unable to update your titulo.'));
+                $this->Session->setFlash(__('Não foi possível atualizar titulo.'));
             }
             if (!$this->request->data) {
                 $this->request->data = $titulo;
             }
+            self::getDepends();
+        }
+        
+        public function getDepends(){
             self::getLocalizacao();
             self::getAutors();
             self::getClassificacaos();
+            self::getAssuntos();
         }
         
         public function delete($id = null){

@@ -1,13 +1,16 @@
 <?php
 $this->set("title_for_layout", "Emprestimos");  
 $this->extend('/Common/view');
+$this->start('title');
+echo $this->Html->link('BIBLIOTECA','../')   .' > <b>ALUNOS</b>';
+$this->end();
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Registrar Empréstimo',array('controller' => 'Emprestimos', 'action' => 'add')); ?></li>
 <?php $this->end(); ?>
-<h1>Emprestimos<h1>
+<h1>Emprestimos</h1>
 
-
+<div id="main_div">
 <table>
     <tr>
             <td><b>ALUNO</b></td> 
@@ -37,7 +40,5 @@ $this->start('sidebar');
 <?  }  ?>
 </table>
 <br/>
-<?//=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>
-<br/>
-<br/>
-
+<?=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>
+</div>
