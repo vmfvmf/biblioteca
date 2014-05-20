@@ -37,11 +37,15 @@ create table idiomas(id serial primary key, nome varchar(80))
 create table assuntos(id serial primary key, assunto varchar(80))
 create table autors(id serial primary key, nome varchar(80))
 create table editoras(id serial primary key, editora varchar(80))
-create table alunos(id serial primary key, nome varchar(80), ra varchar(20))
-create table emprestimos(id serial primary key, aluno_id int not null, livro_id int not null,
-	data_emprestimo timestamp default now(), data_devolucao timestamp,
+create table alunos(id serial primary key, nome varchar(80), ra varchar(20), ano_serie int)
+
+create table emprestimos(id serial primary key, aluno_id int not null, titulo_id int not null,
+ livro_id int not null, data_emprestimo timestamp default now(), data_devolucao timestamp, 
+	data_prev_dev timestamp default now()+INTERVAL '7days',
 		foreign key (aluno_id) references alunos(id),
+		foreign key (titulo_id) references titulos(id),
 		foreign key (livro_id) references livros(id))
+
 
 CREATE TRIGGER trg_livro_emprestado
 		AFTER INSERT ON emprestimos
@@ -74,7 +78,29 @@ CREATE or replace FUNCTION livro_devolvido() RETURNS TRIGGER AS
 		END;
 	$$ LANGUAGE "plpgsql";
 
+
 SELECT concat( t.titulo , ' - ',l.cod_barras) as "titulo", l.id as 
                     "livro_id" FROM livros l inner join titulos t
                      ON l.titulo_id = t.id ;
                      update livros set cod_barras = 'asdasdas'
+select * from alunos
+
+
+select * from ViewLTEs
+
+CREATE OR REPLACE VIEW ViewLTEs AS SELECT t.titulo, t.id as "titulo_id", 
+	l.id as "livro_id", e.id as "emprestimo_id", e.aluno_id as "aluno_id", 
+	e.data_emprestimo, e.data_devolucao, e.data_prev_dev
+	FROM livros l
+	INNER JOIN emprestimos e ON e.livro_id = l.id
+	INNER JOIN titulos t ON t.id = l.titulo_id
+			
+select count(*) from viewlte where aluno_id = 1 and titulo_id = 6
+
+SELECT titulo, data_emprestimo,data_devolucao, data_prev_dev
+                    FROM ViewLTE WHERE aluno_id = 1
+                    ORDER BY titulo ASC LIMIT 5
+
+sELECT titulo, data_emprestimo,data_devolucao, data_prev_dev, extract("days" from (data_devolucao - data_prev_dev)) 
+                     FROM ViewLTEs WHERE aluno_id = 1 AND data_devolucao > data_prev_dev 
+                     ORDER BY titulo ASC LIMIT 5

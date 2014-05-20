@@ -1,13 +1,13 @@
 <?php
+    echo $this->Html->script('jquery', false);
+    echo $this->Html->script('jquery-ui', false);
+    echo $this->Html->css('jquery-ui', null, array('inline' => false));
     echo $this->Html->link('BIBLIOTECA','../')   .' > '.
         $this->Html->link('EMPRESTIMOS',array('controller' => 'Emprestimos', 'action' => 'index'))
         .' > <b>NOVO</b>';
 ?>
 <h1>Registro de Emprestimo</h1>
 <?php  
-    echo $this->Html->script('jquery', false);
-    echo $this->Html->script('jquery-ui', false);
-    echo $this->Html->css('jquery-ui', null, array('inline' => false));
     if(isset($livros)){
         echo    $this->Form->create('Emprestimo',array( 'action' => 'add')),
                 $this->Form->input('livro_id',array

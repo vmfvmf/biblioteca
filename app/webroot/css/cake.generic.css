@@ -20,7 +20,9 @@
 	margin:0;
 	padding:0;
 }
-
+.divh3{
+    padding-left: 2.2em !important;
+}
 /** General Style Info **/
 body {
 	background: #003d4c;

@@ -7,7 +7,8 @@ echo $this->Html->link('BIBLIOTECA','../')   .' > '.
 <?php  
 
         echo    $this->Form->create('Aluno',array( 'action' => 'add')),
-                       $this->Form->input('nome'),
+                       $this->Form->input('nome', array('label' => 'Nome')),
                 $this->Form->input('ra', array('label' => 'RA')),
+                $this->Form->input('ano_serie', array('label' => 'Série')),
             $this->Form->end('cadastrar');
 ?>

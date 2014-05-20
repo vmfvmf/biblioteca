@@ -17,6 +17,7 @@ $this->start('sidebar');
             <td><b>LIVRO</b></td> 
             <td><b>DATA EMPRESTIMO</b></td> 
             <td><b>DATA DEVOLUÇÃO</b></td>
+            <td><b>PRAZO DEVOLUÇÃO</b></td>
             <td><b>AÇÕES</b></td>
     </tr>
     
@@ -24,10 +25,11 @@ $this->start('sidebar');
         <tr>
                <td><?=$emp['Aluno']['nome']; ?></td>
                <td><?=$emp['Livro']['Titulo']['titulo']; ?></td>
-               <td><?=$this->Time->format($emp['Emprestimo']['data_emprestimo'], '%d/%m/%Y - %H:%M'); ?></td>
+               <td><?=$this->Time->format($emp['Emprestimo']['data_emprestimo'], '%d/%m/%Y'); ?></td>
                <td><?=($emp['Emprestimo']['data_devolucao'] != null) ? 
-                 $this->Time->format($emp['Emprestimo']['data_devolucao'], '%d/%m/%Y - %H:%M'):
+                 $this->Time->format($emp['Emprestimo']['data_devolucao'], '%d/%m/%Y'):
                     $emp['Emprestimo']['data_devolucao']; ?></td>
+               <td><?=$this->Time->format($emp['Emprestimo']['data_prev_dev'], '%d/%m/%Y'); ?></td>
                <td>
                     <?=$this->Html->link('Editar',array('controller' => 'Emprestimos', 'action' => 'edit',$emp['Emprestimo']['id'])); ?>
                   |  <?=$this->Html->link('Excluir',array('controller' => 'Emprestimos', 'action' => 'delete',$emp['Emprestimo']['id']), null, "Deseja excluir este emprestimo?"); ?>

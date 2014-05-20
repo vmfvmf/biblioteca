@@ -5764,3 +5764,1523 @@ Stack Trace:
 #3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-05-19 12:28:16 Error: Fatal Error (4): syntax error, unexpected '?>' in [/opt/lampp/htdocs/biblioteca/app/View/Emprestimos/index.ctp, line 32]
+2014-05-19 12:28:16 Error: [FatalErrorException] syntax error, unexpected '?>'
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 32)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 32, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 32, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 15:40:06 Error: Fatal Error (4): syntax error, unexpected '?>', expecting function (T_FUNCTION) in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 30]
+2014-05-19 15:40:06 Error: [FatalErrorException] syntax error, unexpected '?>', expecting function (T_FUNCTION)
+Request URL: /biblioteca/relatorios
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 30)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 30, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 30, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 15:43:11 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 24]
+2014-05-19 15:43:11 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 15:45:02 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 24]
+2014-05-19 15:45:02 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 15:45:03 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 24]
+2014-05-19 15:45:03 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 15:45:07 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 24]
+2014-05-19 15:45:07 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 15:45:51 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 24]
+2014-05-19 15:45:51 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 15:45:51 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 24]
+2014-05-19 15:45:51 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 15:46:18 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 24]
+2014-05-19 15:46:18 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 15:47:40 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 24]
+2014-05-19 15:47:40 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 15:47:41 Error: Fatal Error (1): Call to a member function find() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 24]
+2014-05-19 15:47:41 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 24, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 17:02:41 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE) in [/opt/lampp/htdocs/biblioteca/app/View/Relatorios/alunos.ctp, line 46]
+2014-05-19 17:02:41 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE)
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 46)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 46, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 46, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 17:10:59 Error: Fatal Error (4): syntax error, unexpected ''$("#aluno_id").bind("changed"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in [/opt/lampp/htdocs/biblioteca/app/View/Relatorios/alunos.ctp, line 36]
+2014-05-19 17:10:59 Error: [FatalErrorException] syntax error, unexpected ''$("#aluno_id").bind("changed"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 36, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 36, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 17:12:07 Error: Fatal Error (4): syntax error, unexpected ''$("#aluno_id").bind( "changed' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in [/opt/lampp/htdocs/biblioteca/app/View/Relatorios/alunos.ctp, line 36]
+2014-05-19 17:12:07 Error: [FatalErrorException] syntax error, unexpected ''$("#aluno_id").bind( "changed' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 36, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 36, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 17:12:08 Error: Fatal Error (4): syntax error, unexpected ''$("#aluno_id").bind( "changed' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in [/opt/lampp/htdocs/biblioteca/app/View/Relatorios/alunos.ctp, line 36]
+2014-05-19 17:12:08 Error: [FatalErrorException] syntax error, unexpected ''$("#aluno_id").bind( "changed' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 36, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 36, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 17:12:10 Error: Fatal Error (4): syntax error, unexpected ''$("#aluno_id").bind( "changed' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in [/opt/lampp/htdocs/biblioteca/app/View/Relatorios/alunos.ctp, line 36]
+2014-05-19 17:12:10 Error: [FatalErrorException] syntax error, unexpected ''$("#aluno_id").bind( "changed' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 36, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 36, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 17:12:14 Error: Fatal Error (4): syntax error, unexpected ''$("#aluno_id").bind( "changed' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in [/opt/lampp/htdocs/biblioteca/app/View/Relatorios/alunos.ctp, line 36]
+2014-05-19 17:12:14 Error: [FatalErrorException] syntax error, unexpected ''$("#aluno_id").bind( "changed' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 36, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 36, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 17:33:47 Error: [MissingActionException] Action RelatoriosController::biblioteca() could not be found.
+Exception Attributes: array (
+  'controller' => 'RelatoriosController',
+  'action' => 'biblioteca',
+)
+Request URL: /biblioteca/Relatorios/biblioteca/relatorios/data.ctp
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-19 17:33:58 Error: [MissingActionException] Action RelatoriosController::data() could not be found.
+Exception Attributes: array (
+  'controller' => 'RelatoriosController',
+  'action' => 'data',
+)
+Request URL: /biblioteca/Relatorios/data
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-19 17:34:38 Error: [MissingActionException] Action RelatoriosController::biblioteca() could not be found.
+Exception Attributes: array (
+  'controller' => 'RelatoriosController',
+  'action' => 'biblioteca',
+)
+Request URL: /biblioteca/Relatorios/biblioteca/relatorios/data.ctp
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-19 17:34:47 Error: [MissingActionException] Action RelatoriosController::biblioteca() could not be found.
+Exception Attributes: array (
+  'controller' => 'RelatoriosController',
+  'action' => 'biblioteca',
+)
+Request URL: /biblioteca/Relatorios/biblioteca/relatorios/data.ctp
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-19 17:35:19 Error: [MissingActionException] Action RelatoriosController::data.ctp() could not be found.
+Exception Attributes: array (
+  'controller' => 'RelatoriosController',
+  'action' => 'data.ctp',
+)
+Request URL: /biblioteca/Relatorios/data.ctp
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-19 17:39:44 Error: Fatal Error (1): Call to undefined method View::layout() in [/opt/lampp/htdocs/biblioteca/app/View/Relatorios/data.ctp, line 1]
+2014-05-19 17:39:44 Error: [FatalErrorException] Call to undefined method View::layout()
+Request URL: /biblioteca/Relatorios/data
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/opt/lampp/htdo...', 1)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/opt/lampp/htdo...', 1, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/opt/lampp/htdo...', 1, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 17:40:10 Error: Fatal Error (1): Call to undefined method View::layout() in [/opt/lampp/htdocs/biblioteca/app/View/Relatorios/data.ctp, line 1]
+2014-05-19 17:40:10 Error: [FatalErrorException] Call to undefined method View::layout()
+Request URL: /biblioteca/Relatorios/data
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/opt/lampp/htdo...', 1)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/opt/lampp/htdo...', 1, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/opt/lampp/htdo...', 1, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 17:57:57 Error: [PDOException] SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: "[object Object]"
+LINE 1: ...ublic"."alunos" AS "Aluno"   WHERE "Aluno"."id" = '[object O...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/[object%20Object]
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT "Aluno"....', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT "Aluno"....', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT "Aluno"....', false)
+#4 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(2902): DboSource->read(Object(Aluno), Array)
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(2874): Model->_readDataSource('first', Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(800): DboSource->query('findById', Array, Object(Aluno))
+#8 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(31): Model->__call('findById', Array)
+#9 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(31): Aluno->findById('[object Object]')
+#10 [internal function]: RelatoriosController->data('[object Object]')
+#11 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#12 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#13 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#14 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-05-19 17:58:01 Error: [PDOException] SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: "[object Object]"
+LINE 1: ...ublic"."alunos" AS "Aluno"   WHERE "Aluno"."id" = '[object O...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/[object%20Object]
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT "Aluno"....', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT "Aluno"....', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT "Aluno"....', false)
+#4 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(2902): DboSource->read(Object(Aluno), Array)
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(2874): Model->_readDataSource('first', Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(800): DboSource->query('findById', Array, Object(Aluno))
+#8 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(31): Model->__call('findById', Array)
+#9 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(31): Aluno->findById('[object Object]')
+#10 [internal function]: RelatoriosController->data('[object Object]')
+#11 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#12 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#13 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#14 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-05-19 19:45:11 Error: Fatal Error (1): Call to undefined method TitulosController::getCategorias() in [/opt/lampp/htdocs/biblioteca/app/Controller/TitulosController.php, line 82]
+2014-05-19 19:45:11 Error: [FatalErrorException] Call to undefined method TitulosController::getCategorias()
+Request URL: /biblioteca/Titulos/view/19
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/opt/lampp/htdo...', 82)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/opt/lampp/htdo...', 82, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/opt/lampp/htdo...', 82, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 19:53:40 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Model/Relatorio.php(11): Model->query('SELECT t.titulo...')
+#3 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(32): Relatorio->pesquisaDados('2')
+#4 [internal function]: RelatoriosController->data('2')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-19 19:53:47 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/3
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Model/Relatorio.php(11): Model->query('SELECT t.titulo...')
+#3 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(32): Relatorio->pesquisaDados('3')
+#4 [internal function]: RelatoriosController->data('3')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-19 19:53:50 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/5
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Model/Relatorio.php(11): Model->query('SELECT t.titulo...')
+#3 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(32): Relatorio->pesquisaDados('5')
+#4 [internal function]: RelatoriosController->data('5')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-19 19:54:04 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Model/Relatorio.php(11): Model->query('SELECT t.titulo...')
+#3 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(32): Relatorio->pesquisaDados('1')
+#4 [internal function]: RelatoriosController->data('1')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-19 19:55:34 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Model/Relatorio.php(13): Model->query('SELECT t.titulo...')
+#3 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(32): Relatorio->pesquisaDados('1')
+#4 [internal function]: RelatoriosController->data('1')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-19 19:56:04 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Model/Relatorio.php(13): Model->query('SELECT t.titulo...')
+#3 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(32): Relatorio->pesquisaDados('1')
+#4 [internal function]: RelatoriosController->data('1')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-19 19:56:56 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Model/Relatorio.php(13): Model->query('SELECT t.titulo...')
+#3 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(32): Relatorio->pesquisaDados('2')
+#4 [internal function]: RelatoriosController->data('2')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-19 19:57:15 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Model/Relatorio.php(13): Model->query('SELECT t.titulo...')
+#3 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(32): Relatorio->pesquisaDados('2')
+#4 [internal function]: RelatoriosController->data('2')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-19 19:57:22 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/4
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Model/Relatorio.php(13): Model->query('SELECT t.titulo...')
+#3 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(32): Relatorio->pesquisaDados('4')
+#4 [internal function]: RelatoriosController->data('4')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-19 20:06:12 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Model/Relatorio.php(13): Model->query('SELECT t.titulo...')
+#3 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(32): Relatorio->pesquisaDados('2')
+#4 [internal function]: RelatoriosController->data('2')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-19 20:06:49 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Model/Relatorio.php(13): Model->query('SELECT t.titulo...')
+#3 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(32): Relatorio->pesquisaDados('2')
+#4 [internal function]: RelatoriosController->data('2')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-19 20:10:16 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Model/Relatorio.php(13): Model->query('SELECT t.titulo...')
+#3 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(32): Relatorio->pesquisaDados('2')
+#4 [internal function]: RelatoriosController->data('2')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-19 20:12:53 Error: Fatal Error (1): Call to a member function query() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 32]
+2014-05-19 20:12:53 Error: [FatalErrorException] Call to a member function query() on a non-object
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 32, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 32, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 20:13:19 Error: Fatal Error (1): Call to a member function query() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 32]
+2014-05-19 20:13:19 Error: [FatalErrorException] Call to a member function query() on a non-object
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 32, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 32, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 20:15:43 Error: Fatal Error (1): Call to a member function query() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 32]
+2014-05-19 20:15:43 Error: [FatalErrorException] Call to a member function query() on a non-object
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 32, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 32, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 20:15:57 Error: Fatal Error (1): Call to a member function query() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 32]
+2014-05-19 20:15:57 Error: [FatalErrorException] Call to a member function query() on a non-object
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 32, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 32, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 20:16:34 Error: Fatal Error (1): Call to a member function query() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 32]
+2014-05-19 20:16:34 Error: [FatalErrorException] Call to a member function query() on a non-object
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 32, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 32, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 20:20:37 Error: [MissingActionException] Action RelatoriosController::dados() could not be found.
+Exception Attributes: array (
+  'controller' => 'RelatoriosController',
+  'action' => 'dados',
+)
+Request URL: /biblioteca/Relatorios/dados/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-19 20:20:44 Error: [MissingActionException] Action RelatoriosController::dado() could not be found.
+Exception Attributes: array (
+  'controller' => 'RelatoriosController',
+  'action' => 'dado',
+)
+Request URL: /biblioteca/Relatorios/dado/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#2 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-19 20:20:59 Error: Fatal Error (1): Call to a member function query() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 32]
+2014-05-19 20:20:59 Error: [FatalErrorException] Call to a member function query() on a non-object
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 32, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 32, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 20:21:13 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(34): Model->query('SELECT t.titulo...')
+#3 [internal function]: RelatoriosController->data('2')
+#4 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#7 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-05-19 20:24:18 Error: Fatal Error (4): syntax error, unexpected '<' in [/opt/lampp/htdocs/biblioteca/app/View/Relatorios/data.ctp, line 14]
+2014-05-19 20:24:18 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 14)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 14, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 14, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 21:22:39 Error: Fatal Error (1): Call to undefined method TitulosController::getCategorias() in [/opt/lampp/htdocs/biblioteca/app/Controller/TitulosController.php, line 82]
+2014-05-19 21:22:39 Error: [FatalErrorException] Call to undefined method TitulosController::getCategorias()
+Request URL: /biblioteca/Titulos/view/7
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/opt/lampp/htdo...', 82)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/opt/lampp/htdo...', 82, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/opt/lampp/htdo...', 82, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 21:50:33 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Model/Relatorio.php(13): Model->query('SELECT titulo, ...')
+#3 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(32): Relatorio->pesquisaDados('2')
+#4 [internal function]: RelatoriosController->data('2')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#8 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-19 21:51:37 Error: [PDOException] SQLSTATE[08P01]: <<Unknown error>>: 7 ERROR:  bind message supplies 0 parameters, but prepared statement "pdo_stmt_00000006" requires 1
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(602): DboSource->fetchAll('SELECT titulo, ...', false)
+#4 [internal function]: DboSource->query('SELECT titulo, ...', '2')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(33): Model->query('SELECT titulo, ...', '2')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:02:56 Error: [PDOException] SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "BY"
+LINE 1: ...ROM ViewLTE WHERE aluno_id = 1 GROUP BY tituloORDER BY count
+                                                               ^
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(34): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('1')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:03:11 Error: [PDOException] SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at or near "BY"
+LINE 1: ...ROM ViewLTE WHERE aluno_id = 1 GROUP BY tituloORDER BY count
+                                                               ^
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(34): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('1')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:20:12 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column "titulo" does not exist
+LINE 1: SELECT titulo, data_emprestimo,data_devolucao, data_prev_dev...
+               ^
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(39): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('1')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:20:39 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column "titulo" does not exist
+LINE 1: SELECT titulo, data_emprestimo,data_devolucao, data_prev_dev...
+               ^
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(39): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('1')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:22:04 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column "titulo" does not exist
+LINE 1: SELECT titulo, data_emprestimo,data_devolucao, data_prev_dev...
+               ^
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(39): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('1')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:25:59 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column "titulo" does not exist
+LINE 1: SELECT titulo, data_emprestimo,data_devolucao, data_prev_dev...
+               ^
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(39): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('1')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:27:19 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column "titulo" does not exist
+LINE 1: SELECT titulo, data_emprestimo,data_devolucao, data_prev_dev...
+               ^
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(39): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('1')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:28:31 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column "titulo" does not exist
+LINE 1: SELECT titulo, data_emprestimo,data_devolucao, data_prev_dev...
+               ^
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(39): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('1')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:31:55 Error: Fatal Error (1): Call to a member function query() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 36]
+2014-05-19 22:31:55 Error: [FatalErrorException] Call to a member function query() on a non-object
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 36, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 36, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 22:32:07 Error: Fatal Error (1): Call to a member function query() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 36]
+2014-05-19 22:32:07 Error: [FatalErrorException] Call to a member function query() on a non-object
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 36, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 36, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-19 22:32:36 Error: [MissingTableException] Table viewltes for model Viewlte was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'viewltes',
+  'class' => 'Viewlte',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('viewltes')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3305): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(39): Model->query('SELECT titulo, ...')
+#3 [internal function]: RelatoriosController->data('2')
+#4 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#7 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-05-19 22:33:59 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:34:43 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:34:44 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:34:46 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:42:26 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:42:29 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:45:14 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:45:15 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:45:32 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:45:33 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:46:48 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:46:49 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:46:55 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('1')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:51:34 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('1')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:51:40 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:52:40 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:52:40 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:52:50 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:52:50 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-19 22:53:50 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:26:44 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:26:45 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:27:11 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:27:13 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:27:21 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:28:54 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:28:54 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:28:56 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:29:14 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:29:14 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:29:16 Error: [PDOException] SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "viewlte" does not exist
+LINE 1: ...ta_emprestimo) as "max", count(*) as "count" FROM ViewLTE WH...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(35): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:29:27 Error: Fatal Error (1): Call to a member function query() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 36]
+2014-05-20 00:29:27 Error: [FatalErrorException] Call to a member function query() on a non-object
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 36, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 36, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-20 00:29:40 Error: Fatal Error (1): Call to a member function query() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 36]
+2014-05-20 00:29:40 Error: [FatalErrorException] Call to a member function query() on a non-object
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 36, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 36, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-20 00:29:41 Error: Fatal Error (1): Call to a member function query() on a non-object in [/opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php, line 36]
+2014-05-20 00:29:41 Error: [FatalErrorException] Call to a member function query() on a non-object
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 36, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 36, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-20 00:30:03 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column "titulo" does not exist
+LINE 1: SELECT titulo, data_emprestimo,data_devolucao, data_prev_dev...
+               ^
+Request URL: /biblioteca/Relatorios/data/2
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(39): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('2')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:43:47 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column "day" does not exist
+LINE 1: ...restimo,data_devolucao, data_prev_dev,  date_part("day",data...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(40): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('1')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:44:25 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  column "days" does not exist
+LINE 1: ...restimo,data_devolucao, data_prev_dev,  date_part("days",dat...
+                                                             ^
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT titulo, ...', Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT titulo, ...', Array, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT titulo, ...')
+#4 [internal function]: DboSource->query('SELECT titulo, ...')
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /opt/lampp/htdocs/biblioteca/app/Controller/RelatoriosController.php(40): Model->query('SELECT titulo, ...')
+#7 [internal function]: RelatoriosController->data('1')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RelatoriosController), Array)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-20 00:51:14 Error: Fatal Error (4): syntax error, unexpected ',' in [/opt/lampp/htdocs/biblioteca/app/View/Relatorios/alunos.ctp, line 9]
+2014-05-20 00:51:14 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 9, Array)
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 9, Array)
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-20 00:51:30 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /opt/lampp/htdocs/biblioteca/lib/Cake/Model/Model.php(1355): Model->getDataSource()
+#2 /opt/lampp/htdocs/biblioteca/lib/Cake/View/Helper/FormHelper.php(207): Model->schema()
+#3 /opt/lampp/htdocs/biblioteca/lib/Cake/View/Helper/FormHelper.php(459): FormHelper->_introspectModel('Relatorio', 'fields')
+#4 /opt/lampp/htdocs/biblioteca/app/View/Relatorios/alunos.ctp(9): FormHelper->create('Relatorio', Array)
+#5 /opt/lampp/htdocs/biblioteca/lib/Cake/View/View.php(929): include('/opt/lampp/htdo...')
+#6 /opt/lampp/htdocs/biblioteca/lib/Cake/View/View.php(891): View->_evaluate('/opt/lampp/htdo...', Array)
+#7 /opt/lampp/htdocs/biblioteca/lib/Cake/View/View.php(460): View->_render('/opt/lampp/htdo...')
+#8 /opt/lampp/htdocs/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#9 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#10 /opt/lampp/htdocs/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /opt/lampp/htdocs/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}

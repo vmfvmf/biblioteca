@@ -1,9 +1,7 @@
 <?php
 $this->set("title_for_layout", "Assuntos");  
 $this->extend('/Common/view');
-$this->start('title');
-echo $this->Html->link('BIBLIOTECA','../')   .' > <b>ASSUNTOS</b>';
-$this->end();
+$this->assign('title',$this->Html->link('BIBLIOTECA','../')   .' > <b>ASSUNTOS</b>');
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Novo Assunto',array('controller' => 'Assuntos', 'action' => 'add')); ?></li>
