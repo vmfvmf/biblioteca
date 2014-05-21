@@ -1,9 +1,8 @@
 <?php
-$this->set("title_for_layout", "Autors");  
 $this->extend('/Common/view');
-$this->start('title');
-echo $this->Html->link('BIBLIOTECA','../')   .' > <b>AUTORES</b>';
-$this->end();
+$this->set("title_for_layout", "Autores");  
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').'<b> AUTORES </b>');
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Novo Autor',array('controller' => 'Autors', 'action' => 'add')); ?></li>
@@ -12,13 +11,13 @@ $this->start('sidebar');
 <div id="main_div" >
 <table>
     <tr>
-            <td><b><?=$this->Paginator->sort('nome','AUTOR');?></b></td> 
+            <td><b><?=$this->Paginator->sort('autor','AUTOR');?></b></td> 
             <td><b>AÇÃO</b></td>
     </tr>
     
 <? foreach($autors as $autor){  ?>
         <tr>
-               <td><?=$autor['Autor']['nome']; ?></td>
+               <td><?=$autor['Autor']['autor']; ?></td>
                
                <td>
                     <?=$this->Html->link('Editar',array('controller' => 'Autors', 'action' => 'edit',$autor['Autor']['id'])); ?>

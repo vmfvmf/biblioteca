@@ -1,4 +1,10 @@
 <?php
+echo $this->Html->script('jquery', false);
+echo $this->Html->script('jquery-ui', false);
+echo $this->Html->script('easyaspie', false);
+echo $this->Html->script('superfish', false);
+echo $this->Html->script('modernizr', false);
+echo $this->Html->css('fastwork', false);
 /**
  *
  *
@@ -27,16 +33,47 @@
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('cake.generic');
+                echo $this->Html->css('easy');
+                echo $this->Html->css('jquery-ui');
+                echo $this->Html->css('jquery-ui-min');
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
- 	?>
+                
+                ?>
+<script>
+  $(function(){
+      $('nav').easyPie();
+});
+
+</script>
 </head>
 <body>
 	<div id="container">
 		<div id="header">
 			<h1><?=$this->Html->link('Biblioteca','../'); ?></h1>
-</div>
+<nav>
+<ul class="nav">
+    <li><a href="#">Inicio</a></li>
+    <li>
+        <a href="#">Cadastros</a>
+        <ul>
+            <li><?=$this->Html->link('Alunos',array('controller' => 'Alunos', 'action' => 'index')); ?></li>
+            <li><?=$this->Html->link('Assuntos',array('controller' => 'Assuntos', 'action' => 'index')); ?></li>
+            <li><?=$this->Html->link('Autores',array('controller' => 'Autors', 'action' => 'index')); ?></li>
+            <li><?=$this->Html->link('Classificações',array('controller' => 'Classificacaos', 'action' => 'index')); ?></li>
+            <li><?=$this->Html->link('Editoras',array('controller' => 'Editoras', 'action' => 'index')); ?></li>
+            <li><?=$this->Html->link('Empréstimos',array('controller' => 'Emprestimos', 'action' => 'index')); ?></li>
+            <li><?=$this->Html->link('Livros',array('controller' => 'Livros', 'action' => 'index')); ?></li>
+            <li><?=$this->Html->link('Localizações',array('controller' => 'Localizacaos', 'action' => 'index')); ?></li>
+            <li><?=$this->Html->link('Relatórios',array('controller' => 'Relatorios', 'action' => 'index')); ?></li>
+            <li><?=$this->Html->link('Títulos',array('controller' => 'Titulos', 'action' => 'index')); ?></li>
+        </ul>
+    </li>
+</ul>
+</nav>
+                </div>
+                <div id="fastwork"><? echo $this->fetch('fastwork'); ?></div>
 		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>
@@ -49,3 +86,4 @@
 	</div>
 </body>
 </html>
+

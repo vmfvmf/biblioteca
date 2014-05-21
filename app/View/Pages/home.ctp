@@ -16,5 +16,7 @@
 <br/>
 <?=$this->Html->link('Editoras',array('controller' => 'Editoras', 'action' => 'index')); ?>
 <br/>
+<?=$this->Html->link('Localizações',array('controller' => 'Localizacaos', 'action' => 'index')); ?>
+<br/>
 <?=$this->Html->link('Relatorios',array('controller' => 'Relatorios', 'action' => 'index')); ?>
 <br/>

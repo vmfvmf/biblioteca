@@ -1,21 +1,18 @@
 <?php
-$this->set("title_for_layout", "Emprestimos");  
 $this->extend('/Common/view');
-$this->start('title');
-echo $this->Html->link('BIBLIOTECA','../')   .' > <b>ALUNOS</b>';
-$this->end();
+$this->set("title_for_layout", "Empréstimos");  
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').'<b> EMPRÉSTIMOS </b>');
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Registrar Empréstimo',array('controller' => 'Emprestimos', 'action' => 'add')); ?></li>
 <?php $this->end(); ?>
-<h1>Emprestimos</h1>
-
 <div id="main_div">
 <table>
     <tr>
             <td><b>ALUNO</b></td> 
             <td><b>LIVRO</b></td> 
-            <td><b>DATA EMPRESTIMO</b></td> 
+            <td><b>DATA EMPRÉSTIMO</b></td> 
             <td><b>DATA DEVOLUÇÃO</b></td>
             <td><b>PRAZO DEVOLUÇÃO</b></td>
             <td><b>AÇÕES</b></td>
@@ -23,18 +20,21 @@ $this->start('sidebar');
     
 <? foreach($emprestimos as $emp){  ?>
         <tr>
-               <td><?=$emp['Aluno']['nome']; ?></td>
-               <td><?=$emp['Livro']['Titulo']['titulo']; ?></td>
-               <td><?=$this->Time->format($emp['Emprestimo']['data_emprestimo'], '%d/%m/%Y'); ?></td>
-               <td><?=($emp['Emprestimo']['data_devolucao'] != null) ? 
-                 $this->Time->format($emp['Emprestimo']['data_devolucao'], '%d/%m/%Y'):
-                    $emp['Emprestimo']['data_devolucao']; ?></td>
-               <td><?=$this->Time->format($emp['Emprestimo']['data_prev_dev'], '%d/%m/%Y'); ?></td>
+               <td><?=$emp['Viewlte']['aluno']; ?></td>
+               <td><?=$emp['Viewlte']['titulo']; ?></td>
+               <td><?=$this->Time->format($emp['Viewlte']['data_emprestimo'], '%d/%m/%Y'); ?></td>
+               <td><?=($emp['Viewlte']['data_devolucao'] != null) ? 
+                 $this->Time->format($emp['Viewlte']['data_devolucao'], '%d/%m/%Y'):
+                    $emp['Viewlte']['data_devolucao']; ?></td>
+               <td><?=$this->Time->format($emp['Viewlte']['prazo_devolucao'], '%d/%m/%Y'); ?></td>
                <td>
-                    <?=$this->Html->link('Editar',array('controller' => 'Emprestimos', 'action' => 'edit',$emp['Emprestimo']['id'])); ?>
-                  |  <?=$this->Html->link('Excluir',array('controller' => 'Emprestimos', 'action' => 'delete',$emp['Emprestimo']['id']), null, "Deseja excluir este emprestimo?"); ?>
-               <? if(!$emp['Emprestimo']['data_devolucao']) echo ' | '. $this->Html->link('Devolver',array('controller' => 'Emprestimos', 'action' => 'devolver',$emp['Emprestimo']['id']), null, "Registrar devolução?"); ?>
-                  |  <?=$this->Html->link('Detalhes',array('controller' => 'Emprestimos', 'action' => 'view',$emp['Emprestimo']['id'])); ?>
+                    <?=$this->Html->link('Editar',array('controller' => 'Emprestimos', 'action' => 'edit',$emp['Viewlte']['id'])); ?>
+                  |  <?=$this->Html->link('Excluir',array('controller' => 'Emprestimos', 'action' => 'delete',$emp['Viewlte']['id']), null, "Deseja excluir este emprestimo?"); ?>
+               <? if(!$emp['Viewlte']['data_devolucao']) echo ' | '. $this->Html->link('Devolver',array('controller' => 'Emprestimos',
+                        'action' => 'devolver',$emp['Viewlte']['id']), null, "Registrar devolução?"); ?>
+                  <? if(!$emp['Viewlte']['data_devolucao']) echo ' | '. $this->Html->link('Prorrogar',array('controller' => 'Emprestimos',
+                        'action' => 'prorrogar',$emp['Viewlte']['id']), null, "Registrar devolução?"); ?>
+                  |  <?=$this->Html->link('Detalhes',array('controller' => 'Emprestimos', 'action' => 'view',$emp['Viewlte']['id'])); ?>
                  
 
                </td> 

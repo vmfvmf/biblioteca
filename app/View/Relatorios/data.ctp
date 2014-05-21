@@ -51,7 +51,7 @@
     <tr>
         <td><?=$d['0']['titulo'];?></td>
         <td><?=$this->Time->format($d['0']['data_emprestimo'], '%d/%m/%Y'); ?></td>
-        <td><?=$this->Time->format($d['0']['data_prev_dev'], '%d/%m/%Y'); ?></td>
+        <td><?=$this->Time->format($d['0']['prazo_devolucao'], '%d/%m/%Y'); ?></td>
         <td><?=$this->Time->format($d['0']['data_devolucao'], '%d/%m/%Y'); ?></td>
         <td><?=$d[0]['atraso']; ?></td>
     </tr>

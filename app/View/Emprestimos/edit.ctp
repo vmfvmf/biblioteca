@@ -1,19 +1,18 @@
 <?php
-echo $this->Html->link('BIBLIOTECA','../')   .' > '.
-        $this->Html->link('EMPRESTIMOS',array('controller' => 'Emprestimos', 'action' => 'index'))
-        .' > <b>NOVO</b>';
-?>
-<h1>Editar Escola</h1>
+echo $this->Html->script('jquery', false);
+echo $this->Html->script('jquery-ui', false);
+echo $this->Html->css('jquery-ui', null, array('inline' => false));
 
-<?php  
-    <?php  
-    echo $this->Html->script('jquery', false);
-    echo $this->Html->script('jquery-ui', false);
-    echo $this->Html->css('jquery-ui', null, array('inline' => false));
+$this->set("title_for_layout", 'Editar Empréstimo');
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').
+        $this->Html->link(' EMPRÉSTIMOS ',array('controller' => 'Emprestimos', 'action' => 'index')).
+        $this->Html->image('../img/arrow.png').'<b> EDITAR </b>');
+
     if(isset($livros)){
-        echo    $this->Form->create('Emprestimo',array( 'action' => 'edit')),
+        echo    $this->Form->create(),
                 $this->Form->input('livro_id',array
-                  ('options'=>$livros, 'empty' => 'Selecione o livro')),
+                  ('options'=>$livros)),
                 $this->Form->input('aluno_id',array('type' => 'hidden', 'value'=> '0', 'id' => 'aluno_id')),
                 $this->Form->input('aluno',array(
                     'id' => 'nome',

@@ -1,12 +1,11 @@
 <?php
-echo $this->Html->link('BIBLIOTECA','../')   .' > '.
-        $this->Html->link('AUTORES',array('controller' => 'Autors', 'action' => 'index'))
-        .' > <b>EDITAR</b>';
-?>
-<h1>Editar Autor</h1>
+$this->set("title_for_layout", 'Editar Autor');
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').
+        $this->Html->link(' AUTORES ',array('controller' => 'Autors', 'action' => 'index')).
+        $this->Html->image('../img/arrow.png').'<b> EDITAR </b>');
 
-<?php  
-       echo    $this->Form->create(),
-                       $this->Form->input('nome'),
+echo    $this->Form->create(),
+                       $this->Form->input('autor'),
                        $this->Form->end('salvar');
 ?>

@@ -1,15 +1,13 @@
 <?php
-$this->set("title_for_layout", "Editoras");  
 $this->extend('/Common/view');
-$this->start('title');
-echo $this->Html->link('BIBLIOTECA','../')   .' > <b>EDITORAS</b>';
-$this->end();
+$this->set("title_for_layout", "Editoras");  
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').'<b> EDITORAS </b>');
+
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Nova Editora',array('controller' => 'Editoras', 'action' => 'add')); ?></li>
 <?php $this->end(); ?>
-<h1>Editoras<h1>
-
         <div id="main_div">
 <table>
     <tr>

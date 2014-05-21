@@ -4,16 +4,17 @@
         public  $name = "Emprestimos";
         
         public function index() {
-            $this->paginate = array('limit' => 20, 'recursive' => 2);//, 'order' => array( 'Livro.' => 'asc'));
-            $emprestimos = $this->paginate('Emprestimo');
-                        
+            $this->paginate = array('limit' => 20, 'recursive' => 1);//, 'order' => array( 'Livro.' => 'asc'));
+            $emprestimos = $this->paginate('Viewlte');
             $this->set(compact('emprestimos'));
         }
         
         public function add(){
             if ($this->data){
                 if($this->Emprestimo->save($this->data)){
-                    $this->Session->setFlash(__('Emprestimo realizado com sucesso.'));
+                    $this->Session->setFlash(__('Cadastrado com sucesso!', null),
+                            'default', 
+                             array('class' => 'notice success'));
                     return $this->redirect(array('action' => 'index'));
                 }
             }
@@ -23,26 +24,27 @@
         
         public function edit($id = null){
             if (!$id) {
-                throw new NotFoundException(__('Invalid titulo'));
+                throw new NotFoundException(__('Invalid'));
             }
-            $titulo = $this->Titulo->findById($id);
-            if (!$titulo) {
-                throw new NotFoundException(__('Invalid TItulo'));
+            $emp = $this->Emprestimolivros->findById($id);
+            if (!$emp) {
+                throw new NotFoundException(__('Invalid'));
             }
-            if ($this->request->is(array('titulo', 'put'))) {
-                $this->Titulo->id = $id;
-            if ($this->Titulo->save($this->request->data)) {
-                $this->Session->setFlash(__('Your titulo has been updated.'));
+            if ($this->request->is(array('emprestimo', 'put'))) {
+                $this->Emprestimolivros->id = $id;
+            if ($this->Emprestimolivros->save($this->request->data)) {
+                $this->Session->setFlash(__('Atualizado com sucesso!', null),
+                            'default', 
+                             array('class' => 'notice success'));
                 return $this->redirect(array('action' => 'index'));
             }
                 $this->Session->setFlash(__('Unable to update your titulo.'));
             }
             if (!$this->request->data) {
-                $this->request->data = $titulo;
+                $this->request->data = $emp;
             }
-            self::getLocalizacao();
-            self::getAutors();
-            self::getCategorias();
+            self::getAlunos();
+            self::getLivros();
         }
         
         public function devolver($id = null){
@@ -50,17 +52,33 @@
                 if(!$this->Emprestimo->realizaDev($id)){
                 
                 }
-                $this->Session->setFlash("Livro devolvido com sucesso!");
+                $this->Session->setFlash(__('Devolução bem sucedida!', null),
+                            'default', 
+                             array('class' => 'notice success'));
+                $this->redirect(array('controller' => 'Emprestimos', 'action' => 'index'));
+            }
+        }
+        
+        public function prorrogar($id = null){
+            if($id){
+                if(!$this->Emprestimo->prorrogaPrazo($id)){
+                
+                }
+                $this->Session->setFlash(__('Prazo Prorrogado!', null),
+                            'default', 
+                             array('class' => 'notice success'));
                 $this->redirect(array('controller' => 'Emprestimos', 'action' => 'index'));
             }
         }
         
         public function delete($id = null){
             if($id){
-                if($this->Emprestimo->delete($id)){
-                    $this->Session->setFlash("Emprestimo excluido com sucesso!");
+                if($this->Emprestimolivros->delete($id)){
+                    $this->Session->setFlash(__('Deletado com sucesso!', null),
+                            'default', 
+                             array('class' => 'notice'));
                 }
-                $this->redirect(array('controller' => 'Emprestimos', 'action' => 'index'));
+                $this->redirect(array('controller' => 'Emprestimolivros', 'action' => 'index'));
             }
         }
         
@@ -74,29 +92,27 @@
             }
             //self::getAlunos();
             self::getLivro();                
-            pr($emprestimo);exit(0);
         }
        
         public function getLivro(){
-           $this->Emprestimo->Livro->Behaviors->load('Containable');
+           $this->Emprestimolivro->Livro->Behaviors->load('Containable');
            $livro = $this->Emprestimo->Livro->find('all');
            $this->set(compact('livro'));
            //pr($livro); exit(0);
         }
         
         public function getAlunos(){
-            $alunos = $this->Emprestimo->Aluno->find('list',array('fields' => array( 'id', 'nome')));
+            $alunos = $this->Emprestimo->Aluno->find(
+                    'list',array('fields' => array( 'id', 'nome')));
             $this->set(compact('alunos'));
-//            pr($alunos);exit(0);
         }
         
         public function getLivros(){
             $livros = $this->Emprestimo->Livro->getLivrosTitulo();
             if($livros){
                 foreach($livros as $row) {
-                    $id = $row[0]['livro_id'];
-                    $name = $row[0]['titulo'];
-                    $list[$id] = $name;
+                    $list[$row[0]['livro_id']] = $row[0]['titulo'];
+                    //$list['titulo'] = $row[0]['titulo'];
                 }
                 $livros = $list;
                 $this->set(compact('livros'));

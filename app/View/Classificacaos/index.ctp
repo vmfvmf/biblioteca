@@ -1,15 +1,14 @@
 <?php
-$this->set("title_for_layout", "Classificação");  
 $this->extend('/Common/view');
-$this->start('title');
-echo $this->Html->link('BIBLIOTECA','../')   .' > <b>CLASSIFICAÇÕES</b>';
-$this->end();
+$this->set("title_for_layout", "Classificações");  
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').'<b> CLASSIFICAÇÕES </b>');
+
 
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Nova Classificação',array('controller' => 'Classificacaos', 'action' => 'add')); ?></li>
 <?php $this->end(); ?>
-<h1>Classificações<h1>
 
         <div id="main_div" >
 <table>

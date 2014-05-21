@@ -1,7 +1,10 @@
 <?php
-$this->set("title_for_layout", "Assuntos");  
+
 $this->extend('/Common/view');
-$this->assign('title',$this->Html->link('BIBLIOTECA','../')   .' > <b>ASSUNTOS</b>');
+$this->set("title_for_layout", "Assuntos");  
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').'<b> ASSUNTOS </b>');
+
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Novo Assunto',array('controller' => 'Assuntos', 'action' => 'add')); ?></li>
@@ -20,7 +23,7 @@ $this->start('sidebar');
                
                <td>
                     <?=$this->Html->link('Editar',array('controller' => 'Assuntos', 'action' => 'edit',$ass['Assunto']['id'])); ?>
-                  |  <?=$this->Html->link('Excluir',array('controller' => 'Assunto', 'action' => 'delete',$ass['Assunto']['id']), null, "Deseja excluir este assunto?"); ?>
+                  |  <?=$this->Html->link('Excluir',array('controller' => 'Assuntos', 'action' => 'delete',$ass['Assunto']['id']), null, "Deseja excluir este assunto?"); ?>
                  
 
                </td> 

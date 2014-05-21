@@ -1,10 +1,8 @@
 <?php
-echo $this->Html->link('BIBLIOTECA','../')   .' > '.
-        $this->Html->link('LIVROS',array('controller' => 'Livros', 'action' => 'index'))
-        .' > <b>EDITAR</b>';
-?>
-<h1>Editar Livro</h1>
-<?php  
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').
+        $this->Html->link(' LIVROS ',array('controller' => 'Livros', 'action' => 'index')).
+        $this->Html->image('../img/arrow.png').'<b> EDITAR </b>');
 
         echo    $this->Form->create('Livro',array( 'action' => 'edit')),
                 $this->Form->input('titulo_id',array

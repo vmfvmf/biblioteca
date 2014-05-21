@@ -1,19 +1,17 @@
 <?php
-    echo $this->Html->script('jquery', false);
-    echo $this->Html->script('jquery-ui-1.10.4.min', false);
-    echo $this->Html->script('ui.multiselect', false);
-    echo $this->Html->css('jquery-ui', null, array('inline' => false));
-    echo     $this->Html->css('ui.multiselect', null, array('inline' => false));
-    echo $this->Html->link('BIBLIOTECA','../')   .' > '.
-        $this->Html->link('TITULOS',array('controller' => 'Titulos', 'action' => 'index'))
-        .' > <b>EDITAR</b>';
-?>
-<h1>Editar Titulo</h1>
+$this->set("title_for_layout", "Editar Título"); 
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').
+        $this->Html->link(' TÍTULOS ',array('controller' => 'Titulos', 'action' => 'index')).
+        $this->Html->image('../img/arrow.png').'<b> EDITAR </b>');
 
-<?php  
+echo $this->Html->script('jquery', false);
+echo $this->Html->script('jquery-ui', false);
+    echo $this->Html->script('ui.multiselect', false);
+    echo     $this->Html->css('ui.multiselect', null, array('inline' => false));
     
-       echo    $this->Form->create('Titulo',array( 'action' => 'edit')),
-          $this->Form->input('titulo'),
+       echo    $this->Form->create(),
+          $this->Form->input('titulo', array('label'=>'Título')),
                        
           $this->Form->input('Autor', array(
                               'label' => __('Autores',true),
@@ -40,7 +38,7 @@
                               'options'=>$assuntos,
               'style' => 'clear: none !important; width:460px; height:200px;'
           )),
-          $this->Form->input('localizacao_id',array('options'=>$localizacao, 'empty' => 'Selecione o titulo')),
+          $this->Form->input('localizacao_id',array('options'=>$localizacao, 'empty' => '')),
           $this->Form->end('Salvar');
        
           $this->Html->scriptStart(array('inline' => false));

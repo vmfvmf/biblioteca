@@ -3,7 +3,17 @@
         
         public $name = "Livro";
         public $belongsTo = array("Idioma","Titulo", "Editora");
-        public $hasMany = array("Emprestimo");
+        public $hasMany = array(
+            "Viewlivrosdetalhe" => array(
+                'className' => 'Viewlivrosdetalhe',
+                'foreignKey' => 'id')
+        );
+        public $hasAndBelongsToMany = array(
+                            "Emprestimo" => array(
+                                'className' => 'Emprestimo',
+                                'joinTable' => 'emprestimos_livros',
+                                'foreignKey' => 'livro_id',
+                                'associationForeignKey' => 'emprestimo_id'));
         
         public function getLivrosTitulo(){
             return $this->query('

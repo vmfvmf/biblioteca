@@ -14,7 +14,9 @@
         public function add(){
             if ($this->data){
                 if($this->Autor->save($this->data)){
-                    $this->Session->setFlash(__('Autor cadastrado.'));
+                    $this->Session->setFlash(__('Autor cadastrado', null),
+                            'default', 
+                             array('class' => 'notice success'));
                     return $this->redirect(array('action' => 'index'));
                 }
             }
@@ -31,7 +33,9 @@
             if ($this->request->is(array('$autor', 'put'))) {
                 $this->Autor->id = $id;
             if ($this->Autor->save($this->request->data)) {
-                $this->Session->setFlash(__('Autor atualizado.'));
+                $this->Session->setFlash(__('Autor atualizado', null),
+                            'default', 
+                             array('class' => 'notice success'));
                 return $this->redirect(array('action' => 'index'));
             }
                 $this->Session->setFlash(__('Não foi possível atualizar autor.'));
@@ -43,10 +47,12 @@
         
         public function delete($id = null){
             if($id){
-                if($this->Titulo->delete($id)){
-                    $this->Session->setFlash("Titulo excluido com sucesso!");
+                if($this->Autor->delete($id)){
+                    $this->Session->setFlash(__('Autor excluído', null),
+                            'default', 
+                             array('class' => 'notice'));
                 }
-                $this->redirect(array('controller' => 'Titulos', 'action' => 'index'));
+                $this->redirect(array('controller' => 'Autors', 'action' => 'index'));
             }
         }
         

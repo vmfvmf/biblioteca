@@ -14,7 +14,9 @@
         public function add(){
             if ($this->data){
                 if($this->Editora->save($this->data)){
-                    $this->Session->setFlash(__('Editora cadastrada.'));
+                    $this->Session->setFlash(__('Editora cadastrada.', null),
+                            'default', 
+                             array('class' => 'notice success'));
                     return $this->redirect(array('action' => 'index'));
                 }
             }
@@ -31,7 +33,9 @@
             if ($this->request->is(array('$ass', 'put'))) {
                 $this->Editora->id = $id;
             if ($this->Editora->save($this->request->data)) {
-                $this->Session->setFlash(__('Editora atualizada.'));
+                $this->Session->setFlash(__('Editora cadastrada', null),
+                            'default', 
+                             array('class' => 'notice success'));
                 return $this->redirect(array('action' => 'index'));
             }
                 $this->Session->setFlash(__('Não foi possível atualizar a editora.'));
@@ -43,10 +47,12 @@
         
         public function delete($id = null){
             if($id){
-                if($this->Titulo->delete($id)){
-                    $this->Session->setFlash("Titulo excluido com sucesso!");
+                if($this->Editora->delete($id)){
+                    $this->Session->setFlash(__('Editora excluída', null),
+                            'default', 
+                             array('class' => 'notice'));
                 }
-                $this->redirect(array('controller' => 'Titulos', 'action' => 'index'));
+                $this->redirect(array('controller' => 'Editoras', 'action' => 'index'));
             }
         }
         

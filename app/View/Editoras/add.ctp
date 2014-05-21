@@ -1,10 +1,9 @@
 <?php
-echo $this->Html->link('BIBLIOTECA','../')   .' > '.
-        $this->Html->link('EDITORAS',array('controller' => 'Editoras', 'action' => 'index'))
-        .' > <b>NOVO</b>';
-?>
-<h1>Nova Editora</h1>
-<?php  
+$this->set("title_for_layout", 'Nova Editora');
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').
+        $this->Html->link(' EDITORAS ',array('controller' => 'Editoras', 'action' => 'index')).
+        $this->Html->image('../img/arrow.png').'<b> NOVO </b>');
 
         echo    $this->Form->create('Editora',array( 'action' => 'add')),
                        $this->Form->input('editora'),

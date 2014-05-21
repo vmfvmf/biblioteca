@@ -1,12 +1,17 @@
 <?php
-$this->set("title_for_layout", "Titulos");  
+$this->set("title_for_layout", "Títulos");  
 $this->extend('/Common/view');
-$this->start('title');
-echo $this->Html->link('BIBLIOTECA','../')   .' > <b>TITULOS</b>';
-$this->end();
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').'<b> TÍTULOS </b>');
+
 $this->start('sidebar');
 ?>
-<li><?=$this->Html->link('Novo Titulo',array('controller' => 'Titulos', 'action' => 'add')); ?></li>
+<li><?=$this->Html->link('Novo Título',array('controller' => 'Titulos', 'action' => 'add')); ?></li>
+<br><li><?=$this->Html->link('Novo Autor',array('controller' => 'Autors', 'action' => 'add')); ?></li>
+<br><li><?=$this->Html->link('Novo Assunto',array('controller' => 'Assuntos', 'action' => 'add')); ?></li>
+<br><li><?=$this->Html->link('Nova Classificação',array('controller' => 'Titulos', 'action' => 'add')); ?></li>
+<br><li><?=$this->Html->link('Nova Localização',array('controller' => 'Localizacaos', 'action' => 'add')); ?></li>
+
 <?php 
     $this->end(); 
 ?>
@@ -16,24 +21,35 @@ $this->start('sidebar');
             <td><b><?=$this->Paginator->sort('titulo','TITULO');?></b></td> 
             <td><b>LOCALIZAÇÃO</b></td>
             <td><b>AUTORES</b></td>
+            <td><b>CLASSIFICAÇÕES</b></td>
             <td><b>AÇÃO</b></td>
     </tr>
     
 <? foreach($titulos as $titulo){  ?>
         <tr>
-               <td><?=$this->Html->link($titulo['Titulo']['titulo'],array('controller' => 'Titulos', 'action' => 'view',$titulo['Titulo']['id'])); ?></td>
-               <td><?=$titulo['Localizacao']['nome']; ?></td>
+               <td><?=$this->Html->link($titulo['Viewtitulosdetalhe']['titulo'],array('controller' => 'Titulos', 'action' => 'view',$titulo['Viewtitulosdetalhe']['id'])); ?></td>
+               <td><?=$titulo['Viewtitulosdetalhe']['localizacao']; ?></td>
                <td><?
                                 $txt = "";
-                                foreach($titulo['Autor'] as $autor){
-                                    $txt .= $autor['nome'].'<br>';
+                                $autor = explode(',',$titulo['Viewtitulosdetalhe']['autores']);
+                                foreach($autor as $a){
+                                    $txt .= str_replace(array('"','{','}'), '',$a).'<br>';
+                                }
+                                echo $txt;
+                           ?>
+               </td>
+               <td><?
+                                $txt = "";
+                                $cla = explode(',',$titulo['Viewtitulosdetalhe']['classificacaos']);
+                                foreach($cla as $a){
+                                    $txt .= str_replace(array('"','{','}'), '',$a).'<br>';
                                 }
                                 echo $txt;
                            ?>
                </td>
                <td>
-                    <?=$this->Html->link('Editar',array('controller' => 'Titulos', 'action' => 'edit',$titulo['Titulo']['id'])); ?>
-                  |  <?=$this->Html->link('Excluir',array('controller' => 'Titulos', 'action' => 'delete',$titulo['Titulo']['id']), null, "Deseja excluir essa escola?"); ?>
+                    <?=$this->Html->link('Editar',array('controller' => 'Titulos', 'action' => 'edit',$titulo['Viewtitulosdetalhe']['id'])); ?>
+                  |  <?=$this->Html->link('Excluir',array('controller' => 'Titulos', 'action' => 'delete',$titulo['Viewtitulosdetalhe']['id']), null, "Deseja excluir este titulo?"); ?>
                  
 
                </td> 

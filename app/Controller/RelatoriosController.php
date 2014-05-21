@@ -11,14 +11,6 @@
             self::getAlunos();
         }
         
-        public function delete($id = null){
-            if($id){
-                if($this->Titulo->delete($id)){
-                    $this->Session->setFlash("Titulo excluido com sucesso!");
-                }
-                $this->redirect(array('controller' => 'Titulos', 'action' => 'index'));
-            }
-        }
         
         public function getAlunos(){
             $alunos = $this->Relatorio->Aluno->find('list',array('fields' => array( 'id', 'nome'),
@@ -34,9 +26,9 @@
                     . ' count(*) as "count" FROM ViewLTEs WHERE aluno_id = '.$id.' GROUP BY titulo '
                     . ' ORDER BY count DESC LIMIT 5');
             $atrasos = $this->Relatorio->Viewlte->query(
-                    'SELECT titulo, data_emprestimo,data_devolucao, data_prev_dev, '
-                    . ' extract("days" from data_devolucao - data_prev_dev) as "atraso"'
-                    . ' FROM ViewLTEs WHERE aluno_id = '.$id.' AND data_devolucao > data_prev_dev '
+                    'SELECT titulo, data_emprestimo,data_devolucao, prazo_devolucao, '
+                    . ' extract("days" from data_devolucao) - extract("days" from prazo_devolucao) as "atraso"'
+                    . ' FROM ViewLTEs WHERE aluno_id = '.$id.' AND data_devolucao > prazo_devolucao '
                     . ' ORDER BY titulo ASC LIMIT 5');
             $this->set(compact('aluno'));
             $this->set(compact('atrasos'));

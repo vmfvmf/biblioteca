@@ -1,10 +1,9 @@
 <?php
-echo $this->Html->link('BIBLIOTECA','../')   .' > '.
-        $this->Html->link('ALUNOS',array('controller' => 'Alunos', 'action' => 'index'))
-        .' > <b>NOVO</b>';
-?>
-<h1>Novo Aluno</h1>
-<?php  
+$this->set("title_for_layout", 'Novo Aluno');
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').
+        $this->Html->link(' ALUNOS ',array('controller' => 'Alunos', 'action' => 'index')).
+        $this->Html->image('../img/arrow.png').'<b> NOVO </b>');
 
         echo    $this->Form->create('Aluno',array( 'action' => 'add')),
                        $this->Form->input('nome', array('label' => 'Nome')),

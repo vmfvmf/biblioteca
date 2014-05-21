@@ -3,7 +3,11 @@
         
         public $name = "Titulo";
         public $belongsTo = array("Localizacao");
-        public $hasMany = array("Livro");
+        public $hasMany = array("Livro",
+            "Viewtitulosdetalhe" => array(
+                'className' => 'Viewtitulosdetalhe',
+                'foreignKey' => 'id')
+        );
         public $hasAndBelongsToMany = array(
                             "Autor" => array(
                                 'className' => 'Autor',

@@ -12,7 +12,9 @@
         public function add(){
             if ($this->data){
                 if($this->Classificacao->save($this->data)){
-                    $this->Session->setFlash(__('Classificacão cadastrada.'));
+                    $this->Session->setFlash(__('Classificação cadastrada', null),
+                            'default', 
+                             array('class' => 'notice success'));
                     return $this->redirect(array('action' => 'index'));
                 }
             }
@@ -29,7 +31,9 @@
             if ($this->request->is(array('$ass', 'put'))) {
                 $this->Classificacao->id = $id;
             if ($this->Classificacao->save($this->request->data)) {
-                $this->Session->setFlash(__('Classificação atualizada.'));
+                $this->Session->setFlash(__('Classificação atualizada', null),
+                            'default', 
+                             array('class' => 'notice success'));
                 return $this->redirect(array('action' => 'index'));
             }
                 $this->Session->setFlash(__('Não foi possível atualizar o classificação.'));
@@ -42,7 +46,9 @@
         public function delete($id = null){
             if($id){
                 if($this->Classificacao->delete($id)){
-                    $this->Session->setFlash("Classificação excluido com sucesso!");
+                    $this->Session->setFlash(__('Classificação excluída', null),
+                            'default', 
+                             array('class' => 'notice'));
                 }
                 $this->redirect(array('controller' => 'Classificacaos', 'action' => 'index'));
             }

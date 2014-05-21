@@ -1,9 +1,9 @@
 <?php
 $this->set("title_for_layout", "Alunos");  
 $this->extend('/Common/view');
-$this->start('title');
-echo $this->Html->link('BIBLIOTECA','../')   .' > <b>ALUNOS</b>';
-$this->end();
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').'<b> ALUNOS </b>');
+
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Novo Aluno',array('controller' => 'Alunos', 'action' => 'add')); ?></li>

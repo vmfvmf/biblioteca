@@ -14,7 +14,9 @@
         public function add(){
             if ($this->data){
                 if($this->Assunto->save($this->data)){
-                    $this->Session->setFlash(__('Assunto cadastrado.'));
+                    $this->Session->setFlash(__('Assunto cadastrado', null),
+                            'default', 
+                             array('class' => 'notice success'));
                     return $this->redirect(array('action' => 'index'));
                 }
             }
@@ -31,7 +33,9 @@
             if ($this->request->is(array('$ass', 'put'))) {
                 $this->Assunto->id = $id;
             if ($this->Assunto->save($this->request->data)) {
-                $this->Session->setFlash(__('Assunto atualizado.'));
+                $this->Session->setFlash(__('Assunto atualizado', null),
+                            'default', 
+                             array('class' => 'notice success'));
                 return $this->redirect(array('action' => 'index'));
             }
                 $this->Session->setFlash(__('Não foi possível atualizar o assunto.'));
@@ -43,10 +47,12 @@
         
         public function delete($id = null){
             if($id){
-                if($this->Titulo->delete($id)){
-                    $this->Session->setFlash("Titulo excluido com sucesso!");
+                if($this->Assunto->delete($id)){
+                    $this->Session->setFlash(__('Assunto excluído', null),
+                            'default', 
+                             array('class' => 'notice'));
                 }
-                $this->redirect(array('controller' => 'Titulos', 'action' => 'index'));
+                $this->redirect(array('controller' => 'Assuntos', 'action' => 'index'));
             }
         }
         

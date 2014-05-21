@@ -1,18 +1,17 @@
 <?php
-echo $this->Html->link('BIBLIOTECA','../')   .' > '.
-        $this->Html->link('TITULOS',array('controller' => 'Titulos', 'action' => 'index'))
-        .' > <b>NOVO</b>';
-?>
-<h1>Novo Titulo</h1>
-<?php  
-    echo $this->Html->script('jquery', false);
-    echo $this->Html->script('jquery-ui-1.10.4.min', false);
+$this->set("title_for_layout", "Novo Título"); 
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').
+        $this->Html->link(' TÍTULOS ',array('controller' => 'Titulos', 'action' => 'index')).
+        $this->Html->image('../img/arrow.png').'<b> NOVO </b>');
+
+echo $this->Html->script('jquery', false);
+echo $this->Html->script('jquery-ui', false);
     echo $this->Html->script('ui.multiselect', false);
-    echo $this->Html->css('jquery-ui', null, array('inline' => false));
     echo     $this->Html->css('ui.multiselect', null, array('inline' => false));
     
         echo    $this->Form->create('Titulo',array( 'action' => 'add')),
-                       $this->Form->input('titulo'),
+                       $this->Form->input('titulo', array('label'=>'Título')),
                        
           $this->Form->input('Autor', array(
                               'label' => __('Autores',true),

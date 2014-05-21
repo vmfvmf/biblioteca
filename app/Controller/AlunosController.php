@@ -16,7 +16,7 @@
                 if($this->Aluno->save($this->data)){
                     $this->Session->setFlash(__('Aluno cadastrado.', null),
                             'default', 
-                             array('class' => 'message success'));
+                             array('class' => 'notice success'));
                     return $this->redirect(array('action' => 'index'));
                 }
             }
@@ -35,7 +35,7 @@
             if ($this->Aluno->save($this->request->data)) {
                 $this->Session->setFlash(__('Aluno atualizado.', null),
                             'default', 
-                             array('class' => 'message success'));
+                             array('class' => 'notice success'));
                 return $this->redirect(array('action' => 'index'));
             }
                 $this->Session->setFlash(__('Não foi possível atualizar aluno.'));
@@ -47,10 +47,12 @@
         
         public function delete($id = null){
             if($id){
-                if($this->Titulo->delete($id)){
-                    $this->Session->setFlash("Titulo excluido!");
+                if($this->Aluno->delete($id)){
+                    $this->Session->setFlash(__('Aluno excluído.', null),
+                            'default', 
+                             array('class' => 'notice'));
                 }
-                $this->redirect(array('controller' => 'Titulos', 'action' => 'index'));
+                $this->redirect(array('controller' => 'Alunos', 'action' => 'index'));
             }
         }
         

@@ -1,15 +1,13 @@
 <?php
-$this->set("title_for_layout", "Copias");  
 $this->extend('/Common/view');
-$this->start('title');
-echo $this->Html->link('BIBLIOTECA','../')   .' > <b>LIVROS</b>';
-$this->end();
+$this->set("title_for_layout", "Livros");  
+$this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').'<b> LIVROS </b>');
+
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Novo Livro',array('controller' => 'Livros', 'action' => 'add')); ?></li>
 <?php $this->end(); ?>
-<h1>Livros<h1>
-
         <div id="main_div">
 <table>
     <tr>
@@ -25,23 +23,26 @@ $this->start('sidebar');
     
 <? foreach($livros as $livro){  ?>
         <tr>
-               <td><?=$this->Html->link($livro['Titulo']['titulo'],array('controller' => 'Livros', 'action' => 'view',$livro['Livro']['id'])); ?></td>
-               <td><?=$livro['Livro']['edicao']; ?></td>
-               <td><?=$livro['Livro']['ano']; ?></td>
-               <td><?=$livro['Editora']['editora']; ?></td>
-               <td><?=$livro['Titulo']['Localizacao']['nome']; ?></td>
-               <td><?=$livro['Idioma']['nome']; ?></td>
+               <td><?=$this->Html->link($livro['Viewlivrosdetalhe']['titulo'],
+                       array('controller' => 'Livros', 'action' => 'view',$livro['Viewlivrosdetalhe']['id'])); ?></td>
+               <td><?=$livro['Viewlivrosdetalhe']['edicao']; ?></td>
+               <td><?=$livro['Viewlivrosdetalhe']['ano']; ?></td>
+               <td><?=$livro['Viewlivrosdetalhe']['editora']; ?></td>
+               <td><?=$livro['Viewlivrosdetalhe']['localizacao']; ?></td>
+               <td><?=$livro['Viewlivrosdetalhe']['idioma']; ?></td>
                <td><?
-                                $txt = "";
-                                foreach($livro['Titulo']['Autor'] as $autor){
-                                    $txt .= $autor['nome'].'<br>';
+                                $txt = "<ul>";
+                                $autor = explode(',',$livro['Viewlivrosdetalhe']['autores']);
+                                foreach($autor as $a){
+                                    $txt .= '<li>'.str_replace(array('"','{','}'), '',$a).'</li>';
                                 }
-                                echo $txt; 
+                                echo '</ul>'.$txt; 
                            ?>
                </td>
                <td>
-                    <?=$this->Html->link('Editar',array('controller' => 'Livros', 'action' => 'edit',$livro['Livro']['id'])); ?>
-                  |  <?=$this->Html->link('Excluir',array('controller' => 'Livros', 'action' => 'delete',$livro['Livro']['id']), null, "Deseja excluir este livro?"); ?>
+                    <?=$this->Html->link('Editar',array('controller' => 'Livros', 'action' => 'edit',$livro['Viewlivrosdetalhe']['id'])); ?>
+                  |  <?=$this->Html->link('Excluir',array('controller' => 'Livros', 'action' => 'delete',$livro['Viewlivrosdetalhe']['id']), 
+                            null, "Deseja excluir este livro?"); ?>
                  
 
                </td> 
