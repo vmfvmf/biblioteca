@@ -16,18 +16,24 @@ $this->start('sidebar');
             <td><b>AÇÃO</b></td>
     </tr>
     
-<? foreach($localizacao as $lo){  ?>
+<?php foreach($localizacao as $lo){  ?>
         <tr>
                <td><?=$lo['Localizacao']['localizacao']; ?></td>
                
                <td>
-                    <?=$this->Html->link('Editar',array('controller' => 'Localizacaos', 'action' => 'edit',$lo['Localizacao']['id'])); ?>
-                  |  <?=$this->Html->link('Excluir',array('controller' => 'Localizacaos', 'action' => 'delete',$lo['Localizacao']['id']), null, "Deseja excluir esta Localização?"); ?>
+                    <?= $this->Html->link($this->Html->image('edit.png'), 
+                        array('controller' => 'Localizacaos', 'action' => 'edit',$lo['Localizacao']['id']),
+                        array('escape' => false, 'title' => "Editar"));?>
+                   
+                  | <?= $this->Html->link($this->Html->image('trash.png'), 
+                        array('controller' => 'Localizacaos', 'action' => 'delete',$lo['Localizacao']['id']),
+                        array('escape' => false, 'title' => "Deletar"), "Deseja excluir esta localização?");?> 
+                 
                  
 
                </td> 
         </tr>
-<?  }  ?>
+<?php  }  ?>
 </table>
 <br/>
 <?=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>

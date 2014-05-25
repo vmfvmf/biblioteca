@@ -15,18 +15,23 @@ $this->start('sidebar');
             <td><b>AÇÃO</b></td>
     </tr>
     
-<? foreach($autors as $autor){  ?>
+<?php foreach($autors as $autor){  ?>
         <tr>
                <td><?=$autor['Autor']['autor']; ?></td>
                
                <td>
-                    <?=$this->Html->link('Editar',array('controller' => 'Autors', 'action' => 'edit',$autor['Autor']['id'])); ?>
-                  |  <?=$this->Html->link('Excluir',array('controller' => 'Autors', 'action' => 'delete',$autor['Autor']['id']), null, "Deseja excluir este autor?"); ?>
+                   <?= $this->Html->link($this->Html->image('edit.png'), 
+                        array('controller' => 'Autors', 'action' => 'edit',$autor['Autor']['id']),
+                        array('escape' => false, 'title' => "Editar"));?>
+                   
+                  | <?= $this->Html->link($this->Html->image('trash.png'), 
+                        array('controller' => 'Autors', 'action' => 'delete',$autor['Autor']['id']),
+                        array('escape' => false, 'title' => "Deletar"), "Deseja excluir este autor?");?> 
                  
 
                </td> 
         </tr>
-<?  }  ?>
+<?php  }  ?>
 </table>
 <br/>
 <?=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>

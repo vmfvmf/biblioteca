@@ -17,18 +17,23 @@ $this->start('sidebar');
             <td><b>AÇÃO</b></td>
     </tr>
     
-<? foreach($assuntos as $ass){  ?>
+<?php foreach($assuntos as $ass){  ?>
         <tr>
                <td><?=$ass['Assunto']['assunto']?></td>
                
                <td>
-                    <?=$this->Html->link('Editar',array('controller' => 'Assuntos', 'action' => 'edit',$ass['Assunto']['id'])); ?>
-                  |  <?=$this->Html->link('Excluir',array('controller' => 'Assuntos', 'action' => 'delete',$ass['Assunto']['id']), null, "Deseja excluir este assunto?"); ?>
+                   <?= $this->Html->link($this->Html->image('edit.png'), 
+                        array('controller' => 'Assuntos', 'action' => 'edit',$ass['Assunto']['id']),
+                        array('escape' => false, 'title' => "Editar"));?>
+                   
+                  | <?= $this->Html->link($this->Html->image('trash.png'), 
+                        array('controller' => 'Assuntos', 'action' => 'delete',$ass['Assunto']['id']),
+                        array('escape' => false, 'title' => "Deletar"), "Deseja excluir este assunto?");?> 
                  
 
                </td> 
         </tr>
-<?  }  ?>
+<?php  }  ?>
 </table>
 <br/>
 <?=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>

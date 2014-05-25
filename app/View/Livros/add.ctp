@@ -10,19 +10,23 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
                 $this->Form->input('titulo_id',array('type' => 'hidden', 
                     'value'=> '0', 'id' => 'titulo_id')),
                 $this->Form->input('titulo',array(
-                    'id' => 'titulo',
+                    'id' => 'titulo', 'label' => 'Título',
                     'type' => 'text', 'class' => 'autocomplete'
                 )),
                 
                 $this->Form->input('editora_id',array
                   ('options'=>$editoras, 'empty' => 'Selecione a editora')),
-                $this->Form->input('Livro.cod_barras'),
-                $this->Form->input('Livro.edicao'),
-                $this->Form->input('Livro.obs'),
+                $this->Form->input('Livro.cod_barras', array('label'=>'Código de Barras')),
+                $this->Form->input('Livro.edicao', array('label'=>'Edição')),
+                
+                //$this->Form->input('Livro.data_aquisicao', array('label'=>'Data de Aquisição', 
+                    //"type"=>"hidden")),
+                $this->Form->input("Livro.data_aquisicao", array("id"=>"data_aquisicao", 
+                    "label"=>"Data de Aquisição", "type"=>"text")),
+                $this->Form->input('Livro.obs', array('label'=>'Observações')),
                 $this->Form->input('Livro.ano'),
                 $this->Form->input('idioma_id',array
                   ('options'=>$idiomas, 'empty' => 'Selecione o idioma')),
-                $this->Form->input('Livro.data_aquisicao'),
               $this->Form->end('cadastrar');
         
         $scrip = 'var availableTags = [';
@@ -42,7 +46,20 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
                             $( ".autocomplete" ).val( ui.item.label);
                             return false;}
                     });
-                        $(".multiselect").multiselect();
+                        $("#data_aquisicao").datepicker(
+                            {   defaultDate: "01/01/2010",
+                                dateFormat: "dd/mm/yy",
+                                dayNames: ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"],
+                                dayNamesMin: ["D","S","T","Q","Q","S","S"],
+                                dayNamesShort: ["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"],
+                                monthNames: ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],
+                                monthNamesShort: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],
+                                nextText: "Próx",
+                                prevText: "Ante",
+                                changeYear: true,
+                                changeMonth: true,
+                            }
+                        );
                     });';
         $this->Html->scriptStart(array('inline' => false));
                     echo $scrip;

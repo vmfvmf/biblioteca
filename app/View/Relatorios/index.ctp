@@ -8,7 +8,7 @@
     <div id="accordion">
         <h3 class="divh3">Alunos</h3>
         <div>
-            <?echo $this->Html->link('/Titulo',
+            <?php echo $this->Html->link('/Titulo',
                     array('controller' => 'Relatorios', 'action' => 'alunos'));?>
         </div>
         <h3 class="divh3">Titulos</h3>
@@ -17,7 +17,7 @@
         <div><p>sadf</p></div>
     </div>
 </div>
-    <?
+    <?php
     $this->Html->scriptStart(array('inline' => false));
     
     echo '$(function() {

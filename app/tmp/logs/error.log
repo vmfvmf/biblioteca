@@ -10229,3 +10229,1420 @@ Stack Trace:
 #3 /opt/lampp/htdocs/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-05-24 10:44:22 Error: [MissingControllerException] Controller class ViewltcsController could not be found.
+Exception Attributes: array (
+  'class' => 'ViewltcsController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/viewltcs/alunos
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 10:45:42 Error: [MissingControllerException] Controller class ViewltcsController could not be found.
+Exception Attributes: array (
+  'class' => 'ViewltcsController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/viewltcs/alunos
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 10:45:51 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1355): Model->getDataSource()
+#2 /var/www/html/biblioteca/lib/Cake/View/Helper/FormHelper.php(207): Model->schema()
+#3 /var/www/html/biblioteca/lib/Cake/View/Helper/FormHelper.php(459): FormHelper->_introspectModel('Relatorio', 'fields')
+#4 /var/www/html/biblioteca/app/View/Relatorios/alunos.ctp(9): FormHelper->create()
+#5 /var/www/html/biblioteca/lib/Cake/View/View.php(929): include('/var/www/html/b...')
+#6 /var/www/html/biblioteca/lib/Cake/View/View.php(891): View->_evaluate('/var/www/html/b...', Array)
+#7 /var/www/html/biblioteca/lib/Cake/View/View.php(460): View->_render('/var/www/html/b...')
+#8 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#9 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#10 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-24 10:47:55 Error: [MissingTableException] Table relatorios for model Relatorio was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'relatorios',
+  'class' => 'Relatorio',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/Relatorios/alunos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('relatorios')
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1355): Model->getDataSource()
+#2 /var/www/html/biblioteca/lib/Cake/View/Helper/FormHelper.php(207): Model->schema()
+#3 /var/www/html/biblioteca/lib/Cake/View/Helper/FormHelper.php(459): FormHelper->_introspectModel('Relatorio', 'fields')
+#4 /var/www/html/biblioteca/app/View/Relatorios/alunos.ctp(6): FormHelper->create()
+#5 /var/www/html/biblioteca/lib/Cake/View/View.php(929): include('/var/www/html/b...')
+#6 /var/www/html/biblioteca/lib/Cake/View/View.php(891): View->_evaluate('/var/www/html/b...', Array)
+#7 /var/www/html/biblioteca/lib/Cake/View/View.php(460): View->_render('/var/www/html/b...')
+#8 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#9 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#10 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(RelatoriosController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-24 11:10:47 Error: Fatal Error (4): syntax error, unexpected end of file in [/var/www/html/biblioteca/app/View/Relatorios/data.ctp, line 59]
+2014-05-24 11:10:47 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 59)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 59, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 59, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 11:10:53 Error: Fatal Error (4): syntax error, unexpected end of file in [/var/www/html/biblioteca/app/View/Relatorios/data.ctp, line 59]
+2014-05-24 11:10:53 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 59)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 59, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 59, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 11:10:57 Error: Fatal Error (4): syntax error, unexpected end of file in [/var/www/html/biblioteca/app/View/Relatorios/data.ctp, line 59]
+2014-05-24 11:10:57 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /biblioteca/Relatorios/data/1
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 59)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 59, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 59, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 17:27:30 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/img/arrow.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 17:27:33 Error: [MissingControllerException] Controller class Lol.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Lol.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/lol.html
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 17:40:18 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/var/www/html/biblioteca/app/View/Titulos/index.ctp, line 53]
+2014-05-24 17:40:18 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /biblioteca/Titulos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 53)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 53, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 53, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 17:41:01 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/html/biblioteca/app/View/Titulos/index.ctp, line 54]
+2014-05-24 17:41:01 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /biblioteca/Titulos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 54)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 54, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 54, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 17:41:45 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/html/biblioteca/app/View/Titulos/index.ctp, line 54]
+2014-05-24 17:41:45 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /biblioteca/Titulos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 54)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 54, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 54, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 17:42:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/editicon.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 17:42:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/editicon.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 17:43:27 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/var/www/html/biblioteca/app/View/Titulos/index.ctp, line 52]
+2014-05-24 17:43:27 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /biblioteca/Titulos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 52, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 52, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 17:58:45 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/var/www/html/biblioteca/app/View/Titulos/index.ctp, line 57]
+2014-05-24 17:58:45 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /biblioteca/Titulos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 57)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 57, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 57, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 17:58:53 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/var/www/html/biblioteca/app/View/Titulos/index.ctp, line 57]
+2014-05-24 17:58:53 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /biblioteca/Titulos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 57)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 57, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 57, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 18:23:14 Error: Fatal Error (4): syntax error, unexpected ',' in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 43]
+2014-05-24 18:23:14 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 43, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 43, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 18:23:37 Error: Fatal Error (4): syntax error, unexpected ',' in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 43]
+2014-05-24 18:23:37 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 43, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 43, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 18:23:48 Error: Fatal Error (4): syntax error, unexpected ',' in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 42]
+2014-05-24 18:23:48 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 42, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 42, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 18:23:49 Error: Fatal Error (4): syntax error, unexpected ',' in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 42]
+2014-05-24 18:23:49 Error: [FatalErrorException] syntax error, unexpected ','
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 42, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 42, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 18:24:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:24:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:42:30 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:42:30 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:43:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:43:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:43:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:43:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:43:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:45:29 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:46:32 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 40]
+2014-05-24 18:46:32 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 18:46:48 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 40]
+2014-05-24 18:46:48 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 18:46:49 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 40]
+2014-05-24 18:46:49 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 18:47:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:47:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:49:04 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 40]
+2014-05-24 18:49:04 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 18:49:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:49:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:51:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:51:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:52:34 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:53:47 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:54:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:55:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:55:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:56:44 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 18:56:44 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:00:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:00:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:01:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:01:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:01:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:05:09 Error: Fatal Error (4): syntax error, unexpected ')' in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 40]
+2014-05-24 19:05:09 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:05:24 Error: Fatal Error (1): Call to a member function format() on a non-object in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 42]
+2014-05-24 19:05:24 Error: [FatalErrorException] Call to a member function format() on a non-object
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/b...', 42)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/b...', 42, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/b...', 42, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:06:14 Error: Fatal Error (1): Call to a member function format() on a non-object in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 42]
+2014-05-24 19:06:14 Error: [FatalErrorException] Call to a member function format() on a non-object
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/b...', 42)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/b...', 42, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/b...', 42, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:06:15 Error: Fatal Error (1): Call to a member function format() on a non-object in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 42]
+2014-05-24 19:06:15 Error: [FatalErrorException] Call to a member function format() on a non-object
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/b...', 42)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/b...', 42, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/b...', 42, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:06:22 Error: Fatal Error (1): Call to undefined function format() in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 42]
+2014-05-24 19:06:22 Error: [FatalErrorException] Call to undefined function format()
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/html/b...', 42)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/html/b...', 42, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/html/b...', 42, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:06:23 Error: Fatal Error (1): Call to undefined function format() in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 42]
+2014-05-24 19:06:23 Error: [FatalErrorException] Call to undefined function format()
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/html/b...', 42)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/html/b...', 42, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/html/b...', 42, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:06:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:07:36 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:08:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:09:21 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:09:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:09:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:09:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:09:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:09:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:09:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:10:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:10:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:13:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:13:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:13:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:13:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:13:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:13:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:14:42 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:14:42 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:14:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:14:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:14:44 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:15:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:15:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:15:26 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:15:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:16:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:16:34 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:06 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:06 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:30 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:30 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:30 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:42 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:42 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:17:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:18:11 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:18:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:18:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:18:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:18:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:19:17 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 40]
+2014-05-24 19:19:17 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:19:40 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 40]
+2014-05-24 19:19:40 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:19:41 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 40]
+2014-05-24 19:19:41 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 40, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:21:18 Error: Fatal Error (1): Cannot use object of type DateInterval as array in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 42]
+2014-05-24 19:21:18 Error: [FatalErrorException] Cannot use object of type DateInterval as array
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/var/www/html/b...', 42)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/var/www/html/b...', 42, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/var/www/html/b...', 42, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:22:47 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:23:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:24:01 Error: Fatal Error (4): syntax error, unexpected '.' in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 39]
+2014-05-24 19:24:01 Error: [FatalErrorException] syntax error, unexpected '.'
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 39)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 39, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 39, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:24:07 Error: Fatal Error (4): syntax error, unexpected '.' in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 39]
+2014-05-24 19:24:07 Error: [FatalErrorException] syntax error, unexpected '.'
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 39)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 39, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 39, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:24:08 Error: Fatal Error (4): syntax error, unexpected '.' in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 39]
+2014-05-24 19:24:08 Error: [FatalErrorException] syntax error, unexpected '.'
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 39)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 39, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 39, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:24:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:24:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:27:33 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/img/recycle.jpg
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 19:36:35 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting ',' or ';' in [/var/www/html/biblioteca/app/View/Emprestimos/index.ctp, line 48]
+2014-05-24 19:36:35 Error: [FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting ',' or ';'
+Request URL: /biblioteca/Emprestimos
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 48, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 48, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 19:51:13 Error: Fatal Error (4): syntax error, unexpected ''type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [/var/www/html/biblioteca/app/View/Livros/add.ctp, line 14]
+2014-05-24 19:51:13 Error: [FatalErrorException] syntax error, unexpected ''type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /biblioteca/Livros/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 14)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 14, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 14, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 21:34:42 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [/var/www/html/biblioteca/app/View/Livros/add.ctp, line 27]
+2014-05-24 21:34:42 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /biblioteca/Livros/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 27)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 27, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 27, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 21:38:14 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/var/www/html/biblioteca/app/View/Livros/add.ctp, line 27]
+2014-05-24 21:38:14 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /biblioteca/Livros/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 27)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 27, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 27, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-24 23:35:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/-images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:36:37 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/-images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:38:42 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:38:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:38:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:38:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:39:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:39:07 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:39:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:45:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:45:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/-images/ui-bg_gloss-wave_35_f6a828_500x100.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:45:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/-images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:45:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/-images/ui-icons_ef8c08_256x240.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:45:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/-images/ui-bg_glass_100_f6f6f6_1x400.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:45:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/-images/ui-icons_ef8c08_256x240.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:45:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:45:58 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:46:53 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:47:54 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:48:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:48:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:48:31 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:48:40 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-24 23:48:41 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/jquery-ui-min.css
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

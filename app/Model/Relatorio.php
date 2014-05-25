@@ -1,13 +1,10 @@
 <?php
     class Relatorio extends AppModel{
-        public  $name = "Relatorio";
+        public $name = "Viewlte";
         public $hasMany = array("Aluno","Livro", 
             "Viewlte" => array(
             'className' => 'Viewlte',
             'foreignKey' => 'emprestimo_id'));
-        
-        
-        
     }
 /*
  * To change this license header, choose License Headers in Project Properties.

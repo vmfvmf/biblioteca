@@ -17,18 +17,22 @@ $this->start('sidebar');
             <td><b>AÇÃO</b></td>
     </tr>
     
-<? foreach($alunos as $aluno){  ?>
+<?php foreach($alunos as $aluno){  ?>
         <tr>
                <td><?=$this->Html->link($aluno['Aluno']['nome'],array('controller' => 'Autors', 'action' => 'view',$aluno['Aluno']['nome'])); ?></td>
                <td><?=$aluno['Aluno']['ra']?></td>
                <td>
-                    <?=$this->Html->link('Editar',array('controller' => 'Alunos', 'action' => 'edit',$aluno['Aluno']['id'])); ?>
-                  |  <?=$this->Html->link('Excluir',array('controller' => 'Alunos', 'action' => 'delete',$aluno['Aluno']['id']), null, "Deseja excluir este aluno?"); ?>
-                 
-
+                   <?= $this->Html->link($this->Html->image('edit.png'), 
+                        array('controller' => 'Alunos', 'action' => 'edit',$aluno['Aluno']['id']), 
+                        array('escape' => false, 'title' => "Editar"));?>
+                   
+                  | <?= $this->Html->link($this->Html->image('trash.png'), 
+                        array('controller' => 'Alunos', 'action' => 'delete',$aluno['Aluno']['id']),
+                        array('escape' => false, 'title' => "Deletar"), "Deseja excluir este aluno?");?> 
+                    
                </td> 
         </tr>
-<?  }  ?>
+<?php  }  ?>
 </table>
 <br/>
 <?=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>

@@ -26,14 +26,14 @@
         <td><b>PRIMEIRO EMPRESTIMO</b></td>
         <td><b>ULTIMO EMPRESTIMO</b></td>
     </thead>
-    <? foreach ($dados as $d){?>
+    <?php foreach ($dados as $d){?>
     <tr>
-        <td><?=$d['0']['titulo'];?></td>
+        <td><?php=$d[0]['titulo'];?></td>
         <td><?=$d['0']['count'];?></td>
         <td><?=$this->Time->format($d['0']['min'], '%d/%m/%Y'); ?></td>
         <td><?=$this->Time->format($d['0']['max'], '%d/%m/%Y'); ?></td>
     </tr>
-    <? }?>
+    <?php }?>
 </table>
 <br>
 <hr>
@@ -47,7 +47,7 @@
         <td><b>DATA DEVOLUÇÃO</b></td>
         <td><b>DIAS DE ATRASO</b></td>
     </thead>
-    <? foreach ($atrasos as $d){?>
+    <?php foreach ($atrasos as $d){?>
     <tr>
         <td><?=$d['0']['titulo'];?></td>
         <td><?=$this->Time->format($d['0']['data_emprestimo'], '%d/%m/%Y'); ?></td>
@@ -55,5 +55,5 @@
         <td><?=$this->Time->format($d['0']['data_devolucao'], '%d/%m/%Y'); ?></td>
         <td><?=$d[0]['atraso']; ?></td>
     </tr>
-    <? }?>
+    <?php }?>
 </table>

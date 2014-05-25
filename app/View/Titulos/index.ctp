@@ -25,11 +25,11 @@ $this->start('sidebar');
             <td><b>AÇÃO</b></td>
     </tr>
     
-<? foreach($titulos as $titulo){  ?>
+<?php foreach($titulos as $titulo){  ?>
         <tr>
                <td><?=$this->Html->link($titulo['Viewtitulosdetalhe']['titulo'],array('controller' => 'Titulos', 'action' => 'view',$titulo['Viewtitulosdetalhe']['id'])); ?></td>
                <td><?=$titulo['Viewtitulosdetalhe']['localizacao']; ?></td>
-               <td><?
+               <td><?php
                                 $txt = "";
                                 $autor = explode(',',$titulo['Viewtitulosdetalhe']['autores']);
                                 foreach($autor as $a){
@@ -38,7 +38,7 @@ $this->start('sidebar');
                                 echo $txt;
                            ?>
                </td>
-               <td><?
+               <td><?php
                                 $txt = "";
                                 $cla = explode(',',$titulo['Viewtitulosdetalhe']['classificacaos']);
                                 foreach($cla as $a){
@@ -48,13 +48,16 @@ $this->start('sidebar');
                            ?>
                </td>
                <td>
-                    <?=$this->Html->link('Editar',array('controller' => 'Titulos', 'action' => 'edit',$titulo['Viewtitulosdetalhe']['id'])); ?>
-                  |  <?=$this->Html->link('Excluir',array('controller' => 'Titulos', 'action' => 'delete',$titulo['Viewtitulosdetalhe']['id']), null, "Deseja excluir este titulo?"); ?>
-                 
-
+                <?= $this->Html->link($this->Html->image('edit.png'), 
+                        array("controller"=>"Titulos", "action"=>"edit",$titulo['Viewtitulosdetalhe']['id']), 
+                        array('escape' => false, 'title' => "Editar"));?>
+                   
+                  | <?= $this->Html->link($this->Html->image('trash.png'), 
+                        array("controller"=>"Titulos", "action"=>"delete",$titulo['Viewtitulosdetalhe']['id']), 
+                        array('escape' => false, 'title' => "Deletar"), "Deseja excluir este titulo?");?> 
                </td> 
         </tr>
-<?  }  ?>
+<?php  }  ?>
 </table>
 <br/>
 <?=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>

@@ -17,18 +17,23 @@ $this->start('sidebar');
             <td><b>AÇÃO</b></td>
     </tr>
     
-<? foreach($classificacao as $cas){  ?>
+<?php foreach($classificacao as $cas){  ?>
         <tr>
                <td><?=$cas['Classificacao']['classificacao']?></td>
                
                <td>
-                    <?=$this->Html->link('Editar',array('controller' => 'Classificacaos', 'action' => 'edit',$cas['Classificacao']['id'])); ?>
-                  |  <?=$this->Html->link('Excluir',array('controller' => 'Classificacaos', 'action' => 'delete',$cas['Classificacao']['id']), null, "Deseja excluir esta Classificação?"); ?>
+                   <?= $this->Html->link($this->Html->image('edit.png'), 
+                        array('controller' => 'Classificacaos', 'action' => 'edit',$cas['Classificacao']['id']),
+                        array('escape' => false, 'title' => "Editar"));?>
+                   
+                  | <?= $this->Html->link($this->Html->image('trash.png'), 
+                        array('controller' => 'Classificacaos', 'action' => 'delete',$cas['Classificacao']['id']),
+                        array('escape' => false, 'title' => "Deletar"), "Deseja excluir esta classificação?");?> 
                  
 
                </td> 
         </tr>
-<?  }  ?>
+<?php  }  ?>
 </table>
 <br/>
 <?=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>

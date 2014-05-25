@@ -2,17 +2,14 @@
     echo $this->Html->script('jquery', false);
     echo $this->Html->script('jquery-ui', false);
     echo $this->Html->css('jquery-ui', null, array('inline' => false));
-?>
-<h1>Relatório Aluno</h1>
 
-    <? 
-   echo $this->Form->create('Viewltc',array( 'action' => 'alunos')),
+   echo $this->Form->create(),
         $this->Form->input("aluno_id", array("type"=>"hidden")),
     $this->Form->input("Nome", array("label"=>"Nome", "type" => "text", 
         "id" => 'aluno_id', "class" => "autocomplete"));?>
 
 <div id="rel_div"></div>
-    <?
+    <?php
     $scrip = 'var availableTags = [';
         foreach($alunos as $key => $al){
             $scrip .= '{label:"'.$al.'" , value:"'.$key.'" },';
@@ -41,4 +38,3 @@
     $this->Html->scriptEnd();
     echo $this->Js->writeBuffer();
     ?>
-

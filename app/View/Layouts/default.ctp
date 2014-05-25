@@ -5,6 +5,8 @@ echo $this->Html->script('easyaspie', false);
 echo $this->Html->script('superfish', false);
 echo $this->Html->script('modernizr', false);
 echo $this->Html->css('fastwork', false);
+echo $this->Html->css('jquery-ui');
+echo $this->Html->css('jquery-ui-min');
 /**
  *
  *
@@ -34,8 +36,6 @@ echo $this->Html->css('fastwork', false);
 
 		echo $this->Html->css('cake.generic');
                 echo $this->Html->css('easy');
-                echo $this->Html->css('jquery-ui');
-                echo $this->Html->css('jquery-ui-min');
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
@@ -66,14 +66,16 @@ echo $this->Html->css('fastwork', false);
             <li><?=$this->Html->link('Empréstimos',array('controller' => 'Emprestimos', 'action' => 'index')); ?></li>
             <li><?=$this->Html->link('Livros',array('controller' => 'Livros', 'action' => 'index')); ?></li>
             <li><?=$this->Html->link('Localizações',array('controller' => 'Localizacaos', 'action' => 'index')); ?></li>
-            <li><?=$this->Html->link('Relatórios',array('controller' => 'Relatorios', 'action' => 'index')); ?></li>
             <li><?=$this->Html->link('Títulos',array('controller' => 'Titulos', 'action' => 'index')); ?></li>
         </ul>
+    </li>
+    <li>
+        <li><?=$this->Html->link('Relatórios',array('controller' => 'Relatorios', 'action' => 'index')); ?></li>
     </li>
 </ul>
 </nav>
                 </div>
-                <div id="fastwork"><? echo $this->fetch('fastwork'); ?></div>
+                <div id="fastwork"><?php echo $this->fetch('fastwork'); ?></div>
 		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>

@@ -18,7 +18,7 @@ $this->start('sidebar');
             <td><b>AÇÕES</b></td>
     </tr>
     
-<? foreach($emprestimos as $emp){  ?>
+<?php foreach($emprestimos as $emp){  ?>
         <tr>
                <td><?=$emp['Viewlte']['aluno']; ?></td>
                <td><?=$emp['Viewlte']['titulo']; ?></td>
@@ -28,18 +28,31 @@ $this->start('sidebar');
                     $emp['Viewlte']['data_devolucao']; ?></td>
                <td><?=$this->Time->format($emp['Viewlte']['prazo_devolucao'], '%d/%m/%Y'); ?></td>
                <td>
-                    <?=$this->Html->link('Editar',array('controller' => 'Emprestimos', 'action' => 'edit',$emp['Viewlte']['id'])); ?>
-                  |  <?=$this->Html->link('Excluir',array('controller' => 'Emprestimos', 'action' => 'delete',$emp['Viewlte']['id']), null, "Deseja excluir este emprestimo?"); ?>
-               <? if(!$emp['Viewlte']['data_devolucao']) echo ' | '. $this->Html->link('Devolver',array('controller' => 'Emprestimos',
-                        'action' => 'devolver',$emp['Viewlte']['id']), null, "Registrar devolução?"); ?>
-                  <? if(!$emp['Viewlte']['data_devolucao']) echo ' | '. $this->Html->link('Prorrogar',array('controller' => 'Emprestimos',
-                        'action' => 'prorrogar',$emp['Viewlte']['id']), null, "Registrar devolução?"); ?>
-                  |  <?=$this->Html->link('Detalhes',array('controller' => 'Emprestimos', 'action' => 'view',$emp['Viewlte']['id'])); ?>
-                 
+                   <?= $this->Html->link($this->Html->image('edit.png'), 
+                        array('controller' => 'Emprestimos', 'action' => 'edit',$emp['Viewlte']['id']),
+                        array('escape' => false, 'title' => "Editar"));?>
+                   
+                  | <?= $this->Html->link($this->Html->image('trash.png'), 
+                        array('controller' => 'Emprestimos', 'action' => 'delete',$emp['Viewlte']['id']),
+                        array('escape' => false, 'title' => "Deletar"), "Deseja excluir este esmpréstimo?");?> 
+                <?php if(!$emp['Viewlte']['data_devolucao']){ 
+                    echo " | ".
+                        $this->Html->link($this->Html->image('recycle.png'), 
+                        array('controller' => 'Emprestimos','action' => 'devolver',$emp['Viewlte']['id']),
+                        array('escape' => false, 'title' => "Devolver"), "Registrar devolução?");
+                    
+                    $date1 = date_create($this->Time->format($emp['Viewlte']['prazo_devolucao'],"%Y/%m/%d"));
+                    $date2 = date_create("2014/4/4");//"y.m.d")); 
+                    $diff=date_diff($date1,$date2,false);
+                    if($diff->invert>0) echo " | " .
+                        $this->Html->link($this->Html->image('extend.png'), 
+                        array('controller' => 'Emprestimos','action' => 'prorrogar',$emp['Viewlte']['id']),
+                        array('escape' => false, 'title' => "Renovar"), "Deseja renovar este esmpréstimo?");
+                }?> 
 
                </td> 
         </tr>
-<?  }  ?>
+<?php  }  ?>
 </table>
 <br/>
 <?=$this->Paginator->prev('Ant | '),$this->Paginator->next('Prox       | '),$this->Paginator->numbers();?>

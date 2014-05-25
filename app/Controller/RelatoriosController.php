@@ -34,6 +34,7 @@
             $this->set(compact('atrasos'));
             $this->set(compact('dados'));
             $this->layout = "ajax";
+            //pr($dados);exit(0);
         }
         
     }
