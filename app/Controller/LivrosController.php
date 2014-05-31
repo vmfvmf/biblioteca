@@ -61,6 +61,34 @@
             }
         }
         
+        public function resultado($tipo = null, $valor = null){
+            if($tipo && $valor){
+                switch($tipo){
+                    case "titulo":
+                        $livros = $this->Livro->Titulo->Viewtitulosdetalhe->query(
+                            'SELECT * '
+                            . " FROM Viewtitulosdetalhes WHERE titulo ilike '%".$valor."%'"
+                            . ' ORDER BY titulo');
+                        $this->set(compact('livros'));
+                        break;
+                    
+                }
+            }else $this->redirect(array('controller' => 'Livros', 'action' => 'buscar'));
+        }
+        
+        public function buscar(){
+            if ($this->data){
+                return $this->redirect(array('controller' => 'Livros', 'action' => 'resultado',
+                            $this->data["Livro"]["tipo"],$this->data["Livro"]["titulo"]));
+            }
+            self::getTitulosList();
+            self::getEditoras();
+            self::getIdiomas();
+            self::getAutors();
+            self::getClassificacaos();
+            self::getAssuntos();
+        }
+        
         public function view($id = null){
             if($id){
                 $this->paginate = array('limit' => 10, 'recursive' => 2,
@@ -75,6 +103,20 @@
             $titulos = $this->Livro->Titulo->find('list',array('fields' => array( 'id', 'titulo'),
                                 'order'=>'titulo'));
             $this->set(compact('titulos'));
+        }
+        
+        public function getClassificacaos(){
+            $classificacaos = $this->Livro->Titulo->Classificacao->find('list',array(
+                'fields' => array( 'id', 'classificacao'),
+                                'order'=>'classificacao'));
+            $this->set(compact('classificacaos'));
+        }
+        
+        public function getAssuntos(){
+            $assuntos = $this->Livro->Titulo->Assunto->find('list',array(
+                'fields' => array( 'id', 'assunto'),
+                                'order'=>'assunto'));
+            $this->set(compact('assuntos'));
         }
         
         

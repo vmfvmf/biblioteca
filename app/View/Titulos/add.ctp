@@ -42,7 +42,10 @@ echo $this->Html->script('jquery-ui', false);
           $this->Form->end('cadastrar');
      
         $this->Html->scriptStart(array('inline' => false));
-                    echo '$(function(){$(".multiselect").multiselect();});';
+                    echo '$(function(){
+                        $(".multiselect").multiselect();
+                        $(document).tooltip();
+                    });';
 
                     $this->Html->scriptEnd();
                 echo $this->Js->writeBuffer();

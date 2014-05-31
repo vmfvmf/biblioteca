@@ -12,7 +12,7 @@ $this->start('sidebar');
 <div id="main_div" >
 <table>
     <tr>
-            <td><b><?=$this->Paginator->sort('localizacao','Localizacao');?></b></td> 
+            <td><b><?=$this->Paginator->sort('localizacao','LOCALIZAÇÃO');?></b></td> 
             <td><b>AÇÃO</b></td>
     </tr>
     

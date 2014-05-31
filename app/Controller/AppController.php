@@ -31,4 +31,33 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+ 
+    public $components = array(
+        'Session',
+        'Auth' => array(
+            'loginRedirect' => array('controller' => 'pages', 'action' => 'display', 'home'),
+            'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home'),
+            'authorize' => array('Controller') // Adicionamos essa linha
+        )
+    );
+    
+    function beforeFilter() {
+        parent::beforeFilter(); 
+        $this->Auth->allow('display'); 
+    }
+    
+    public function isAuthorized($user) {
+        $adminControllerAcess = array('Livros','Alunos','Assuntos','Autors','Classificacaos','Editors',
+            'Emprestimos','Idiomas','Livros','Localizacaos','Relatorios','Titulos');
+        if (isset($user['role'])) {
+            if( $user['role'] === 'sadmin' ){
+                return true; // Admin pode acessar todas actions
+            }else if($user['role'] === 'admin' && 
+                    in_array($this->name,$adminControllerAcess)
+                    ){ 
+                return true;
+            }
+        }
+        return false; // Os outros usuários não podem
+    }
 }

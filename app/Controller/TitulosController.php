@@ -82,11 +82,14 @@
         
         public function view($id = null){
             if($id){
-                $titulo = $this->Titulo->read(null, $id);
+                $titulo = $this->Titulo->Viewtitulosdetalhe->read(null, $id);
                 $this->set(compact("titulo"));
-                self::getLocalizacao();
-            self::getAutors();
-            self::getCategorias();
+                $livros = $this->Titulo->Viewlivrosdetalhe->query(
+                            'SELECT * '
+                            . " FROM Viewlivrosdetalhes WHERE titulo_id = ".$id
+                            . ' ORDER BY disponivel');
+                $this->set(compact('livros'));
+                //pr($titulo);exit(0);
             }
         }
         

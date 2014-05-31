@@ -7,6 +7,7 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
 $this->start('sidebar');
 ?>
 <li><?=$this->Html->link('Novo Livro',array('controller' => 'Livros', 'action' => 'add')); ?></li>
+<li><?=$this->Html->link('Buscar Livro',array('controller' => 'Livros', 'action' => 'buscar')); ?></li>
 <?php $this->end(); ?>
         <div id="main_div">
 <table>

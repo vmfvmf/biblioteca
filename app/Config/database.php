@@ -65,7 +65,7 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Postgres',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'postgres',
+		'login' => 'biblioteca_user',
 		'password' => '123',
 		'database' => 'biblioteca',
 		'prefix' => '',

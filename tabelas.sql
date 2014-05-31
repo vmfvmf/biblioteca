@@ -1,10 +1,40 @@
-﻿drop table autors_livros
+﻿revoke all from biblioteca_admin
+drop group biblioteca_admin 
+
+/*create user biblioteca_user password '123'
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON viewlivrosdetalhes TO biblioteca_user
+GRANT ALL ON ALL SEQUENCES IN SCHEMA public TO biblioteca_user
+GRANT ALL PRIVILEGES ON DATABASE biblioteca to biblioteca_user
+create user padrao password '123'
+create group biblioteca with user usuario_biblioteca
+create group biblioteca_admin with user padrao
+grant all on database biblioteca
+	to biblioteca_user
+grant all on 
+	users, alunos,emprestimos,autors,assuntos,classificacaos, editoras, autors_titulos, 
+	idiomas,livros,localizacaos, titulos, Viewlivrosdetalhes, viewltes, emprestimos_livros,
+	classificacaos_titulos, assuntos_titulos, Viewtitulosdetalhes
+	to biblioteca_user;
+create schema admin;
+alter table emprestimos set schema admin;*/
+
+drop table autors_livros
 drop table assuntos_livros
 drop table livros
 drop table localizacaos
 drop table idiomas cascade
 drop table autors
 drop table teste
+
+	CREATE TABLE users (
+	    id SERIAL PRIMARY KEY,
+	    username VARCHAR(50),
+	    password VARCHAR(50),
+	    role VARCHAR(20),
+	    created TIMESTAMP DEFAULT NULL,
+	    modified TIMESTAMP DEFAULT NULL
+	);
 
 create table titulos(id serial primary key, titulo varchar(255), localizacao_id int,
 	constraint fk_livro_localizacao foreign key(localizacao_id) references localizacaos)
@@ -44,17 +74,16 @@ create table emprestimos(id serial primary key, aluno_id int not null,
 		foreign key (aluno_id) references alunos(id))
 
 create table emprestimos_livros(id serial primary key, emprestimo_id int, titulo_id int not null, prorrogado int default 0,
-	livro_id int not null, data_devolucao timestamp, prazo_devolucao timestamp default now()+INTERVAL '7days',
+	livro_id int not null, data_devolucao date, prazo_devolucao timestamp default now()+INTERVAL '7days',
 	foreign key (titulo_id) references titulos(id),
 	foreign key (livro_id) references livros(id))
 	
+
+/* ATUALIZA STATUS DO LIVRO EMPRESTADO PARA INDISPONIVEL E INSERE ID DO TITULO  */
 drop trigger trg_livro_emprestado on emprestimos_livros
 CREATE TRIGGER trg_livro_emprestado
 		BEFORE INSERT ON emprestimos_livros
 		FOR EACH ROW EXECUTE PROCEDURE livro_emprestado();
-
-select * from emprestimos_livros
-
 CREATE or replace FUNCTION livro_emprestado() RETURNS TRIGGER AS
 	$$
 		DECLARE li Livros%ROWTYPE;
@@ -65,6 +94,10 @@ CREATE or replace FUNCTION livro_emprestado() RETURNS TRIGGER AS
 			RETURN NEW;
 		END;
 	$$ LANGUAGE "plpgsql";
+
+
+
+
 select * from viewltes select * from emprestimos_livros
 CREATE TRIGGER trg_livro_devolvido
 		BEFORE INSERT ON emprestimos_livros
@@ -74,7 +107,7 @@ select (now() + INTERVAL '7 days')
 CREATE or replace FUNCTION livro_emprestado() RETURNS TRIGGER AS
 	$$
 		BEGIN
-			SELECT titulo_id FROM livros WHERE id = NEW.livros.id;
+			SELECT titulo_id FROM livros WHERE id = NEW.livros_id;
 			IF(titulo_id) THEN
 				NEW.titulo_id := titulo_id;
 				RETURN NEW;
@@ -82,24 +115,34 @@ CREATE or replace FUNCTION livro_emprestado() RETURNS TRIGGER AS
 		END;
 	$$ LANGUAGE "plpgsql";
 
-
-
-DROP TRIGGER trg_livro_devolvido ON emprestimos
+/* ATUALIZA PRAZO DE ENTREGA DO LIVRO SELECIONADO SE PRAZO NÃO VENCIDO E ATUALIZA DATA DE DEVOLUÇÃO
+	E STATUS DO LIVRO DEVOLVIDO */
+DROP TRIGGER trg_livro_devolvido ON emprestimos_livros
 CREATE TRIGGER trg_livro_devolvido
-		BEFORE UPDATE ON emprestimolivros
-		FOR EACH ROW EXECUTE PROCEDURE livro_devolvido();
-
-CREATE or replace FUNCTION livro_devolvido() RETURNS TRIGGER AS
+		BEFORE UPDATE ON emprestimos_livros
+		FOR EACH ROW EXECUTE PROCEDURE livro_devolvido_prorrogado();
+CREATE or replace FUNCTION livro_devolvido_prorrogado() RETURNS TRIGGER AS
 	$$
 		BEGIN
 			IF (not OLD.data_devolucao isnull AND 
 				not OLD.data_devolucao = NEW.data_devolucao ) THEN 
 				raise exception 'ESTE LIVRO JÁ FOI DEVOLVIDO';
-				/*USING ERRCODE = 'no_puede';*/
+				RETURN OLD;
+			ELSIF (not OLD.data_devolucao isnull AND 
+				NEW.prazo_devolucao <> OLD.prazo_devolucao ) THEN 
+				raise exception 'ESTE LIVRO JÁ FOI DEVOLVIDO E O PRAZO NÃO PODE SER PRORROGADO';
 				RETURN OLD;
 			ELSIF (OLD.data_devolucao isnull) THEN
-				update livros set disponivel = TRUE where id = OLD.livro_id;
-				RETURN NEW;	
+				IF(NEW.prazo_devolucao > OLD.prazo_devolucao) THEN
+					IF(OLD.prazo_devolucao < now()::DATE) THEN
+						raise exception 'PRAZO VENCIDO, PRORROGAMENTO INDISPONÍVEL';
+						RETURN OLD;
+					ELSE RETURN NEW;
+					END IF;
+				ELSE	
+					update livros set disponivel = TRUE where id = OLD.livro_id;
+					RETURN NEW;	
+				END IF	;
 			ELSE 
 				RETURN NEW;
 			END IF;
@@ -116,12 +159,12 @@ SELECT concat( t.titulo , ' - ',l.cod_barras) as "titulo", l.id as
 CREATE OR REPLACE VIEW ViewLTEs AS SELECT t.titulo, e.id as "titulo_id", 
 	el.id as "livro_id", e.id as "emprestimo_id", e.aluno_id as "aluno_id", a.nome as "aluno", 
 	e.data_emprestimo, el.data_devolucao, el.prazo_devolucao, el.id
-	FROM emprestimolivros el
+	FROM emprestimos_livros el
 	INNER JOIN emprestimos e ON e.id = el.emprestimo_id
 	INNER JOIN titulos t ON t.id = el.titulo_id
 	INNER JOIN alunos a ON a.id = e.aluno_id
 			
-select count(*) from viewlte where aluno_id = 1 and titulo_id = 6
+select count(*) from viewltes where aluno_id = 1 and titulo_id = 6
 
 SELECT titulo, data_emprestimo,data_devolucao, data_prev_dev
                     FROM ViewLTE WHERE aluno_id = 1
@@ -201,20 +244,35 @@ CREATE or replace FUNCTION count_titulos(int) RETURNS BIGINT AS
 			SELECT COUNT(*) FROM livros WHERE titulo_id = $1;
 	$$ LANGUAGE sql;
 
+CREATE or replace FUNCTION count_titulos_disponiveis(int) RETURNS BIGINT AS
+	$$
+			SELECT COUNT(*) FROM livros WHERE titulo_id = $1 AND disponivel;
+	$$ LANGUAGE sql;
+
 select get_titulo_assuntos(21)
 select * from viewlivros
 
 select * from viewlivros
 
 CREATE OR REPLACE VIEW Viewtitulosdetalhes AS 
-	SELECT t.id as "id", t.titulo, l.localizacao,(select get_titulo_editoras(t.id)) as "editoras",
+	SELECT t.id as "id", t.titulo, l.localizacao,
+	(select get_titulo_editoras(t.id)) as "editoras",
 	(select get_titulo_autores(t.id)) as "autores",
 	(select get_titulo_classificacaos(t.id)) as "classificacaos",
 	(select get_titulo_assuntos(t.id)) as "assuntos",
-	(select count_titulos(t.id)) as "exemplares"
+	(select count_titulos(t.id)) as exemplares,
+	(select count_titulos_disponiveis(t.id)) as "disponiveis"
 	FROM titulos t INNER JOIN localizacaos l ON t.localizacao_id = l.id
 
+drop view select * from Viewlivrosdetalhes 
 CREATE OR REPLACE VIEW Viewlivrosdetalhes AS
 	SELECT l.*, v.titulo, v.autores, v.classificacaos, v.assuntos, 
-	e.editora FROM livros l INNER JOIN editoras e ON e.id = l.editora_id
+	CASE WHEN NOT l.disponivel THEN 
+		(SELECT el.prazo_devolucao FROM emprestimos_livros el 
+			WHERE l.id = el.livro_id AND data_devolucao ISNULL)
+		ELSE NULL END AS prazo_devolucao,
+	e.editora, i.idioma, v.localizacao
+	FROM livros l INNER JOIN editoras e ON e.id = l.editora_id
+		INNER JOIN idiomas i ON i.id = l.idioma_id
 		INNER JOIN viewtitulosdetalhes v ON l.titulo_id = v.id
+update emprestimos_livros set teste = prazo_devolucao

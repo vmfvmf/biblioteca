@@ -1,7 +1,8 @@
 <?php
-    class Idioma extends AppModel{
+    class Login extends AppModel{
+        public $name = "Login";
+        public $useTable = false;
         
-        public  $name = "Idioma";
     }
 /*
  * To change this license header, choose License Headers in Project Properties.

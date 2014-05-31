@@ -6,7 +6,6 @@ echo $this->Html->script('superfish', false);
 echo $this->Html->script('modernizr', false);
 echo $this->Html->css('fastwork', false);
 echo $this->Html->css('jquery-ui');
-echo $this->Html->css('jquery-ui-min');
 /**
  *
  *
@@ -44,6 +43,7 @@ echo $this->Html->css('jquery-ui-min');
 <script>
   $(function(){
       $('nav').easyPie();
+      $(document).tooltip();
 });
 
 </script>
@@ -54,7 +54,7 @@ echo $this->Html->css('jquery-ui-min');
 			<h1><?=$this->Html->link('Biblioteca','../'); ?></h1>
 <nav>
 <ul class="nav">
-    <li><a href="#">Inicio</a></li>
+    <li><?=$this->Html->link('Início','../'); ?></li>
     <li>
         <a href="#">Cadastros</a>
         <ul>
@@ -64,6 +64,7 @@ echo $this->Html->css('jquery-ui-min');
             <li><?=$this->Html->link('Classificações',array('controller' => 'Classificacaos', 'action' => 'index')); ?></li>
             <li><?=$this->Html->link('Editoras',array('controller' => 'Editoras', 'action' => 'index')); ?></li>
             <li><?=$this->Html->link('Empréstimos',array('controller' => 'Emprestimos', 'action' => 'index')); ?></li>
+            <li><?=$this->Html->link('Idiomas',array('controller' => 'Idiomas', 'action' => 'index')); ?></li>
             <li><?=$this->Html->link('Livros',array('controller' => 'Livros', 'action' => 'index')); ?></li>
             <li><?=$this->Html->link('Localizações',array('controller' => 'Localizacaos', 'action' => 'index')); ?></li>
             <li><?=$this->Html->link('Títulos',array('controller' => 'Titulos', 'action' => 'index')); ?></li>

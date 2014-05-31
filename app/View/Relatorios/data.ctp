@@ -21,10 +21,10 @@
 <h1>5 LIVROS MAIS EMPRESTADOS</h1>
 <table>
     <thead>
-        <td><b>TITULO</b></td>
+        <td><b>TÍTULO</b></td>
         <td><b>QTD EMPRÉSTIMOS</b></td>
-        <td><b>PRIMEIRO EMPRESTIMO</b></td>
-        <td><b>ULTIMO EMPRESTIMO</b></td>
+        <td><b>PRIMEIRO EMPRÉSTIMO</b></td>
+        <td><b>ULTIMO EMPRÉSTIMO</b></td>
     </thead>
     <?php foreach ($dados as $d){?>
     <tr>
@@ -41,8 +41,8 @@
 <h1>DEVOLUÇÕES ATRASADAS</h1>
 <table>
     <thead>
-        <td><b>TITULO</b></td>
-        <td><b>DATA EMPRESTIMO</b></td>
+        <td><b>TÍTULO</b></td>
+        <td><b>DATA EMPRÉSTIMO</b></td>
         <td><b>PRAZO DEVOLUÇÃO</b></td>
         <td><b>DATA DEVOLUÇÃO</b></td>
         <td><b>DIAS DE ATRASO</b></td>

@@ -6,7 +6,10 @@
         public $hasMany = array("Livro",
             "Viewtitulosdetalhe" => array(
                 'className' => 'Viewtitulosdetalhe',
-                'foreignKey' => 'id')
+                'foreignKey' => 'id'),
+            "Viewlivrosdetalhe" => array(
+                'className' => 'Viewlivrosdetalhe',
+                'foreignKey' => 'titulo_id')
         );
         public $hasAndBelongsToMany = array(
                             "Autor" => array(

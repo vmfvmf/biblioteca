@@ -18,7 +18,7 @@ $this->start('sidebar');
 <div id="main_div">
 <table>
     <tr>
-            <td><b><?=$this->Paginator->sort('titulo','TITULO');?></b></td> 
+            <td><b><?=$this->Paginator->sort('titulo','TÍTULO');?></b></td> 
             <td><b>LOCALIZAÇÃO</b></td>
             <td><b>AUTORES</b></td>
             <td><b>CLASSIFICAÇÕES</b></td>

@@ -4,7 +4,7 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
         $this->Html->link(' LIVROS ',array('controller' => 'Livros', 'action' => 'index')).
         $this->Html->image('../img/arrow.png').'<b> EDITAR </b>');
 
-        echo    $this->Form->create('Livro',array( 'action' => 'edit')),
+        echo    $this->Form->create(),
                 $this->Form->input('titulo_id',array
                   ('options'=>$titulos)),
                 $this->Form->input('editora_id',array

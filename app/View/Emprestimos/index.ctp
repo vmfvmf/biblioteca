@@ -42,9 +42,10 @@ $this->start('sidebar');
                         array('escape' => false, 'title' => "Devolver"), "Registrar devolução?");
                     
                     $date1 = date_create($this->Time->format($emp['Viewlte']['prazo_devolucao'],"%Y/%m/%d"));
-                    $date2 = date_create("2014/4/4");//"y.m.d")); 
+                    $date2 = new DateTime();
+                    $date2->format("%Y/%m/%d");
                     $diff=date_diff($date1,$date2,false);
-                    if($diff->invert>0) echo " | " .
+                    if($diff->days > 0 && $diff->invert>0) echo " | " .
                         $this->Html->link($this->Html->image('extend.png'), 
                         array('controller' => 'Emprestimos','action' => 'prorrogar',$emp['Viewlte']['id']),
                         array('escape' => false, 'title' => "Renovar"), "Deseja renovar este esmpréstimo?");
