@@ -1,4 +1,5 @@
 <?php
+$this->assign('menu-principal', $this->element('menu-principal'));
 $this->set("title_for_layout", "Detalhes");  
 $this->extend('/Common/view');
 $this->start('sidebar');

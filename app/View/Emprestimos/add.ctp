@@ -1,4 +1,5 @@
 <?php
+$this->assign('menu-principal', $this->element('menu-principal'));
 echo $this->Html->script('jquery', false);
 echo $this->Html->script('jquery-ui', false);
 echo $this->Html->script('ui.multiselect', false);

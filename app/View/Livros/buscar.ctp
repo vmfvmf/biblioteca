@@ -1,4 +1,5 @@
 <?php
+$this->assign('menu-principal', $this->element('menu-principal'));
 $this->set("title_for_layout", "Buscar Livro"); 
 $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
         $this->Html->image('../img/arrow.png').
@@ -57,7 +58,7 @@ echo $this->Html->script('jquery-ui', false);
                               'multiple' => 'multiple',
                               'options'=>$assuntos,
               'style' => 'clear: none !important; width:460px; height:200px;')),
-               $this->Form->input("tipo", array("type"=>"hidden", "value"=>"asuntos")  ),
+               $this->Form->input("tipo", array("type"=>"hidden", "value"=>"assuntos")  ),
            $this->Form->end("Buscar");?>
         </div>
 

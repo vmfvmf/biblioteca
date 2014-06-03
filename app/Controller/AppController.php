@@ -35,15 +35,15 @@ class AppController extends Controller {
     public $components = array(
         'Session',
         'Auth' => array(
-            'loginRedirect' => array('controller' => 'pages', 'action' => 'display', 'home'),
-            'logoutRedirect' => array('controller' => 'pages', 'action' => 'display', 'home'),
+            'loginRedirect' => array('controller' => 'pages', 'action' => 'display'),
+            'logoutRedirect' => array('controller' => 'pages', 'action' => 'display'),
             'authorize' => array('Controller') // Adicionamos essa linha
         )
     );
     
     function beforeFilter() {
         parent::beforeFilter(); 
-        $this->Auth->allow('display'); 
+        $this->Auth->allow('display','login'); 
     }
     
     public function isAuthorized($user) {
@@ -57,7 +57,6 @@ class AppController extends Controller {
                     ){ 
                 return true;
             }
-        }
-        return false; // Os outros usuários não podem
+        }else{ return false; }// Os outros usuários não podem
     }
 }

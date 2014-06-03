@@ -1,4 +1,5 @@
 <?php
+$this->assign('menu-principal', $this->element('menu-principal'));
 $this->extend('/Common/view');
 $this->set("title_for_layout", "Empréstimos");  
 $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
@@ -20,8 +21,8 @@ $this->start('sidebar');
     
 <?php foreach($emprestimos as $emp){  ?>
         <tr>
-               <td><?=$emp['Viewlte']['aluno']; ?></td>
-               <td><?=$emp['Viewlte']['titulo']; ?></td>
+               <td><?=$this->Html->link($emp['Viewlte']['aluno'],array('controller' => 'Alunos', 'action' => 'view',$emp['Viewlte']['aluno_id'])); ?></td>
+               <td><?=$this->Html->link($emp['Viewlte']['titulo'],array('controller' => 'Livros', 'action' => 'view',$emp['Viewlte']['livro_id'])); ?></td>
                <td><?=$this->Time->format($emp['Viewlte']['data_emprestimo'], '%d/%m/%Y'); ?></td>
                <td><?=($emp['Viewlte']['data_devolucao'] != null) ? 
                  $this->Time->format($emp['Viewlte']['data_devolucao'], '%d/%m/%Y'):

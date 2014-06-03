@@ -24,6 +24,11 @@
             self::getIdiomas();
         }
         
+        function beforeFilter() {
+            parent::beforeFilter(); 
+            $this->Auth->allow('buscar','display','resultado','index','view'); 
+        }
+        
         public function edit($id = null){
             if (!$id) {
                 throw new NotFoundException(__('Invalid post'));
@@ -71,15 +76,109 @@
                             . ' ORDER BY titulo');
                         $this->set(compact('livros'));
                         break;
-                    
+                    case "autors":
+                        $livros_ids = $this->Livro->Titulo->query(
+                                'SELECT t.id '
+                            . " FROM titulos t "
+                            . ' INNER JOIN autors_titulos ta ON'
+                                . ' t.id = ta.titulo_id'
+                                . ' WHERE ta.autor_id IN ('.$valor.')');
+                        $valor = "";
+                        foreach($livros_ids as $id){
+                           $valor .=  $id[0]['id'].',';
+                        }
+                        $valor = substr($valor,0,  strlen($valor)-1);
+                        if($valor){
+                            $livros = $this->Livro->Titulo->Viewtitulosdetalhe->query(
+                                'SELECT * '
+                                . " FROM Viewtitulosdetalhes WHERE id in (".$valor.")"
+                                . ' ORDER BY titulo');
+                            $this->set(compact('livros'));
+                        }
+                        //pr($valor);exit(0);*/
+                        break;
+                    case "classificacaos":
+                        $livros_ids = $this->Livro->Titulo->query(
+                                'SELECT t.id '
+                            . " FROM titulos t "
+                            . ' INNER JOIN classificacaos_titulos ta ON'
+                                . ' t.id = ta.titulo_id'
+                                . ' WHERE ta.classificacao_id IN ('.$valor.')');
+                        $valor = "";
+                        foreach($livros_ids as $id){
+                           $valor .=  $id[0]['id'].',';
+                        }
+                        $valor = substr($valor,0,  strlen($valor)-1);
+                        if($valor){
+                            $livros = $this->Livro->Titulo->Viewtitulosdetalhe->query(
+                                'SELECT * '
+                                . " FROM Viewtitulosdetalhes WHERE id in (".$valor.")"
+                                . ' ORDER BY titulo');
+                            $this->set(compact('livros'));
+                        }
+                        //pr($valor);exit(0);*/
+                        break;
+                    case "assuntos":
+                        //pr($valor);exit(0);
+                        $livros_ids = $this->Livro->Titulo->query(
+                                'SELECT t.id '
+                            . " FROM titulos t "
+                            . ' INNER JOIN assuntos_titulos ta ON'
+                                . ' t.id = ta.titulo_id'
+                                . ' WHERE ta.assunto_id IN ('.$valor.')');
+                        if($livros_ids){
+                            $valor = "";
+                            foreach($livros_ids as $id){
+                               $valor .=  $id[0]['id'].',';
+                            }
+                            $valor = substr($valor,0,  strlen($valor)-1);
+                            if($valor){
+                                $livros = $this->Livro->Titulo->Viewtitulosdetalhe->query(
+                                    'SELECT * '
+                                    . " FROM Viewtitulosdetalhes WHERE id in (".$valor.")"
+                                    . ' ORDER BY titulo');
+                                $this->set(compact('livros'));
+                            }
+                        }
+                        //pr($valor);exit(0);*/
+                        break;
                 }
             }else $this->redirect(array('controller' => 'Livros', 'action' => 'buscar'));
         }
         
         public function buscar(){
             if ($this->data){
-                return $this->redirect(array('controller' => 'Livros', 'action' => 'resultado',
+                switch($this->data["Livro"]["tipo"]){
+                    case "titulo":
+                        return $this->redirect(array('controller' => 'Livros', 'action' => 'resultado',
                             $this->data["Livro"]["tipo"],$this->data["Livro"]["titulo"]));
+                    case "autors":
+                        $var = "";
+                        foreach($this->data["Livro"]["Autor"] as $v){
+                            $var .= $v.',';
+                        }
+                        $var = substr($var,0,  strlen($var)-1);
+                        return $this->redirect(array('controller' => 'Livros', 'action' => 'resultado',
+                            $this->data["Livro"]["tipo"],$var));
+                    case "classificacaos":
+                        $var = "";
+                        foreach($this->data["Livro"]["Classificacao"] as $v){
+                            $var .= $v.',';
+                        }
+                        $var = substr($var,0,  strlen($var)-1);
+                        return $this->redirect(array('controller' => 'Livros', 'action' => 'resultado',
+                            $this->data["Livro"]["tipo"],$var));
+                    case "assuntos":
+                        $var = "";
+                        foreach($this->data["Livro"]["Assunto"] as $v){
+                            $var .= $v.',';
+                        }
+                        $var = substr($var,0,  strlen($var)-1);
+                        return $this->redirect(array('controller' => 'Livros', 'action' => 'resultado',
+                            $this->data["Livro"]["tipo"],$var));
+                        
+                }
+                
             }
             self::getTitulosList();
             self::getEditoras();
@@ -91,11 +190,13 @@
         
         public function view($id = null){
             if($id){
-                $this->paginate = array('limit' => 10, 'recursive' => 2,
-                    'order' => array( 'Livro.Titulo.titulo' => 'asc'),
-                    'conditions' => array('Livro.id =' => $id));
-                $livros = $this->paginate('Livro');
+                $livros = $this->Livro->Titulo->Viewlivrosdetalhe->query(
+                            'SELECT * '
+                            . " FROM Viewlivrosdetalhes WHERE id = ".$id
+                            . ' ORDER BY disponivel desc');
                 $this->set(compact("livros"));
+                $titulo = $this->Livro->Titulo->Viewtitulosdetalhe->read(null, $livros[0][0]['titulo_id']);
+                $this->set(compact("titulo"));
             }
         }
         
@@ -137,6 +238,9 @@
             $this->set(compact('editoras'));
         }
         
+        public function barcode(){
+            
+        }
     }
         
 ?>

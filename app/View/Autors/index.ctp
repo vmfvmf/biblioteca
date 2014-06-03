@@ -1,4 +1,5 @@
 <?php
+$this->assign('menu-principal', $this->element('menu-principal'));
 $this->extend('/Common/view');
 $this->set("title_for_layout", "Autores");  
 $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .

@@ -28,7 +28,7 @@
     </thead>
     <?php foreach ($dados as $d){?>
     <tr>
-        <td><?php=$d[0]['titulo'];?></td>
+        <td><?=$d[0]['titulo'];?></td>
         <td><?=$d['0']['count'];?></td>
         <td><?=$this->Time->format($d['0']['min'], '%d/%m/%Y'); ?></td>
         <td><?=$this->Time->format($d['0']['max'], '%d/%m/%Y'); ?></td>

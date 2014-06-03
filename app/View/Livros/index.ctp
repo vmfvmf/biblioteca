@@ -1,4 +1,5 @@
 <?php
+$this->assign('menu-principal', $this->element('menu-principal'));
 $this->extend('/Common/view');
 $this->set("title_for_layout", "Livros");  
 $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
@@ -6,7 +7,8 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
 
 $this->start('sidebar');
 ?>
-<li><?=$this->Html->link('Novo Livro',array('controller' => 'Livros', 'action' => 'add')); ?></li>
+<li><?= $this->Session->read('Auth.User.role') === 'sadmin' ||
+        $this->Session->read('Auth.User.role') === 'admin' ? $this->Html->link('Novo Livro',array('controller' => 'Livros', 'action' => 'add')) : ''; ?></li>
 <li><?=$this->Html->link('Buscar Livro',array('controller' => 'Livros', 'action' => 'buscar')); ?></li>
 <?php $this->end(); ?>
         <div id="main_div">
@@ -19,7 +21,8 @@ $this->start('sidebar');
             <td><b>LOCALIZAÇÃO</b></td>
             <td><b>IDIOMA</b></td>
             <td><b>AUTORES</b></td>
-            <td><b>AÇÃO</b></td>
+            <?= $this->Session->read('Auth.User.role') === 'sadmin' ||
+            $this->Session->read('Auth.User.role') === 'admin' ? '</li><td><b>AÇÃO</b></td>':''; ?>
     </tr>
     
 <?php foreach($livros as $livro){  ?>
@@ -40,17 +43,17 @@ $this->start('sidebar');
                                 echo '</ul>'.$txt; 
                            ?>
                </td>
-               <td>
-                   <?= $this->Html->link($this->Html->image('edit.png'), 
+              <?= $this->Session->read('Auth.User.role') === 'sadmin' ||
+            $this->Session->read('Auth.User.role') === 'admin' ?  
+               '<td>
+                   '.$this->Html->link($this->Html->image('edit.png'), 
                         array('controller' => 'Livros', 'action' => 'edit',$livro['Viewlivrosdetalhe']['id']),
-                        array('escape' => false, 'title' => "Editar"));?>
+                        array('escape' => false, 'title' => "Editar")).
                    
-                  | <?= $this->Html->link($this->Html->image('trash.png'), 
+                 ' | '.$this->Html->link($this->Html->image('trash.png'), 
                         array('controller' => 'Livros', 'action' => 'delete',$livro['Viewlivrosdetalhe']['id']), 
-                        array('escape' => false, 'title' => "Deletar"), "Deseja excluir este livro?");?> 
-                 
+                        array('escape' => false, 'title' => "Deletar"), "Deseja excluir este livro?").'</td> ' : ''; ?>
 
-               </td> 
         </tr>
 <?php  }  ?>
 </table>

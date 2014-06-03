@@ -1,4 +1,5 @@
 <?php
+$this->assign('menu-principal', $this->element('menu-principal'));
 $this->set("title_for_layout", 'Novo Classificação');
 $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
         $this->Html->image('../img/arrow.png').

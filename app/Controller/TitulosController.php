@@ -8,7 +8,6 @@
             $titulos = $this->paginate('Viewtitulosdetalhe');
                         
             $this->set(compact('titulos'));
-           // pr($titulos);
         }
         
         public function add(){
@@ -87,10 +86,14 @@
                 $livros = $this->Titulo->Viewlivrosdetalhe->query(
                             'SELECT * '
                             . " FROM Viewlivrosdetalhes WHERE titulo_id = ".$id
-                            . ' ORDER BY disponivel');
+                            . ' ORDER BY disponivel desc');
                 $this->set(compact('livros'));
-                //pr($titulo);exit(0);
             }
+        }
+        
+        function beforeFilter() {
+            parent::beforeFilter(); 
+            $this->Auth->allow('view'); 
         }
         
         public function getAutors(){

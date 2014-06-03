@@ -8,11 +8,13 @@
     }
  
     public function login() {
-        if ($this->Auth->login()) {
-            $this->redirect($this->Auth->redirect());
-        } else {
-            $this->Session->setFlash(__('Invalid username or password, try again'));
-        }
+        if ($this->data) {
+            if($this->Auth->login()){
+                $this->redirect($this->Auth->redirect());
+            }else {
+                $this->Session->setFlash(__('Usuário ou senha inválido, por favor tente novamente.'));
+            }            
+        } 
     }
 
     public function logout() {

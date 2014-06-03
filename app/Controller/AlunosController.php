@@ -64,12 +64,8 @@
         
         public function view($id = null){
             if($id){
-                $titulo = $this->Titulo->read(null, $id);
-                $this->set(compact("titulo"));
-                self::getLocalizacao();
-            self::getAutors();
-            self::getCategorias();
-                //pr($titulo);exit(0);
+                $aluno = $this->Aluno->read(null, $id);
+                $this->set(compact("aluno"));
             }
         }
         

@@ -1,5 +1,6 @@
 <?php
 $this->set("title_for_layout", "Alunos");  
+$this->assign('menu-principal', $this->element('menu-principal'));
 $this->extend('/Common/view');
 $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
         $this->Html->image('../img/arrow.png').'<b> ALUNOS </b>');

@@ -276,3 +276,9 @@ CREATE OR REPLACE VIEW Viewlivrosdetalhes AS
 		INNER JOIN idiomas i ON i.id = l.idioma_id
 		INNER JOIN viewtitulosdetalhes v ON l.titulo_id = v.id
 update emprestimos_livros set teste = prazo_devolucao
+
+SELECT t.id FROM titulos t 
+INNER JOIN autors_titulos ta ON t.id = ta.titulo_id WHERE ta.autor_id IN (5,15,14,3) 
+
+select * from users
+update users set role = 'user' where role isnull

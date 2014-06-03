@@ -4,6 +4,8 @@ echo $this->Html->script('jquery-ui', false);
 echo $this->Html->script('easyaspie', false);
 echo $this->Html->script('superfish', false);
 echo $this->Html->script('modernizr', false);
+echo $this->Html->script('jquery.fancybox', false);
+echo $this->Html->css('jquery.fancybox', false);
 echo $this->Html->css('fastwork', false);
 echo $this->Html->css('jquery-ui');
 /**
@@ -44,6 +46,7 @@ echo $this->Html->css('jquery-ui');
   $(function(){
       $('nav').easyPie();
       $(document).tooltip();
+      $('.fancybox').fancybox();
 });
 
 </script>
@@ -52,31 +55,27 @@ echo $this->Html->css('jquery-ui');
 	<div id="container">
 		<div id="header">
 			<h1><?=$this->Html->link('Biblioteca','../'); ?></h1>
+
+                        <div id="inner" style="display:none; width: 400px;">
+                            <?=$this->element('login'); ?>
+                        </div>
 <nav>
 <ul class="nav">
-    <li><?=$this->Html->link('Início','../'); ?></li>
-    <li>
-        <a href="#">Cadastros</a>
-        <ul>
-            <li><?=$this->Html->link('Alunos',array('controller' => 'Alunos', 'action' => 'index')); ?></li>
-            <li><?=$this->Html->link('Assuntos',array('controller' => 'Assuntos', 'action' => 'index')); ?></li>
-            <li><?=$this->Html->link('Autores',array('controller' => 'Autors', 'action' => 'index')); ?></li>
-            <li><?=$this->Html->link('Classificações',array('controller' => 'Classificacaos', 'action' => 'index')); ?></li>
-            <li><?=$this->Html->link('Editoras',array('controller' => 'Editoras', 'action' => 'index')); ?></li>
-            <li><?=$this->Html->link('Empréstimos',array('controller' => 'Emprestimos', 'action' => 'index')); ?></li>
-            <li><?=$this->Html->link('Idiomas',array('controller' => 'Idiomas', 'action' => 'index')); ?></li>
-            <li><?=$this->Html->link('Livros',array('controller' => 'Livros', 'action' => 'index')); ?></li>
-            <li><?=$this->Html->link('Localizações',array('controller' => 'Localizacaos', 'action' => 'index')); ?></li>
-            <li><?=$this->Html->link('Títulos',array('controller' => 'Titulos', 'action' => 'index')); ?></li>
-        </ul>
-    </li>
-    <li>
-        <li><?=$this->Html->link('Relatórios',array('controller' => 'Relatorios', 'action' => 'index')); ?></li>
-    </li>
+    <?=$this->fetch('menu-principal'); ?>
+        <?php if($this->Session->check('Auth.User')){
+            echo "<li>".$this->Html->link('Logout',array('controller' => 'Users', 'action' => 'logout'))."</li>";
+        }else{ ?>
+        <li><a href="#inner" class="fancybox">Login</a></li>
+        <?php } ?>
 </ul>
 </nav>
                 </div>
-                <div id="fastwork"><?php echo $this->fetch('fastwork'); ?></div>
+                <div id="fastwork"><?php echo $this->fetch('fastwork'); ?>
+                    <div style="float:right;">
+                      <?php if($this->Session->check('Auth.User')){  ?>
+                      Seja bem vindo <?= $this->Session->read('Auth.User.username'); }?>
+                    </div>
+                </div>
 		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>

@@ -1,4 +1,5 @@
 <?php
+$this->assign('menu-principal', $this->element('menu-principal'));
 $this->set("title_for_layout", "Localizações");  
 $this->extend('/Common/view');
 $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .

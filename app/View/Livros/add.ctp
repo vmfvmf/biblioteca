@@ -1,4 +1,5 @@
 <?php
+$this->assign('menu-principal', $this->element('menu-principal'));
 echo $this->Html->script('jquery', false);
 $this->set("title_for_layout", 'Novo Livro');
 $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .

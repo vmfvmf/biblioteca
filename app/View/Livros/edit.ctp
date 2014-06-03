@@ -1,4 +1,5 @@
 <?php
+$this->assign('menu-principal', $this->element('menu-principal'));
 $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
         $this->Html->image('../img/arrow.png').
         $this->Html->link(' LIVROS ',array('controller' => 'Livros', 'action' => 'index')).

@@ -1,9 +1,19 @@
 <?php
-$this->set("title_for_layout", "Detalhes");  
+$this->assign('menu-principal', $this->element('menu-principal'));
+$this->set("title_for_layout", "Detalhes Título");  
+$this->extend('/Common/view');
+$this->assign('fastwork', $this->Html->link(' INÍCIO ','../')   .
+        $this->Html->image('../img/arrow.png').
+      ( (!$this->Session->check('Auth.User') ||
+       $this->Session->read('Auth.User.role') === 'user'  ) ?
+        '<a href="#inner" class="fancybox"> TÍTULOS </a>' :
+        $this->Html->link(' TÍTULOS ',array('controller' => 'Titulos', 'action' => 'index')) ).
+        $this->Html->image('../img/arrow.png').'<b> DETALHES </b>');
 
 ?>
+
 <h2><?=$titulo['Viewtitulosdetalhe']['titulo'];?></h2>
-<b>Autor(es)</b>
+<h3>Autores</h3>
 <ul>
 <?php
     $txt = "";
@@ -15,7 +25,7 @@ $this->set("title_for_layout", "Detalhes");
 ?>       
 </ul>
 <br>
-<b>Classificações</b>
+<h3>Classificações</h3>
 <ul>
 <?php
     $txt = "";
@@ -27,7 +37,7 @@ $this->set("title_for_layout", "Detalhes");
 ?>       
 </ul>
 <br>
-<b>Assuntos</b>
+<h3>Assuntos</h3>
 <ul>
 <?php
     $txt = "";
@@ -39,8 +49,11 @@ $this->set("title_for_layout", "Detalhes");
 ?>       
 </ul>
 <br/><b>Localização:</b> <?=$titulo['Viewtitulosdetalhe']['localizacao'];?>
-
-<table>
+<br>
+<br>
+<h3>Livros</h3>
+<br>
+<table style='clear: none !important; float:right; width:76%; margin: 0 auto !important'>
     <tr>
             <td><b>EDIÇÃO</b></td> 
             <td><b>ANO</b></td> 
@@ -56,7 +69,9 @@ $this->set("title_for_layout", "Detalhes");
                <td><?=$livro[0]['editora']; ?></td>
                <td><?=$livro[0]['idioma']; ?></td>
                <td><?=$livro[0]['disponivel']?"Sim":"Não"; ?></td>
-               <td><?=$livro[0]['prazo_devolucao']; ?></td>
+               <td><?=$livro[0]['prazo_devolucao']?
+                    $livro[0]['prazo_devolucao'] : 
+                        '--------'; ?></td>
         </tr>
     <?php  }  ?>
 
