@@ -1,14 +1,11 @@
 <?php 
-            $data_to_encode = '999999'; 
+            $data_to_encode = '100013'; 
 
             // Generate Barcode data 
-            $barcode = $this->Barcode->barcode(); 
-            //$barcode
-                    $this->Barcode->setType('C128'); 
-            //$barcode
-                    $this->Barcode->setCode($data_to_encode); 
-            //$barcode
-                    $this->Barcode->setSize(80,200); 
+            $this->Barcode->barcode(); 
+            $this->Barcode->setType('C128'); 
+            $this->Barcode->setCode($data_to_encode); 
+            $this->Barcode->setSize(80,200); 
 
             // Generate filename             
             $random = rand(0,1000000); 
@@ -20,4 +17,5 @@
 
             // Display image 
             echo $this->Html->image('barcode/code_'.$random.'.png');
+
             ?>

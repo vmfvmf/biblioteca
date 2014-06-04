@@ -22299,3 +22299,923 @@ Stack Trace:
 #3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-06-03 00:37:26 Error: Fatal Error (4): syntax error, unexpected '(' in [/var/www/html/biblioteca/app/Controller/AppController.php, line 38]
+2014-06-03 00:37:26 Error: [FatalErrorException] syntax error, unexpected '('
+Request URL: /biblioteca/Users/logout
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 38, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 38, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-03 00:39:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/fancybox_overlay.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-03 00:39:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/fancybox_sprite.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-03 12:51:33 Error: [PDOException] SQLSTATE[23503]: Foreign key violation: 7 ERROR:  insert or update on table "emprestimos" violates foreign key constraint "emprestimos_aluno_id_fkey"
+DETAIL:  Key (aluno_id)=(0) is not present in table "alunos".
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO "pu...', Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO "pu...')
+#3 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1832): DboSource->create(Object(Emprestimo), Array, Array)
+#4 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#5 [internal function]: EmprestimosController->add()
+#6 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-06-03 12:53:37 Error: [PDOException] SQLSTATE[23503]: Foreign key violation: 7 ERROR:  insert or update on table "emprestimos" violates foreign key constraint "emprestimos_aluno_id_fkey"
+DETAIL:  Key (aluno_id)=(0) is not present in table "alunos".
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO "pu...', Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO "pu...')
+#3 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1832): DboSource->create(Object(Emprestimo), Array, Array)
+#4 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#5 [internal function]: EmprestimosController->add()
+#6 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-06-03 12:55:35 Error: [PDOException] SQLSTATE[23503]: Foreign key violation: 7 ERROR:  insert or update on table "emprestimos" violates foreign key constraint "emprestimos_aluno_id_fkey"
+DETAIL:  Key (aluno_id)=(0) is not present in table "alunos".
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO "pu...', Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO "pu...')
+#3 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1832): DboSource->create(Object(Emprestimo), Array, Array)
+#4 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#5 [internal function]: EmprestimosController->add()
+#6 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-06-03 13:24:49 Error: Fatal Error (1): Call to a member function getAlunosRa() on a non-object in [/var/www/html/biblioteca/app/Controller/EmprestimosController.php, line 105]
+2014-06-03 13:24:49 Error: [FatalErrorException] Call to a member function getAlunosRa() on a non-object
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/b...', 105)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/b...', 105, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/b...', 105, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-03 13:30:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/fancybox_overlay.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-03 13:30:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /biblioteca/css/fancybox_sprite.png
+Stack Trace:
+#0 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-03 15:35:16 Error: [PDOException] SQLSTATE[21000]: Cardinality violation: 7 ERROR:  more than one row returned by a subquery used as an expression
+Request URL: /biblioteca/
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT "Viewliv...', Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT "Viewliv...', Array, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT "Viewliv...', false)
+#4 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2902): DboSource->read(Object(AppModel), Array)
+#5 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2874): Model->_readDataSource('all', Array)
+#6 /var/www/html/biblioteca/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate('Viewlivrosdetal...', Array, Array)
+#8 /var/www/html/biblioteca/app/Controller/LivrosController.php(9): Controller->paginate('Viewlivrosdetal...')
+#9 [internal function]: LivrosController->index()
+#10 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#11 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-06-03 15:41:40 Error: [MissingTableException] Table viewlivrosdetalhes for model Viewlivrosdetalhe was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'viewlivrosdetalhes',
+  'class' => 'Viewlivrosdetalhe',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('viewlivrosdetal...')
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1355): Model->getDataSource()
+#2 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1447): Model->schema()
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Component/PaginatorComponent.php(397): Model->hasField('titulo')
+#4 /var/www/html/biblioteca/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(AppModel), Array, Array)
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate('Viewlivrosdetal...', Array, Array)
+#6 /var/www/html/biblioteca/app/Controller/LivrosController.php(9): Controller->paginate('Viewlivrosdetal...')
+#7 [internal function]: LivrosController->index()
+#8 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#9 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-06-03 15:49:22 Error: [MissingTableException] Table viewlivrosdetalhes for model Viewlivrosdetalhe was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'viewlivrosdetalhes',
+  'class' => 'Viewlivrosdetalhe',
+  'ds' => 'default',
+)
+Request URL: /biblioteca/
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Model.php(3498): Model->setSource('viewlivrosdetal...')
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1355): Model->getDataSource()
+#2 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1447): Model->schema()
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Component/PaginatorComponent.php(397): Model->hasField('titulo')
+#4 /var/www/html/biblioteca/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(AppModel), Array, Array)
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate('Viewlivrosdetal...', Array, Array)
+#6 /var/www/html/biblioteca/app/Controller/LivrosController.php(9): Controller->paginate('Viewlivrosdetal...')
+#7 [internal function]: LivrosController->index()
+#8 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#9 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-06-03 16:38:02 Error: Fatal Error (1): Call to a member function load() on a non-object in [/var/www/html/biblioteca/app/Controller/EmprestimosController.php, line 98]
+2014-06-03 16:38:02 Error: [FatalErrorException] Call to a member function load() on a non-object
+Request URL: /biblioteca/Emprestimos/view/51
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/b...', 98)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/b...', 98, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/b...', 98, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-03 16:43:22 Error: Fatal Error (1): Call to a member function load() on a non-object in [/var/www/html/biblioteca/app/Controller/EmprestimosController.php, line 95]
+2014-06-03 16:43:22 Error: [FatalErrorException] Call to a member function load() on a non-object
+Request URL: /biblioteca/Emprestimos/view/38
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/b...', 95)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/b...', 95, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/b...', 95, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-03 17:23:23 Error: Fatal Error (1): Class 'CakeEmail' not found in [/var/www/html/biblioteca/app/Controller/LivrosController.php, line 246]
+2014-06-03 17:23:23 Error: [FatalErrorException] Class 'CakeEmail' not found
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'CakeEmai...', '/var/www/html/b...', 246)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'CakeEmai...', '/var/www/html/b...', 246, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Class 'CakeEmai...', '/var/www/html/b...', 246, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-03 17:26:34 Error: Fatal Error (1): Call to a member function send() on a non-object in [/var/www/html/biblioteca/app/Controller/LivrosController.php, line 249]
+2014-06-03 17:26:34 Error: [FatalErrorException] Call to a member function send() on a non-object
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/b...', 249)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/b...', 249, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/b...', 249, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-03 17:27:07 Error: [SocketException] From is not specified.
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/app/Controller/LivrosController.php(249): CakeEmail->send()
+#1 [internal function]: LivrosController->email()
+#2 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#3 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#5 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2014-06-03 17:28:17 Error: [SocketException] Network is unreachable
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(99): CakeSocket->connect()
+#1 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(59): SmtpTransport->_connect()
+#2 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(1122): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/biblioteca/app/Controller/LivrosController.php(250): CakeEmail->send()
+#4 [internal function]: LivrosController->email()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 17:29:46 Error: [SocketException] Network is unreachable
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(99): CakeSocket->connect()
+#1 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(59): SmtpTransport->_connect()
+#2 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(1122): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/biblioteca/app/Controller/LivrosController.php(250): CakeEmail->send()
+#4 [internal function]: LivrosController->email()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 17:29:46 Error: [SocketException] Network is unreachable
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(99): CakeSocket->connect()
+#1 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(59): SmtpTransport->_connect()
+#2 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(1122): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/biblioteca/app/Controller/LivrosController.php(250): CakeEmail->send()
+#4 [internal function]: LivrosController->email()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 17:33:13 Error: [SocketException] Network is unreachable
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(99): CakeSocket->connect()
+#1 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(59): SmtpTransport->_connect()
+#2 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(1122): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/biblioteca/app/Controller/LivrosController.php(251): CakeEmail->send()
+#4 [internal function]: LivrosController->email()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 17:33:14 Error: [SocketException] Network is unreachable
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(99): CakeSocket->connect()
+#1 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(59): SmtpTransport->_connect()
+#2 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(1122): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/biblioteca/app/Controller/LivrosController.php(251): CakeEmail->send()
+#4 [internal function]: LivrosController->email()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 17:34:30 Error: [SocketException] Network is unreachable
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(99): CakeSocket->connect()
+#1 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(59): SmtpTransport->_connect()
+#2 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(1122): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/biblioteca/app/Controller/LivrosController.php(251): CakeEmail->send()
+#4 [internal function]: LivrosController->email()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 17:36:55 Error: [SocketException] Network is unreachable
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(99): CakeSocket->connect()
+#1 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(59): SmtpTransport->_connect()
+#2 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(1122): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/biblioteca/app/Controller/LivrosController.php(251): CakeEmail->send()
+#4 [internal function]: LivrosController->email()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 17:41:33 Error: [SocketException] Network is unreachable
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(99): CakeSocket->connect()
+#1 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(59): SmtpTransport->_connect()
+#2 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(1122): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/biblioteca/app/Controller/LivrosController.php(251): CakeEmail->send()
+#4 [internal function]: LivrosController->email()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 17:41:36 Error: [SocketException] Network is unreachable
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(99): CakeSocket->connect()
+#1 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(59): SmtpTransport->_connect()
+#2 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(1122): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/biblioteca/app/Controller/LivrosController.php(251): CakeEmail->send()
+#4 [internal function]: LivrosController->email()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 17:42:28 Error: [SocketException] Network is unreachable
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(99): CakeSocket->connect()
+#1 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(59): SmtpTransport->_connect()
+#2 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(1122): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/biblioteca/app/Controller/LivrosController.php(251): CakeEmail->send()
+#4 [internal function]: LivrosController->email()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 18:38:07 Error: [SocketException] SMTP server did not accept the connection or trying to connect to non TLS SMTP server using TLS.
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(59): SmtpTransport->_connect()
+#1 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(1122): SmtpTransport->send(Object(CakeEmail))
+#2 /var/www/html/biblioteca/app/Controller/LivrosController.php(251): CakeEmail->send()
+#3 [internal function]: LivrosController->email()
+#4 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-06-03 18:38:35 Error: [MissingViewException] View file "/var/www/html/biblioteca/app/View/Livros/email.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/biblioteca/app/View/Livros/email.ctp',
+)
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-06-03 18:39:27 Error: [SocketException] stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol
+stream_socket_client(): Failed to enable crypto
+stream_socket_client(): unable to connect to ssl://smtp.gmail.com:587 (Unknown error)
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(99): CakeSocket->connect()
+#1 /var/www/html/biblioteca/lib/Cake/Network/Email/SmtpTransport.php(59): SmtpTransport->_connect()
+#2 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(1122): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/biblioteca/app/Controller/LivrosController.php(251): CakeEmail->send()
+#4 [internal function]: LivrosController->email()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 18:43:04 Error: [MissingViewException] View file "/var/www/html/biblioteca/app/View/Livros/email.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/biblioteca/app/View/Livros/email.ctp',
+)
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-06-03 18:45:22 Error: [MissingViewException] View file "/var/www/html/biblioteca/app/View/Livros/email.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/biblioteca/app/View/Livros/email.ctp',
+)
+Request URL: /biblioteca/livros/email
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-06-03 18:53:38 Error: [SocketException] You need to specify at least one destination for to, cc or bcc.
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(120): CakeEmail->send()
+#1 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(15): EmprestimosController->email(NULL)
+#2 [internal function]: EmprestimosController->add()
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#4 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-06-03 18:57:47 Error: [PDOException] SQLSTATE[42601]: Syntax error: 7 ERROR:  syntax error at end of input
+LINE 1: SELECT email FROM ALUNOS WHERE id =
+                                           ^
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT email FR...', Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT email FR...', Array, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT email FR...')
+#4 [internal function]: DboSource->query('SELECT email FR...')
+#5 /var/www/html/biblioteca/lib/Cake/Model/Model.php(3306): call_user_func_array(Array, Array)
+#6 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(16): Model->query('SELECT email FR...')
+#7 [internal function]: EmprestimosController->add()
+#8 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#9 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-06-03 19:29:35 Error: Fatal Error (1): Call to undefined method EmprestimosController::__view() in [/var/www/html/biblioteca/app/Controller/EmprestimosController.php, line 106]
+2014-06-03 19:29:35 Error: [InternalErrorException] Internal Server Error
+Request URL: /biblioteca/Emprestimos/viewPdf/1
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/html/b...', 106)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/html/b...', 106, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/html/b...', 106, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-03 19:31:25 Error: [MissingViewException] View file "/var/www/html/biblioteca/app/View/Emprestimos/view_pdf.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/biblioteca/app/View/Emprestimos/view_pdf.ctp',
+)
+Request URL: /biblioteca/Emprestimos/viewPdf
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(115): Controller->render()
+#3 [internal function]: EmprestimosController->viewPdf()
+#4 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-06-03 19:31:44 Error: [MissingViewException] View file "/var/www/html/biblioteca/app/View/Emprestimos/viewpdf.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/biblioteca/app/View/Emprestimos/viewpdf.ctp',
+)
+Request URL: /biblioteca/Emprestimos/viewpdf
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(115): Controller->render()
+#3 [internal function]: EmprestimosController->viewPdf()
+#4 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-06-03 19:31:56 Error: [MissingViewException] View file "/var/www/html/biblioteca/app/View/Emprestimos/view_pdf.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/biblioteca/app/View/Emprestimos/view_pdf.ctp',
+)
+Request URL: /biblioteca/Emprestimos/ViewPdf
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(115): Controller->render()
+#3 [internal function]: EmprestimosController->viewPdf()
+#4 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-06-03 19:32:04 Error: [MissingViewException] View file "/var/www/html/biblioteca/app/View/Emprestimos/viewpdf.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/biblioteca/app/View/Emprestimos/viewpdf.ctp',
+)
+Request URL: /biblioteca/Emprestimos/Viewpdf
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(115): Controller->render()
+#3 [internal function]: EmprestimosController->viewPdf()
+#4 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-06-03 19:34:17 Error: Fatal Error (1): Call to undefined method EmprestimosController::__view() in [/var/www/html/biblioteca/app/Controller/EmprestimosController.php, line 106]
+2014-06-03 19:34:17 Error: [FatalErrorException] Call to undefined method EmprestimosController::__view()
+Request URL: /biblioteca/Emprestimos/ViewPdf/10
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/html/b...', 106)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/html/b...', 106, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/html/b...', 106, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-03 19:34:28 Error: [MissingViewException] View file "/var/www/html/biblioteca/app/View/Emprestimos/view_pdf.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/biblioteca/app/View/Emprestimos/view_pdf.ctp',
+)
+Request URL: /biblioteca/Emprestimos/ViewPdf/10
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(115): Controller->render()
+#3 [internal function]: EmprestimosController->viewPdf('10')
+#4 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-06-03 19:34:43 Error: [MissingViewException] View file "/var/www/html/biblioteca/app/View/Emprestimos/view_pdf.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/html/biblioteca/app/View/Emprestimos/view_pdf.ctp',
+)
+Request URL: /biblioteca/Emprestimos/ViewPdf/10
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(115): Controller->render()
+#3 [internal function]: EmprestimosController->viewpdf('10')
+#4 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-06-03 19:57:22 Error: [SocketException] You need to specify at least one destination for to, cc or bcc.
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(146): CakeEmail->send()
+#1 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(17): EmprestimosController->email(NULL)
+#2 [internal function]: EmprestimosController->add()
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#4 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-06-03 19:58:08 Error: [SocketException] You need to specify at least one destination for to, cc or bcc.
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(146): CakeEmail->send()
+#1 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(17): EmprestimosController->email(NULL)
+#2 [internal function]: EmprestimosController->add()
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#4 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-06-03 19:59:06 Error: [SocketException] You need to specify at least one destination for to, cc or bcc.
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(146): CakeEmail->send()
+#1 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(17): EmprestimosController->email(NULL)
+#2 [internal function]: EmprestimosController->add()
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#4 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-06-03 20:00:55 Error: [PDOException] SQLSTATE[21000]: Cardinality violation: 7 ERROR:  more than one row returned by a subquery used as an expression
+Request URL: /biblioteca/
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT "Viewliv...', Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT "Viewliv...', Array, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT "Viewliv...', false)
+#4 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2902): DboSource->read(Object(AppModel), Array)
+#5 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2874): Model->_readDataSource('all', Array)
+#6 /var/www/html/biblioteca/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#7 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate('Viewlivrosdetal...', Array, Array)
+#8 /var/www/html/biblioteca/app/Controller/LivrosController.php(9): Controller->paginate('Viewlivrosdetal...')
+#9 [internal function]: LivrosController->index()
+#10 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LivrosController), Array)
+#11 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LivrosController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-06-03 20:06:54 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  record "new" has no field "livros_id"
+CONTEXT:  SQL statement "SELECT disponivel FROM livros WHERE id = NEW.livros_id"
+PL/pgSQL function livro_emprestado() line 3 at SQL statement
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(2923): PDOStatement->execute()
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2014): DboSource->insertMulti(Object(AppModel), Array, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1845): Model->_saveMulti(Array, '55', Object(Postgres))
+#3 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#4 [internal function]: EmprestimosController->add()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 20:07:18 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  record "new" has no field "livros_id"
+CONTEXT:  SQL statement "SELECT disponivel FROM livros WHERE id = NEW.livros_id"
+PL/pgSQL function livro_emprestado() line 3 at SQL statement
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(2923): PDOStatement->execute()
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2014): DboSource->insertMulti(Object(AppModel), Array, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1845): Model->_saveMulti(Array, '56', Object(Postgres))
+#3 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#4 [internal function]: EmprestimosController->add()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 20:10:00 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  record "new" has no field "livros_id"
+CONTEXT:  SQL statement "SELECT disponivel FROM livros WHERE id = NEW.livros_id"
+PL/pgSQL function livro_emprestado() line 3 at SQL statement
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(2923): PDOStatement->execute()
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2014): DboSource->insertMulti(Object(AppModel), Array, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1845): Model->_saveMulti(Array, '57', Object(Postgres))
+#3 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#4 [internal function]: EmprestimosController->add()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 20:10:16 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  record "new" has no field "livros_id"
+CONTEXT:  SQL statement "SELECT disponivel FROM livros WHERE id = NEW.livros_id"
+PL/pgSQL function livro_emprestado() line 3 at SQL statement
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(2923): PDOStatement->execute()
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2014): DboSource->insertMulti(Object(AppModel), Array, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1845): Model->_saveMulti(Array, '58', Object(Postgres))
+#3 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#4 [internal function]: EmprestimosController->add()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 20:11:21 Error: [PDOException] SQLSTATE[42703]: Undefined column: 7 ERROR:  record "new" has no field "livros_id"
+CONTEXT:  SQL statement "SELECT disponivel FROM livros WHERE id = NEW.livros_id"
+PL/pgSQL function livro_emprestado() line 3 at SQL statement
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(2923): PDOStatement->execute()
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2014): DboSource->insertMulti(Object(AppModel), Array, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1845): Model->_saveMulti(Array, '59', Object(Postgres))
+#3 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#4 [internal function]: EmprestimosController->add()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 20:12:16 Error: [PDOException] SQLSTATE[42601]: Syntax error: 7 ERROR:  query has no destination for result data
+HINT:  If you want to discard the results of a SELECT, use PERFORM instead.
+CONTEXT:  PL/pgSQL function livro_emprestado() line 3 at SQL statement
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(2923): PDOStatement->execute()
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2014): DboSource->insertMulti(Object(AppModel), Array, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1845): Model->_saveMulti(Array, '60', Object(Postgres))
+#3 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#4 [internal function]: EmprestimosController->add()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 20:12:26 Error: [PDOException] SQLSTATE[42601]: Syntax error: 7 ERROR:  query has no destination for result data
+HINT:  If you want to discard the results of a SELECT, use PERFORM instead.
+CONTEXT:  PL/pgSQL function livro_emprestado() line 3 at SQL statement
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(2923): PDOStatement->execute()
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2014): DboSource->insertMulti(Object(AppModel), Array, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1845): Model->_saveMulti(Array, '61', Object(Postgres))
+#3 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#4 [internal function]: EmprestimosController->add()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 20:12:33 Error: [PDOException] SQLSTATE[42601]: Syntax error: 7 ERROR:  query has no destination for result data
+HINT:  If you want to discard the results of a SELECT, use PERFORM instead.
+CONTEXT:  PL/pgSQL function livro_emprestado() line 3 at SQL statement
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(2923): PDOStatement->execute()
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2014): DboSource->insertMulti(Object(AppModel), Array, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1845): Model->_saveMulti(Array, '62', Object(Postgres))
+#3 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#4 [internal function]: EmprestimosController->add()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 20:12:35 Error: [PDOException] SQLSTATE[42601]: Syntax error: 7 ERROR:  query has no destination for result data
+HINT:  If you want to discard the results of a SELECT, use PERFORM instead.
+CONTEXT:  PL/pgSQL function livro_emprestado() line 3 at SQL statement
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(2923): PDOStatement->execute()
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2014): DboSource->insertMulti(Object(AppModel), Array, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1845): Model->_saveMulti(Array, '63', Object(Postgres))
+#3 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#4 [internal function]: EmprestimosController->add()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 20:26:40 Error: [SocketException] You need to specify at least one destination for to, cc or bcc.
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(130): CakeEmail->send()
+#1 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(17): EmprestimosController->email(NULL)
+#2 [internal function]: EmprestimosController->add()
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#4 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-06-03 20:30:32 Error: [CakeException] Unknown status code
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(785): CakeResponse->statusCode(Array)
+#1 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(22): Controller->redirect(Array, Array)
+#2 [internal function]: EmprestimosController->add()
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#4 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-06-03 20:31:56 Error: [PDOException] SQLSTATE[P0001]: Raise exception: 7 ERROR:  ESTE LIVRO ESTÁ INDISPONÍVEL PARA EMPRÉSTIMO.
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(2923): PDOStatement->execute()
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2014): DboSource->insertMulti(Object(AppModel), Array, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1845): Model->_saveMulti(Array, '66', Object(Postgres))
+#3 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#4 [internal function]: EmprestimosController->add()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 20:32:18 Error: [CakeException] Unknown status code
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(785): CakeResponse->statusCode(Array)
+#1 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(22): Controller->redirect(Array, Array)
+#2 [internal function]: EmprestimosController->add()
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#4 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-06-03 20:33:40 Error: [PDOException] SQLSTATE[P0001]: Raise exception: 7 ERROR:  ESTE LIVRO ESTÁ INDISPONÍVEL PARA EMPRÉSTIMO.
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Model/Datasource/DboSource.php(2923): PDOStatement->execute()
+#1 /var/www/html/biblioteca/lib/Cake/Model/Model.php(2014): DboSource->insertMulti(Object(AppModel), Array, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Model/Model.php(1845): Model->_saveMulti(Array, '68', Object(Postgres))
+#3 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(14): Model->save(Array)
+#4 [internal function]: EmprestimosController->add()
+#5 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-06-03 20:33:50 Error: [CakeException] Unknown status code
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(785): CakeResponse->statusCode(Array)
+#1 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(22): Controller->redirect(Array, Array)
+#2 [internal function]: EmprestimosController->add()
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#4 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-06-03 20:38:34 Error: [CakeException] Unknown status code
+Request URL: /biblioteca/Emprestimos/add
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(785): CakeResponse->statusCode(Array)
+#1 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(22): Controller->redirect(Array, Array)
+#2 [internal function]: EmprestimosController->add()
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#4 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-06-03 20:56:27 Error: [SocketException] Invalid email: "tmp"
+Request URL: /biblioteca/Emprestimos/viewpdf/vmfvmf@hotmail.com
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(442): CakeEmail->_setEmail('_to', 'tmp', NULL)
+#1 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(126): CakeEmail->to('tmp')
+#2 [internal function]: EmprestimosController->email('tmp', 'vmfvmf@hotmail....')
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#4 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/html/biblioteca/lib/Cake/Core/Object.php(106): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse), Array)
+#7 /var/www/html/biblioteca/app/View/Emprestimos/viewpdf.ctp(28): Object->requestAction(Array, Array)
+#8 /var/www/html/biblioteca/lib/Cake/View/View.php(929): include('/var/www/html/b...')
+#9 /var/www/html/biblioteca/lib/Cake/View/View.php(891): View->_evaluate('/var/www/html/b...', Array)
+#10 /var/www/html/biblioteca/lib/Cake/View/View.php(460): View->_render('/var/www/html/b...')
+#11 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#12 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(99): Controller->render()
+#13 [internal function]: EmprestimosController->viewpdf('vmfvmf@hotmail....')
+#14 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#15 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#16 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#17 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2014-06-03 20:57:49 Error: [SocketException] Invalid email: "tmp"
+Request URL: /biblioteca/Emprestimos/viewpdf/vmfvmf@hotmail.com
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(442): CakeEmail->_setEmail('_to', 'tmp', NULL)
+#1 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(126): CakeEmail->to('tmp')
+#2 [internal function]: EmprestimosController->email('tmp', 'vmfvmf@hotmail....')
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#4 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/html/biblioteca/lib/Cake/Core/Object.php(106): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse), Array)
+#7 /var/www/html/biblioteca/app/View/Emprestimos/viewpdf.ctp(28): Object->requestAction(Array, Array)
+#8 /var/www/html/biblioteca/lib/Cake/View/View.php(929): include('/var/www/html/b...')
+#9 /var/www/html/biblioteca/lib/Cake/View/View.php(891): View->_evaluate('/var/www/html/b...', Array)
+#10 /var/www/html/biblioteca/lib/Cake/View/View.php(460): View->_render('/var/www/html/b...')
+#11 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#12 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(99): Controller->render()
+#13 [internal function]: EmprestimosController->viewpdf('vmfvmf@hotmail....')
+#14 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#15 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#16 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#17 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2014-06-03 20:59:00 Error: [SocketException] Invalid email: "tmp"
+Request URL: /biblioteca/Emprestimos/viewpdf/vmfvmf@hotmail.com
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(442): CakeEmail->_setEmail('_to', 'tmp', NULL)
+#1 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(126): CakeEmail->to('tmp')
+#2 [internal function]: EmprestimosController->email('tmp', 'vmfvmf@hotmail....')
+#3 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#4 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/html/biblioteca/lib/Cake/Core/Object.php(106): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse), Array)
+#7 /var/www/html/biblioteca/app/View/Emprestimos/viewpdf.ctp(28): Object->requestAction(Array, Array)
+#8 /var/www/html/biblioteca/lib/Cake/View/View.php(929): include('/var/www/html/b...')
+#9 /var/www/html/biblioteca/lib/Cake/View/View.php(891): View->_evaluate('/var/www/html/b...', Array)
+#10 /var/www/html/biblioteca/lib/Cake/View/View.php(460): View->_render('/var/www/html/b...')
+#11 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#12 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(99): Controller->render()
+#13 [internal function]: EmprestimosController->viewpdf('vmfvmf@hotmail....')
+#14 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#15 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#16 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#17 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2014-06-03 21:03:06 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/html/biblioteca/app/View/Emprestimos/viewpdf.ctp, line 28]
+2014-06-03 21:03:06 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /biblioteca/Emprestimos/viewpdf/vmfvmf@hotmail.com
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 28, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 28, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-03 21:04:06 Error: Fatal Error (4): syntax error, unexpected 'array' (T_ARRAY) in [/var/www/html/biblioteca/app/View/Emprestimos/viewpdf.ctp, line 28]
+2014-06-03 21:04:06 Error: [FatalErrorException] syntax error, unexpected 'array' (T_ARRAY)
+Request URL: /biblioteca/Emprestimos/viewpdf/vmfvmf@hotmail.com
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/b...', 28)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/b...', 28, Array)
+#2 /var/www/html/biblioteca/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/b...', 28, Array)
+#3 /var/www/html/biblioteca/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-03 21:11:17 Error: [SocketException] Invalid email: "acessaescoladeitapeva@gmail"
+Request URL: /biblioteca/Emprestimos/viewpdf/vmfvmf@hotmail.com
+Stack Trace:
+#0 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(596): CakeEmail->_setEmail('_from', 'acessaescoladei...', 'BIBLIOTECA')
+#1 /var/www/html/biblioteca/lib/Cake/Network/Email/CakeEmail.php(368): CakeEmail->_setEmailSingle('_from', 'acessaescoladei...', 'BIBLIOTECA', 'From requires o...')
+#2 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(127): CakeEmail->from('acessaescoladei...', 'BIBLIOTECA')
+#3 [internal function]: EmprestimosController->email('vmfvmf@hotmail....', 'vmfvmf@hotmail....')
+#4 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#5 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/html/biblioteca/lib/Cake/Core/Object.php(106): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse), Array)
+#8 /var/www/html/biblioteca/app/View/Emprestimos/viewpdf.ctp(27): Object->requestAction(Array)
+#9 /var/www/html/biblioteca/lib/Cake/View/View.php(929): include('/var/www/html/b...')
+#10 /var/www/html/biblioteca/lib/Cake/View/View.php(891): View->_evaluate('/var/www/html/b...', Array)
+#11 /var/www/html/biblioteca/lib/Cake/View/View.php(460): View->_render('/var/www/html/b...')
+#12 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#13 /var/www/html/biblioteca/app/Controller/EmprestimosController.php(99): Controller->render()
+#14 [internal function]: EmprestimosController->viewpdf('vmfvmf@hotmail....')
+#15 /var/www/html/biblioteca/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EmprestimosController), Array)
+#16 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#17 /var/www/html/biblioteca/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EmprestimosController), Object(CakeRequest), Object(CakeResponse))
+#18 /var/www/html/biblioteca/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}

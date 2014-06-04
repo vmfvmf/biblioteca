@@ -20,7 +20,6 @@
  */
 
 App::uses('Controller', 'Controller');
-
 /**
  * Application Controller
  *
@@ -35,7 +34,7 @@ class AppController extends Controller {
     public $components = array(
         'Session',
         'Auth' => array(
-            'loginRedirect' => array('controller' => 'pages', 'action' => 'display'),
+            'loginRedirect' => array('controller' => 'pages', 'action' => 'display') ,
             'logoutRedirect' => array('controller' => 'pages', 'action' => 'display'),
             'authorize' => array('Controller') // Adicionamos essa linha
         )
@@ -52,10 +51,8 @@ class AppController extends Controller {
         if (isset($user['role'])) {
             if( $user['role'] === 'sadmin' ){
                 return true; // Admin pode acessar todas actions
-            }else if($user['role'] === 'admin' && 
-                    in_array($this->name,$adminControllerAcess)
-                    ){ 
-                return true;
+            }else if($user['role'] === 'admin') { 
+                return in_array($this->name,$adminControllerAcess);
             }
         }else{ return false; }// Os outros usuários não podem
     }

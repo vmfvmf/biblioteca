@@ -12,10 +12,14 @@
         public function add(){
             if ($this->data){
                 if($this->Emprestimo->save($this->data)){
+                    $email = $this->Emprestimo->Aluno->query(
+                            "SELECT email FROM ALUNOS WHERE id = ".$this->data['Emprestimo']['aluno_id']); 
+                    //self::email();
                     $this->Session->setFlash(__('Cadastrado com sucesso!', null),
                             'default', 
                              array('class' => 'notice success'));
-                    return $this->redirect(array('action' => 'index'));
+                    self::viewpdf($email[0][0]['email']);
+                    return $this->redirect(array('action' => 'viewpdf/'.$email[0][0]['email']));
                 }
             }
             self::getAlunos();
@@ -84,16 +88,18 @@
         
         public function view($id = null){
             if($id){
-                $this->Emprestimo->Livro->Behaviors->load('Containable');
-                $this->Emprestimo->Behaviors->load('Containable');
-                $this->Emprestimo->Livro->Titulo->Behaviors->load('Containable');
-                $emprestimo = $this->Emprestimo->read(null, $id);
+                $emprestimo = $this->Emprestimo->Viewlte->findById($id);
                 $this->set(compact("emprestimo"));
-            }
-            //self::getAlunos();
-            self::getLivro();                
+            }               
         }
        
+        function viewpdf($email){ 
+            $this->set(compact("email"));
+            $this->layout = 'pdf'; //this will use the pdf.ctp layout 
+            $this->render();
+        }
+       
+        
         public function getLivro(){
            $this->Emprestimolivro->Livro->Behaviors->load('Containable');
            $livro = $this->Emprestimo->Livro->find('all');
@@ -102,9 +108,33 @@
         }
         
         public function getAlunos(){
-            $alunos = $this->Emprestimo->Aluno->find(
-                    'list',array('fields' => array( 'id', 'nome')));
+            $alunos = $this->Emprestimo->Aluno->getAlunosRa();
+            if($alunos){
+                foreach($alunos as $row) {
+                    $list[$row[0]['id']] = $row[0]['aluno'];
+                    //$list['titulo'] = $row[0]['titulo'];
+                }
+                $alunos = $list;
             $this->set(compact('alunos'));
+            }
+        }
+        
+        
+        public function email($email,$file){
+            App::uses('CakeEmail', 'Network/Email');
+            $Email = new CakeEmail('gmail');
+            $Email->to($email);
+            $Email->from('acessaescoladeitapeva@gmail.com','BIBLIOTECA');
+            $Email->addAttachments('/tmp/'.$file);
+            $Email->message('teste gjhgjhj jhgh');
+            $Email->subject('Comprovante empréstimo');
+            if($Email->send()){
+                $this->Session->setFlash(__('Comprovante enviado para '.$email.' com sucesso.',
+                                null),
+                            'default', 
+                             array('class' => 'notice success'));
+                return $this->redirect(array('action' => 'index'));
+            }
         }
         
         public function getLivros(){
@@ -112,7 +142,6 @@
             if($livros){
                 foreach($livros as $row) {
                     $list[$row[0]['livro_id']] = $row[0]['titulo'];
-                    //$list['titulo'] = $row[0]['titulo'];
                 }
                 $livros = $list;
                 $this->set(compact('livros'));

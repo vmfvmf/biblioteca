@@ -39,6 +39,7 @@ drop table teste
 create table titulos(id serial primary key, titulo varchar(255), localizacao_id int,
 	constraint fk_livro_localizacao foreign key(localizacao_id) references localizacaos)
 
+select setval('livros_id_seq', 100000, true)
 create table livros(id serial primary key, titulo_id int, editora_id int, cod_barras varchar(100), 
 	disponivel boolean not null default(true),edicao varchar(20), situacao smallint, obs text, ano int, data_aquisicao date, 
 	idioma_id int,  
@@ -47,6 +48,8 @@ create table livros(id serial primary key, titulo_id int, editora_id int, cod_ba
 		constraint fk_livro_titulo foreign key (titulo_id) references titulos (id))
 
 
+alter table emprestimos_livros add constraint emprestimolivros_livro_id_fkey foreign key
+	(livro_id) references livros on update cascade
 
 create table autors_titulos(titulo_id int,autor_id int,
 		foreign key (autor_id) references autors(id),
@@ -67,8 +70,8 @@ create table idiomas(id serial primary key, idioma varchar(80))
 create table assuntos(id serial primary key, assunto varchar(80))
 create table autors(id serial primary key, autor varchar(80))
 create table editoras(id serial primary key, editora varchar(80))
-create table alunos(id serial primary key, nome varchar(80), ra varchar(20), ano_serie int)
-
+create table alunos(id serial primary key, nome varchar(80), ra int, ano_serie int)
+alter table alunos add column ra int
 create table emprestimos(id serial primary key, aluno_id int not null, 
   data_emprestimo timestamp default now(), 
 		foreign key (aluno_id) references alunos(id))
@@ -95,23 +98,29 @@ CREATE or replace FUNCTION livro_emprestado() RETURNS TRIGGER AS
 		END;
 	$$ LANGUAGE "plpgsql";
 
-
-
+select * from emprestimos_livros
 
 select * from viewltes select * from emprestimos_livros
 CREATE TRIGGER trg_livro_devolvido
 		BEFORE INSERT ON emprestimos_livros
 		FOR EACH ROW EXECUTE PROCEDURE livro_emprestado();
-
-select (now() + INTERVAL '7 days')
+/* VERIFICA SE LIVRO ESTÁ DISPONÍVEL PARA EMPRÉSTIMO E INSERE TITULO_ID E ATUALIZA COMO INDISPONÍVEL*/
 CREATE or replace FUNCTION livro_emprestado() RETURNS TRIGGER AS
 	$$
+		DECLARE 
+			r Livros.disponivel%type;
+			n Titulos.id%type;
 		BEGIN
-			SELECT titulo_id FROM livros WHERE id = NEW.livros_id;
-			IF(titulo_id) THEN
-				NEW.titulo_id := titulo_id;
-				RETURN NEW;
+			SELECT INTO r disponivel FROM livros WHERE id = NEW.livro_id;
+			IF(r) THEN
+				SELECT INTO n titulo_id FROM livros WHERE id = NEW.livro_id;
+					NEW.titulo_id := n;
+					update livros set disponivel = false where id = NEW.livro_id;
+					RETURN NEW;
+			ELSE RAISE EXCEPTION 'ESTE LIVRO ESTÁ INDISPONÍVEL PARA EMPRÉSTIMO.';
+				return null;
 			END IF;
+			
 		END;
 	$$ LANGUAGE "plpgsql";
 
@@ -157,7 +166,7 @@ SELECT concat( t.titulo , ' - ',l.cod_barras) as "titulo", l.id as
 
 
 CREATE OR REPLACE VIEW ViewLTEs AS SELECT t.titulo, e.id as "titulo_id", 
-	el.id as "livro_id", e.id as "emprestimo_id", e.aluno_id as "aluno_id", a.nome as "aluno", 
+	el.livro_id as "livro_id", e.id as "emprestimo_id", e.aluno_id as "aluno_id", a.nome as "aluno", 
 	e.data_emprestimo, el.data_devolucao, el.prazo_devolucao, el.id
 	FROM emprestimos_livros el
 	INNER JOIN emprestimos e ON e.id = el.emprestimo_id
@@ -250,9 +259,8 @@ CREATE or replace FUNCTION count_titulos_disponiveis(int) RETURNS BIGINT AS
 	$$ LANGUAGE sql;
 
 select get_titulo_assuntos(21)
-select * from viewlivros
+select * from viewtitulosdetalhes
 
-select * from viewlivros
 
 CREATE OR REPLACE VIEW Viewtitulosdetalhes AS 
 	SELECT t.id as "id", t.titulo, l.localizacao,
@@ -264,7 +272,7 @@ CREATE OR REPLACE VIEW Viewtitulosdetalhes AS
 	(select count_titulos_disponiveis(t.id)) as "disponiveis"
 	FROM titulos t INNER JOIN localizacaos l ON t.localizacao_id = l.id
 
-drop view select * from Viewlivrosdetalhes 
+drop view  Viewlivrosdetalhes 
 CREATE OR REPLACE VIEW Viewlivrosdetalhes AS
 	SELECT l.*, v.titulo, v.autores, v.classificacaos, v.assuntos, 
 	CASE WHEN NOT l.disponivel THEN 
@@ -276,7 +284,7 @@ CREATE OR REPLACE VIEW Viewlivrosdetalhes AS
 		INNER JOIN idiomas i ON i.id = l.idioma_id
 		INNER JOIN viewtitulosdetalhes v ON l.titulo_id = v.id
 update emprestimos_livros set teste = prazo_devolucao
-
+select * from emprestimos_livros
 SELECT t.id FROM titulos t 
 INNER JOIN autors_titulos ta ON t.id = ta.titulo_id WHERE ta.autor_id IN (5,15,14,3) 
 

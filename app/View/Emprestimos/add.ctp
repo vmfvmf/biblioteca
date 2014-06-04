@@ -1,9 +1,11 @@
 <?php
 $this->assign('menu-principal', $this->element('menu-principal'));
 echo $this->Html->script('jquery', false);
+//echo $this->Html->script('custom-combobox', false);
 echo $this->Html->script('jquery-ui', false);
 echo $this->Html->script('ui.multiselect', false);
 echo $this->Html->css('ui.multiselect', null, array('inline' => false));
+//echo $this->Html->css('custom-combobox', null, array('inline' => false));
 echo $this->Html->css('jquery-ui', null, array('inline' => false));
 
 $this->set("title_for_layout", 'Novo Empréstimo');
@@ -14,8 +16,11 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
 
 
     if(isset($livros)){
-        echo    $this->Form->create(),
-                
+        echo    $this->Form->create("Emprestimo",array('onsubmit' => 'return itsclicked;')),
+                $this->Form->input('aluno',array(
+                    'id' => 'nome',
+                    'type' => 'text', 'class' => 'autocomplete'
+                )),
                 $this->Form->input('Livro', array(
                               'label' => __('Livros',true),
                               'id' => 'livro_id',
@@ -27,12 +32,14 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
                 )),
                 $this->Form->input('aluno_id',array('type' => 'hidden', 
                     'value'=> '0', 'id' => 'aluno_id')),
-                $this->Form->input('aluno',array(
-                    'id' => 'nome',
-                    'type' => 'text', 'class' => 'autocomplete'
-                )),
+                
        
-                $this->Form->end('cadastrar');
+                $this->Form->submit('cadastrar', array(
+                            'onmousedown' =>
+                                'itsclicked = true; return true;',
+                            'onkeydown' =>
+                                'itsclicked = true; return true;'
+                ));
         
                 $scrip = 'var availableTags = [';
                 foreach($alunos as $key => $al){
@@ -40,6 +47,7 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
                 }
                 $scrip = substr($scrip, 0, strlen($scrip)-1);
                 $scrip .= '];
+                    var itsclicked = false;
                     $(function(){$( ".autocomplete" ).autocomplete(
                         {
                             source:availableTags,
@@ -52,6 +60,12 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
                             return false;}
                     });
                         $(".multiselect").multiselect();
+                    /*    $(".autocomplete").bind(
+                            "keyup", function(e) {
+                                if (e.keyCode == 13) {
+                                    alert("enter");
+                                }
+                        }); */
                     });';
         $this->Html->scriptStart(array('inline' => false));
                     echo $scrip;

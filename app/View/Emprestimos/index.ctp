@@ -11,11 +11,11 @@ $this->start('sidebar');
 <div id="main_div">
 <table>
     <tr>
-            <td><b>ALUNO</b></td> 
-            <td><b>LIVRO</b></td> 
-            <td><b>DATA EMPRÉSTIMO</b></td> 
-            <td><b>DATA DEVOLUÇÃO</b></td>
-            <td><b>PRAZO DEVOLUÇÃO</b></td>
+            <td><b><?=$this->Paginator->sort('aluno','ALUNO');?></b></td> 
+            <td><b><?=$this->Paginator->sort('titulo','LIVRO');?></b></td> 
+            <td><b><?=$this->Paginator->sort('data_emprestimo','DATA EMPRÉSTIMO');?></b></td> 
+            <td><b><?=$this->Paginator->sort('data_devolucao','DATA DEVOLUÇÃO');?></b></td>
+            <td><b><?=$this->Paginator->sort('prazo_devolucao','PRAZO DEVOLUÇÃO');?></b></td>
             <td><b>AÇÕES</b></td>
     </tr>
     
@@ -29,9 +29,9 @@ $this->start('sidebar');
                     $emp['Viewlte']['data_devolucao']; ?></td>
                <td><?=$this->Time->format($emp['Viewlte']['prazo_devolucao'], '%d/%m/%Y'); ?></td>
                <td>
-                   <?= $this->Html->link($this->Html->image('edit.png'), 
-                        array('controller' => 'Emprestimos', 'action' => 'edit',$emp['Viewlte']['id']),
-                        array('escape' => false, 'title' => "Editar"));?>
+                   <?= $this->Html->link($this->Html->image('icondetails.png'), 
+                        array('controller' => 'Emprestimos', 'action' => 'view',$emp['Viewlte']['id']),
+                        array('escape' => false, 'title' => "Detalhes"));?>
                    
                   | <?= $this->Html->link($this->Html->image('trash.png'), 
                         array('controller' => 'Emprestimos', 'action' => 'delete',$emp['Viewlte']['id']),
@@ -46,7 +46,7 @@ $this->start('sidebar');
                     $date2 = new DateTime();
                     $date2->format("%Y/%m/%d");
                     $diff=date_diff($date1,$date2,false);
-                    if($diff->days > 0 && $diff->invert>0) echo " | " .
+                    if($diff->days >= 0 && $diff->invert>0) echo " | " .
                         $this->Html->link($this->Html->image('extend.png'), 
                         array('controller' => 'Emprestimos','action' => 'prorrogar',$emp['Viewlte']['id']),
                         array('escape' => false, 'title' => "Renovar"), "Deseja renovar este esmpréstimo?");
