@@ -27,7 +27,7 @@
                     . ' ORDER BY count DESC LIMIT 5');
             $atrasos = $this->Relatorio->Viewlte->query(
                     'SELECT titulo, data_emprestimo,data_devolucao, prazo_devolucao, '
-                    . ' extract("days" from data_devolucao) - extract("days" from prazo_devolucao) as "atraso"'
+                    . ' (extract("days" from data_devolucao - prazo_devolucao)) as "atraso"'
                     . ' FROM ViewLTEs WHERE aluno_id = '.$id.' AND data_devolucao > prazo_devolucao '
                     . ' ORDER BY titulo ASC LIMIT 5');
             $this->set(compact('aluno'));

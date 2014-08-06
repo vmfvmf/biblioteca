@@ -1,9 +1,14 @@
 ﻿revoke all from biblioteca_admin
 drop group biblioteca_admin 
-
+select * from users
 /*create user biblioteca_user password '123'
-GRANT SELECT, INSERT, UPDATE, DELETE
-ON viewlivrosdetalhes TO biblioteca_user
+
+GRANT SELECT, INSERT ON users TO biblioteca_user
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON alunos, viewltes, viewalunos TO biblioteca_user
+
+GRANT SELECT,  UPDATE, USAGE ON users_id_seq TO biblioteca_user
+	
 GRANT ALL ON ALL SEQUENCES IN SCHEMA public TO biblioteca_user
 GRANT ALL PRIVILEGES ON DATABASE biblioteca to biblioteca_user
 create user padrao password '123'
@@ -25,21 +30,21 @@ drop table livros
 drop table localizacaos
 drop table idiomas cascade
 drop table autors
-drop table teste
+drop table alunos
+drop table users
+select * from users
+select * from userbibliotecas
 
-	CREATE TABLE users (
-	    id SERIAL PRIMARY KEY,
-	    username VARCHAR(50),
-	    password VARCHAR(50),
-	    role VARCHAR(20),
-	    created TIMESTAMP DEFAULT NULL,
-	    modified TIMESTAMP DEFAULT NULL
-	);
 
+CREATE TABLE users (id serial PRIMARY KEY, username VARCHAR(50),password VARCHAR(50),role VARCHAR(20),created TIMESTAMP DEFAULT NULL,
+	nome varchar(50), sobrenome varchar(50), endereco_id int, email varchar(60),modified TIMESTAMP DEFAULT NULL, 
+	    foreign key (endereco_id) references enderecos(id))
+	    
 create table titulos(id serial primary key, titulo varchar(255), localizacao_id int,
 	constraint fk_livro_localizacao foreign key(localizacao_id) references localizacaos)
 
 select setval('livros_id_seq', 100000, true)
+
 create table livros(id serial primary key, titulo_id int, editora_id int, cod_barras varchar(100), 
 	disponivel boolean not null default(true),edicao varchar(20), situacao smallint, obs text, ano int, data_aquisicao date, 
 	idioma_id int,  
@@ -70,17 +75,17 @@ create table idiomas(id serial primary key, idioma varchar(80))
 create table assuntos(id serial primary key, assunto varchar(80))
 create table autors(id serial primary key, autor varchar(80))
 create table editoras(id serial primary key, editora varchar(80))
-create table alunos(id serial primary key, nome varchar(80), ra int, ano_serie int)
-alter table alunos add column ra int
+create table alunos(ra int, ano_serie int) inherits(Users)
+alter table alunos add primary key(id)
+create table enderecos(id serial primary key, logradouro varchar(40), 
+	numero varchar(8), bairro varchar(30), cidade varchar(30))
 create table emprestimos(id serial primary key, aluno_id int not null, 
   data_emprestimo timestamp default now(), 
 		foreign key (aluno_id) references alunos(id))
-
 create table emprestimos_livros(id serial primary key, emprestimo_id int, titulo_id int not null, prorrogado int default 0,
 	livro_id int not null, data_devolucao date, prazo_devolucao timestamp default now()+INTERVAL '7days',
 	foreign key (titulo_id) references titulos(id),
 	foreign key (livro_id) references livros(id))
-	
 
 /* ATUALIZA STATUS DO LIVRO EMPRESTADO PARA INDISPONIVEL E INSERE ID DO TITULO  */
 drop trigger trg_livro_emprestado on emprestimos_livros
@@ -101,10 +106,31 @@ CREATE or replace FUNCTION livro_emprestado() RETURNS TRIGGER AS
 select * from emprestimos_livros
 
 select * from viewltes select * from emprestimos_livros
+
+/* VERIFICA SE USERNAME ESTÁ DISPONIVEL E SE INDISPONIVEL NEGA O CADASTRO  */
+drop trigger trg_username_free on users
+CREATE TRIGGER trg_username_free
+		BEFORE INSERT ON users
+		FOR EACH ROW EXECUTE PROCEDURE username_free();
+CREATE TRIGGER trg_username_free
+		BEFORE INSERT ON alunos
+		FOR EACH ROW EXECUTE PROCEDURE username_free();
+CREATE or replace FUNCTION username_free() RETURNS TRIGGER AS
+	$$
+		BEGIN
+			PERFORM username FROM users WHERE username = NEW.username;
+			IF  FOUND THEN
+				RAISE EXCEPTION 'RA JÁ CADASTRADO.';
+			ELSE
+				RETURN NEW;
+			END IF;
+		END;
+	$$ LANGUAGE "plpgsql";
+
+/* VERIFICA SE LIVRO ESTÁ DISPONÍVEL PARA EMPRÉSTIMO E INSERE TITULO_ID E ATUALIZA COMO INDISPONÍVEL*/
 CREATE TRIGGER trg_livro_devolvido
 		BEFORE INSERT ON emprestimos_livros
 		FOR EACH ROW EXECUTE PROCEDURE livro_emprestado();
-/* VERIFICA SE LIVRO ESTÁ DISPONÍVEL PARA EMPRÉSTIMO E INSERE TITULO_ID E ATUALIZA COMO INDISPONÍVEL*/
 CREATE or replace FUNCTION livro_emprestado() RETURNS TRIGGER AS
 	$$
 		DECLARE 
@@ -164,14 +190,17 @@ SELECT concat( t.titulo , ' - ',l.cod_barras) as "titulo", l.id as
                      ON l.titulo_id = t.id ;
                      update livros set cod_barras = 'asdasdas'
 
-
-CREATE OR REPLACE VIEW ViewLTEs AS SELECT t.titulo, e.id as "titulo_id", 
-	el.livro_id as "livro_id", e.id as "emprestimo_id", e.aluno_id as "aluno_id", a.nome as "aluno", 
-	e.data_emprestimo, el.data_devolucao, el.prazo_devolucao, el.id
+/* VIEW QUE CONTEM DADOS DO ALUNO E SEUS EMPRESTIMOS */
+drop view viewltes
+CREATE OR REPLACE VIEW ViewLTEs AS SELECT t.titulo, t.id as "titulo_id", 
+	el.livro_id as "livro_id", e.id as "emprestimo_id", e.aluno_id as "aluno_id", a.ra, a.email,
+	(a.nome || ' ' || a.sobrenome) as "aluno", e.data_emprestimo, el.data_devolucao, el.prazo_devolucao, el.id
 	FROM emprestimos_livros el
 	INNER JOIN emprestimos e ON e.id = el.emprestimo_id
 	INNER JOIN titulos t ON t.id = el.titulo_id
 	INNER JOIN alunos a ON a.id = e.aluno_id
+
+CREATE OR REPLACE VIEW viewalunos AS SELECT id as "aluno_id",(nome || ' ' || sobrenome) as nome, username as "ra" FROM alunos;
 			
 select count(*) from viewltes where aluno_id = 1 and titulo_id = 6
 
@@ -283,10 +312,12 @@ CREATE OR REPLACE VIEW Viewlivrosdetalhes AS
 	FROM livros l INNER JOIN editoras e ON e.id = l.editora_id
 		INNER JOIN idiomas i ON i.id = l.idioma_id
 		INNER JOIN viewtitulosdetalhes v ON l.titulo_id = v.id
-update emprestimos_livros set teste = prazo_devolucao
-select * from emprestimos_livros
-SELECT t.id FROM titulos t 
-INNER JOIN autors_titulos ta ON t.id = ta.titulo_id WHERE ta.autor_id IN (5,15,14,3) 
 
-select * from users
-update users set role = 'user' where role isnull
+update emprestimos_livros set teste = prazo_devolucao
+
+select * from emprestimos_livros
+
+SELECT t.id FROM titulos t 
+	INNER JOIN autors_titulos ta ON t.id = ta.titulo_id WHERE ta.autor_id IN (5,15,14,3) 
+
+

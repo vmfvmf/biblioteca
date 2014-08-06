@@ -15,19 +15,13 @@ echo $this->Html->script('jquery-ui', false);
                        $this->Form->input('titulo', array('label'=>'Título')),
                        
           $this->Form->input('Autor', array(
-                              'label' => __('Autores',true),
-                              'type' => 'select',
-                              'options'=>$autors,
-                               'class' => 'multiselect',
-                               'multiple' => 'multiple',
-                               'style' => 'clear: none !important; width:460px; height:200px;'
+                'label' => __('Autores',true), 'type' => 'select', 'options'=>$autors,
+                'class' => 'multiselect', 'multiple' => 'multiple',
+                'style' => 'clear: none !important; width:460px; height:200px;'
           )),
             $this->Form->input('Classificacao', array(
-                              'label' => __('Classificações',true),
-                              'type' => 'select',
-                                'class' => 'multiselect',
-                              'multiple' => 'multiple',
-                              'options'=>$classificacaos,
+                'label' => __('Classificações',true), 'type' => 'select', 'class' => 'multiselect',
+                'multiple' => 'multiple', 'options'=>$classificacaos,
                 'style' => 'clear: none !important; width:460px; height:200px;'
           )),
                 

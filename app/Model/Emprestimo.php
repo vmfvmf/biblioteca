@@ -8,7 +8,7 @@
                                 'joinTable' => 'emprestimos_livros',
                                 'foreignKey' => 'emprestimo_id',
                                 'associationForeignKey' => 'livro_id'));
-        public $hasMany = array("Viewlte", "Aluno");
+        public $hasMany = array("Viewlte", "Viewaluno","Viewlivrosdetalhe");
         
         public $validate = array(
             'aluno_id'=> array(

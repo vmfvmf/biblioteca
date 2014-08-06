@@ -2,6 +2,7 @@
 App::uses('AuthComponent', 'Controller/Component');
 class User extends AppModel {
     public $name = 'User';
+    
     public $validate = array(
         'username' => array(
             'required' => array(
@@ -15,9 +16,15 @@ class User extends AppModel {
                 'message' => 'A senha é obrigatória'
             )
         ),// posso criar uma tela para cada role
+        'email' => array(
+            'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'Digite um email válido'
+            )
+        ),
         'role' => array(
             'valid' => array(
-                'rule' => array('inList', array('admin', 'sadmin', 'cliente')),
+                'rule' => array('inList', array('admin', 'sadmin', 'user')),
                 'message' => 'Selecione uma função válida',
                 'allowEmpty' => false
             )

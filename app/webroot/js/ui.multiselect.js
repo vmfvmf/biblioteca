@@ -256,10 +256,10 @@ $.widget("ui.multiselect", {
 		}
 	},
 	_registerDoubleClickEvents: function(elements) {
-		if (!this.options.doubleClickable) return;
+		/*if (!this.options.doubleClickable) return;
 		elements.dblclick(function() {
 			elements.find('a.action').click();
-		});
+		});*/
 	},
 	_registerHoverEvents: function(elements) {
 		elements.removeClass('ui-state-hover');
@@ -315,8 +315,16 @@ $.widget("ui.multiselect", {
 			$(this).removeClass('ui-state-active');
 		})
 		.keypress(function(e) {
-			if (e.keyCode == 13)
+			if (e.keyCode == 13){ // PROGRAMAR AUTO ADD
+                            var li =  $("ul.available li");
+                            for(i = 0; i < li.size(); i++){
+                                if(this.value == li[i].title){
+                                    $(".add-all").trigger("click");
+                                    this.value = "";
+                                }
+                            }
 				return false;
+                    }
 		})
 		.keyup(function() {
 			that._filter.apply(this, [that.availableList]);

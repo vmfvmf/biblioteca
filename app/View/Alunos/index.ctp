@@ -20,15 +20,15 @@ $this->start('sidebar');
     
 <?php foreach($alunos as $aluno){  ?>
         <tr>
-               <td><?=$this->Html->link($aluno['Aluno']['nome'],array('controller' => 'Autors', 'action' => 'view',$aluno['Aluno']['nome'])); ?></td>
-               <td><?=$aluno['Aluno']['ra']?></td>
+               <td><?=$this->Html->link($aluno['Viewaluno']['nome'],array('controller' => 'Alunos', 'action' => 'view',$aluno['Viewaluno']['aluno_id'])); ?></td>
+               <td><?=$aluno['Viewaluno']['ra']?></td>
                <td>
                    <?= $this->Html->link($this->Html->image('edit.png'), 
-                        array('controller' => 'Alunos', 'action' => 'edit',$aluno['Aluno']['id']), 
+                        array('controller' => 'Alunos', 'action' => 'edit',$aluno['Viewaluno']['aluno_id']), 
                         array('escape' => false, 'title' => "Editar"));?>
                    
                   | <?= $this->Html->link($this->Html->image('trash.png'), 
-                        array('controller' => 'Alunos', 'action' => 'delete',$aluno['Aluno']['id']),
+                        array('controller' => 'Alunos', 'action' => 'delete',$aluno['Viewaluno']['aluno_id']),
                         array('escape' => false, 'title' => "Deletar"), "Deseja excluir este aluno?");?> 
                     
                </td> 

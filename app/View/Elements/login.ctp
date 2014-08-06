@@ -8,4 +8,3 @@
     ?>
     </fieldset>
 <?php echo $this->Form->end(__('Login'));?>
-

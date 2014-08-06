@@ -45,10 +45,8 @@ $this->assign('fastwork', $this->Html->link(' INÍCIO ','../')   .
     echo $txt; 
 ?>       
 </ul>
-<br/><b>Localização:</b> <?=$titulo['Viewtitulosdetalhe']['localizacao'];?>
+<br><b>Localização:</b> <?=$titulo['Viewtitulosdetalhe']['localizacao'];?>
 <br>
-<br>
-<h3>Livros</h3>
 <br>
 <table style='clear: none !important; float:right; width:76%; margin: 0 auto !important'>
     <tr>

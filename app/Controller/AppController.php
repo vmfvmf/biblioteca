@@ -42,7 +42,7 @@ class AppController extends Controller {
     
     function beforeFilter() {
         parent::beforeFilter(); 
-        $this->Auth->allow('display','login'); 
+        $this->Auth->allow('display','login', "adduser"); 
     }
     
     public function isAuthorized($user) {

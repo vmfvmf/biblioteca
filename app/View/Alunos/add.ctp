@@ -8,7 +8,10 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
 
         echo    $this->Form->create('Aluno',array( 'action' => 'add')),
                        $this->Form->input('nome', array('label' => 'Nome')),
-                $this->Form->input('ra', array('label' => 'RA')),
+                $this->Form->input('sobrenome', array('label' => 'Sobrenome')),
+                $this->Form->input('username', array('label' => 'RA')),
                 $this->Form->input('ano_serie', array('label' => 'Série')),
+                $this->Form->input('email', array('label' => 'E-Mail')),
+                $this->Form->input('password', array('label' => 'Senha')),
             $this->Form->end('cadastrar');
 ?>

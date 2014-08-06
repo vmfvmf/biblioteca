@@ -73,7 +73,7 @@ echo $this->Html->css('jquery-ui');
                 <div id="fastwork"><?php echo $this->fetch('fastwork'); ?>
                     <div style="float:right;">
                       <?php if($this->Session->check('Auth.User')){  ?>
-                      Seja bem vindo <?= $this->Session->read('Auth.User.username'); }?>
+                      Seja bem vindo <?= $this->Session->read('Auth.User.nome'); }?>
                     </div>
                 </div>
 		<div id="content">
@@ -81,11 +81,13 @@ echo $this->Html->css('jquery-ui');
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
+                    
 		</div>
 		<div id="footer">
 			
 		</div>
 	</div>
+    
 </body>
 </html>
 

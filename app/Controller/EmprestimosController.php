@@ -12,14 +12,14 @@
         public function add(){
             if ($this->data){
                 if($this->Emprestimo->save($this->data)){
-                    $email = $this->Emprestimo->Aluno->query(
+                    $email = $this->Emprestimo->Viewaluno->query(
                             "SELECT email FROM ALUNOS WHERE id = ".$this->data['Emprestimo']['aluno_id']); 
-                    //self::email();
                     $this->Session->setFlash(__('Cadastrado com sucesso!', null),
                             'default', 
                              array('class' => 'notice success'));
-                    self::viewpdf($email[0][0]['email']);
-                    return $this->redirect(array('action' => 'viewpdf/'.$email[0][0]['email']));
+                    //self::viewpdf($email[0][0]['email']);
+                    return $this->redirect(array('action' => 
+                        'viewpdf/'.$email[0][0]['email'].'/'.$this->Emprestimo->id));
                 }
             }
             self::getAlunos();
@@ -93,8 +93,11 @@
             }               
         }
        
-        function viewpdf($email){ 
+        function viewpdf($email,$emp_id){ 
+            $emprestimos = $this->Emprestimo->Viewlte->query(
+                    "SELECT * FROM Viewltes WHERE emprestimo_id = ".$emp_id); 
             $this->set(compact("email"));
+            $this->set(compact("emprestimos"));
             $this->layout = 'pdf'; //this will use the pdf.ctp layout 
             $this->render();
         }
@@ -108,17 +111,30 @@
         }
         
         public function getAlunos(){
-            $alunos = $this->Emprestimo->Aluno->getAlunosRa();
-            if($alunos){
-                foreach($alunos as $row) {
-                    $list[$row[0]['id']] = $row[0]['aluno'];
-                    //$list['titulo'] = $row[0]['titulo'];
-                }
-                $alunos = $list;
-            $this->set(compact('alunos'));
+            $alunos = $this->Emprestimo->Viewaluno->find('list', array('fields'=>array('aluno_id','ra')));
+            if(isset($alunos)){
+                $this->set(compact('alunos'));
+            }else{
+                $this->Session->setFlash(__('Não há alunos cadastrados!', null));
+                return $this->redirect(array('action' => 'index'));
             }
         }
         
+        public function aluno_nome($id = null){
+            if(!$id){ return "Não há cadastro";}
+            $a = $this->Emprestimo->Viewaluno->query("SELECT nome FROM Viewalunos WHERE aluno_id =".$id);
+            $this->set(compact('a'));
+            $this->layout = "ajax";
+        }
+        
+        public function livro_detalhes($id = null){
+            if(!$id){ return "Não há cadastro";}
+            $l = $this->Emprestimo->Viewlivrosdetalhe->find("all",array(
+                'conditions' => array('Viewlivrosdetalhe.disponivel' => 'true', 
+                    ' Viewlivrosdetalhe.id = ' => $id )));
+            $this->set(compact('l'));
+            $this->layout = "ajax";
+        }
         
         public function email($email,$file){
             App::uses('CakeEmail', 'Network/Email');
@@ -138,13 +154,13 @@
         }
         
         public function getLivros(){
-            $livros = $this->Emprestimo->Livro->getLivrosTitulo();
+            $livros = $this->Emprestimo->Livro->find('list', array('fields'=>array('id'),
+                'conditions'=>array('Livro.disponivel' => 'true')));
             if($livros){
-                foreach($livros as $row) {
-                    $list[$row[0]['livro_id']] = $row[0]['titulo'];
-                }
-                $livros = $list;
                 $this->set(compact('livros'));
+            }else{
+                $this->Session->setFlash(__('Não há livros disponíveis!', null));
+                return $this->redirect(array('action' => 'index'));
             }
         }
         

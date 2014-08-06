@@ -1,14 +1,16 @@
 <?php
-    class Aluno extends AppModel{
+    App::import('Model','User');
+    class Aluno extends User{
         
         public  $name = "Aluno";
-        public $hasMany = array("Emprestimo");
+        public $hasMany = array("Emprestimo", "Viewlte", "Viewaluno");
+        public $sequence = 'public.users_id_seq';
         
         
         public function getAlunosRa(){
                 return $this->query('
-                        SELECT concat(a.nome, \' - \',a.ra) as "aluno", a.id
-                        FROM alunos a;', 'list'); // if table name is `locations`
+                        SELECT ra as "aluno", aluno_id
+                        FROM viewalunos;', 'list'); // if table name is `locations`
         }
     }
 /*

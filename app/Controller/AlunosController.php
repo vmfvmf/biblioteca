@@ -5,18 +5,19 @@
         
         public function index() {
             $this->paginate = array('limit' => 10);//, 'order' => array( 'Livro.' => 'asc'));
-            $alunos = $this->paginate('Aluno');
+            $alunos = $this->paginate('Viewaluno');
                         
             $this->set(compact('alunos'));
-            //pr($autors); exit(0);
         }
         
         public function add(){
             if ($this->data){
                 if($this->Aluno->save($this->data)){
+                    $this->Aluno->saveField('role', 'user');
                     $this->Session->setFlash(__('Aluno cadastrado.', null),
                             'default', 
                              array('class' => 'notice success'));
+                    
                     return $this->redirect(array('action' => 'index'));
                 }
             }

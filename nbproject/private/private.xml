@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/biblioteca/app/Controller/AssuntosController.php</file>
-            <file>file:/var/www/html/biblioteca/app/View/Helper/BarcodeHelper.php</file>
-            <file>file:/var/www/html/biblioteca/app/Model/Livro.php</file>
-            <file>file:/var/www/html/biblioteca/app/View/Livros/barcode.ctp</file>
-            <file>file:/var/www/html/biblioteca/app/Controller/LivrosController.php</file>
+            <file>file:/var/www/html/biblioteca/app/Config/email.php</file>
+            <file>file:/var/www/html/biblioteca/app/Controller/EmprestimosController.php</file>
+            <file>file:/var/www/html/biblioteca/app/View/Emprestimos/add.ctp</file>
+            <file>file:/var/www/html/biblioteca/app/View/Emprestimos/viewpdf.ctp</file>
         </group>
     </open-files>
 </project-private>

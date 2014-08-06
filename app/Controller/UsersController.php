@@ -36,9 +36,6 @@
 
     public function adduser() {
         if ($this->request->is('post')) {
-            $this->User->create();
-            pr($this->request->data);exit(0);
-            //$this->request->data['User']['role'] = 'user';
             if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('The user has been saved'));
                 $this->redirect(array('action' => 'index'));
@@ -47,6 +44,7 @@
             }
         }
     }
+    
 
     public function edit($id = null) {
         $this->User->id = $id;

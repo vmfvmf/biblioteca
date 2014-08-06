@@ -18,8 +18,8 @@
         
         public function getLivrosTitulo(){
             return $this->query('
-                    SELECT concat(t.titulo, \' - \',l.id) as "titulo", l.id as 
-                    "livro_id" FROM livros l inner join titulos t
+                    SELECT l.id as 
+                    "livro_id", t.titulo FROM livros l inner join titulos t
                      ON l.titulo_id = t.id where disponivel;', 'list'); // if table name is `locations`
         }
         
