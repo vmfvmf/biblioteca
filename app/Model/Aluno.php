@@ -3,6 +3,7 @@
     class Aluno extends User{
         
         public  $name = "Aluno";
+        public $helpers = array('Biblioteca');
         public $hasMany = array("Emprestimo", "Viewlte", "Viewaluno");
         public $sequence = 'public.users_id_seq';
         

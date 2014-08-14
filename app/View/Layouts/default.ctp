@@ -84,7 +84,7 @@ echo $this->Html->css('jquery-ui');
                     
 		</div>
 		<div id="footer">
-			
+			<?php //echo $this->element('sql_dump'); ?>
 		</div>
 	</div>
     

@@ -4,10 +4,9 @@ $this->set("title_for_layout", "Detalhes Título");
 $this->extend('/Common/view');
 $this->assign('fastwork', $this->Html->link(' INÍCIO ','../')   .
         $this->Html->image('../img/arrow.png').
-      ( (!$this->Session->check('Auth.User') ||
-       $this->Session->read('Auth.User.role') === 'user'  ) ?
-        '<a href="#inner" class="fancybox"> TÍTULOS </a>' :
-        $this->Html->link(' TÍTULOS ',array('controller' => 'Titulos', 'action' => 'index')) ).
+      (( $this->Session->read('Auth.User.role') === 'admin' ||
+          $this->Session->read('Auth.User.role') === 'sadmin') ?
+        $this->Html->link(' TÍTULOS ',array('controller' => 'Titulos', 'action' => 'index')) : '' ).
         $this->Html->image('../img/arrow.png').'<b> DETALHES </b>');
 
 ?>

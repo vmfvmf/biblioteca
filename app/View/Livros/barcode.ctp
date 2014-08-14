@@ -1,21 +1,19 @@
 <?php 
-            $data_to_encode = '100013'; 
-
             // Generate Barcode data 
             $this->Barcode->barcode(); 
             $this->Barcode->setType('C128'); 
-            $this->Barcode->setCode($data_to_encode); 
+            $this->Barcode->setCode($id); 
             $this->Barcode->setSize(80,200); 
 
-            // Generate filename             
-            $random = rand(0,1000000); 
-            $file = 'img/barcode/code_'.$random.'.png'; 
+            // Generate filename       
+            $file = 'img/barcode/code_'.$id.'.png'; 
 
             // Generates image file on server             
             //$barcode
-                    $this->Barcode->writeBarcodeFile($file); 
+            $this->Barcode->writeBarcodeFile($file); 
 
             // Display image 
-            echo $this->Html->image('barcode/code_'.$random.'.png');
+            echo $this->Html->scriptBlock('window.location.href="'.$this->Html->url(array('controller' 
+                => 'Livros', 'action' => 'index'), true).'"'); 
 
             ?>

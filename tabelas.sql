@@ -199,8 +199,8 @@ CREATE OR REPLACE VIEW ViewLTEs AS SELECT t.titulo, t.id as "titulo_id",
 	INNER JOIN emprestimos e ON e.id = el.emprestimo_id
 	INNER JOIN titulos t ON t.id = el.titulo_id
 	INNER JOIN alunos a ON a.id = e.aluno_id
-
-CREATE OR REPLACE VIEW viewalunos AS SELECT id as "aluno_id",(nome || ' ' || sobrenome) as nome, username as "ra" FROM alunos;
+drop view viewalunos 
+CREATE OR REPLACE VIEW viewalunos AS SELECT id,id as "aluno_id",(nome || ' ' || sobrenome) as nome, username as "ra", email FROM alunos;
 			
 select count(*) from viewltes where aluno_id = 1 and titulo_id = 6
 

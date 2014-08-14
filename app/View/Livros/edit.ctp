@@ -16,18 +16,5 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
                 $this->Form->input('idioma_id',array
                   ('options'=>$idiomas, 'empty' => 'Selecione o idioma')),
                 $this->Form->input('Livro.data_aquisicao'),
-      /*    $this->AutoComplete->input( 
-                    'Localizacao.nome', 
-                    array( 
-                        'label' => 'Localização',
-                        'autoCompleteUrl'=>$this->Html->url(  
-                            array( 
-                                'controller'=>'Localizacao', 
-                                'action'=>'auto_complete', 
-                            ) 
-                        ), 
-                        'autoCompleteRequestItem'=>'autoCompleteText', 
-                    ) 
-                ),
-        */               $this->Form->end('salvar');
+                $this->Form->end('salvar');
 ?>

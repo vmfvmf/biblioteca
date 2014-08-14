@@ -2,8 +2,9 @@
     class AlunosController extends AppController{
         
         public  $name = "Alunos";
+        public $uses = array("Aluno", "Viewaluno");
         
-        public function index() {
+        public function alunos() {
             $this->paginate = array('limit' => 10);//, 'order' => array( 'Livro.' => 'asc'));
             $alunos = $this->paginate('Viewaluno');
                         
@@ -57,26 +58,66 @@
             }
         }
         
-        public function getCategorias(){
-            $categorias = $this->Titulo->Categoria->find('list',array('fields' => array( 'id', 'categoria'),
-                                'order'=>'categoria'));
-            $this->set(compact('categorias'));
-        }
         
         public function view($id = null){
             if($id){
-                $aluno = $this->Aluno->read(null, $id);
+                $aluno = $this->Viewaluno->read(null, $id);
                 $this->set(compact("aluno"));
             }
         }
         
-        public function getAutors(){
-            $autors = $this->Titulo->Autor->find('list',array('fields' => array( 'id', 'nome'),
+        public function getNomes(){
+            $nomes = $this->Aluno->find('list',array('fields' => array( 'id', 'nome'),
                                 'order'=>'nome'));
-            $this->set(compact('autors'));
+            $this->set(compact('nomes'));
         }
         
+        public function getRAs(){
+            $ras = $this->Aluno->find('list',array('fields' => array( 'id', 'username'),
+                                'order'=>'username'));
+            $this->set(compact('ras'));
+        }
         
+        public function index(){
+            if ($this->data){
+                switch($this->data["Aluno"]["tipo"]){
+                    case "nome":
+                        return $this->redirect(array('controller' => 'Alunos', 'action' => 'resultado',
+                            $this->data["Aluno"]["tipo"],$this->data["Aluno"]["nome"]));
+                    case "ra":
+                        return $this->redirect(array('controller' => 'Alunos', 'action' => 'resultado',
+                            $this->data["Aluno"]["tipo"],$this->data["Aluno"]["ra"]));
+                }
+            }
+            self::getNomes();
+            self::getRAs();            
+        }
+        
+        public function resultado($tipo = null, $valor = null){
+            if($tipo && $valor){
+                switch($tipo){
+                    case "nome":
+                        $alunos = $this->Aluno->find('all',array(
+                            'conditions'=>array("nome ilike '%".$valor."%'")));
+                        $this->set(compact('alunos'));
+                        //self::checkRetornoBusca($alunos);
+                        break;
+                    case "ra":
+                        $alunos = $this->Aluno->find('all',array(
+                            'conditions'=>array("username ilike '%".$valor."%'")));
+                        $this->set(compact('alunos'));
+                        //self::checkRetornoBusca($alunos);
+                        break;
+                }
+                //pr($alunos);exit(0);
+            }else{
+                $this->paginate = array('limit' => 10, 'recursive' => 1,
+                    'order' => array( 'Viewlivrosdetalhe.titulo' => 'asc'));
+                $livros = $this->paginate('Viewlivrosdetalhe');
+                $this->set(compact('livros'));
+            }
+                
+        }
         
         public function getLocalizacao(){
             $localizacao = $this->Titulo->Localizacao->find('list',array('fields' => array( 'id', 'nome'),
@@ -84,18 +125,5 @@
             $this->set(compact('localizacao'));
         }
         
-     /*   function auto_complete() { 
-            $localizacaos = $this->Localizacao->find('all', array( 
-                'conditions' => array( 
-                    'Localizacao.nome LIKE' => $this->params['url']['autoCompleteText'].'%' 
-                ), 
-                'fields' => array('nome'), 
-                'limit' => 3, 
-                'recursive'=>-1, 
-            )); 
-            $localizacaos2 = Set::Extract($localizacaos,'{n}.Localizacao.nome'); 
-            $this->set('localizacaos', $localizacaos2); 
-            $this->layout = 'ajax';     
-          } */
     }      
 ?>

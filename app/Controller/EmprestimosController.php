@@ -2,15 +2,95 @@
     class EmprestimosController extends AppController{
         
         public  $name = "Emprestimos";
+        public $uses = array("Livro","Viewaluno","Viewlivrosdetalhe","Emprestimo", "Viewlte");
         
-        public function index() {
-            $this->paginate = array('limit' => 10, 'recursive' => 0);//, 'order' => array( 'Livro.' => 'asc'));
-            $emprestimos = $this->paginate('Viewlte');
+        public function emprestimos() {
+            $this->paginate = array('limit' => 10);
+            $emprestimos = $this->paginate('Emprestimo');
             $this->set(compact('emprestimos'));
         }
         
+        public function resultado($tipo = null, $valor = null){
+            if($tipo && $valor){
+                switch($tipo){
+                    case "dataEmp":
+                        $this->paginate = array('limit' => 10,
+                            'conditions' => array("date(data_emprestimo) <=  '".
+                                str_replace('-','/',$valor)."'"),
+                            'order' => array('data_emprestimo' => 'DESC'));
+                        $emprestimos = $this->paginate('Emprestimo');
+                        if(!$emprestimos ){
+                            $this->Session->setFlash(__('Busca sem resultado!', null),
+                            'default', array('class' => 'notice'));
+                            return $this->redirect(array('action' => 'index'));
+                        }
+                        $this->set(compact('emprestimos'));
+                        break;
+                    case "ra":
+                        $this->paginate = array('limit' => 10,
+                            'conditions' => array("Viewaluno.ra ilike  " => '%'.$valor.'%'),
+                                'order' => array("Emprestimo.data_emprestimo" => "DESC"));
+                        $emprestimos = $this->paginate('Emprestimo');
+                        if(!$emprestimos ){
+                            $this->Session->setFlash(__('Busca sem resultado!', null),
+                            'default', array('class' => 'notice'));
+                            return $this->redirect(array('action' => 'index'));
+                        }
+                        $this->set(compact('emprestimos'));
+                        break;
+                    case "livro":
+                        $emps = $this->Viewlte->find('all',array(
+                            'conditions' => array('livro_id'=>$valor)));
+                        $valor = "";
+                        foreach ($emps as $id) {
+                            $valor .= $id['Viewlte']['emprestimo_id'] . ',';
+                        }
+                        $valor = substr($valor, 0, strlen($valor) - 1);
+                        $this->paginate = array('limit' => 10,
+                            'conditions' => "Emprestimo.id in (".$valor.")",
+                                'order' => array("Emprestimo.data_emprestimo" => "DESC"));
+                        $emprestimos = $this->paginate('Emprestimo');
+                        if(!$emprestimos ){
+                            $this->Session->setFlash(__('Busca sem resultado!', null),
+                            'default', array('class' => 'notice'));
+                            return $this->redirect(array('action' => 'index'));
+                        }
+                        $this->set(compact('emprestimos'));
+                        break;
+                }
+            }else{
+                $this->paginate = array('limit' => 10, 'recursive' => 1,
+                    'order' => array( 'Viewlivrosdetalhe.titulo' => 'asc'));
+                $livros = $this->paginate('Viewlivrosdetalhe');
+                $this->set(compact('livros'));
+            }
+                
+        }
+        
+        public function index(){
+            if ($this->data){
+                switch($this->data["Livro"]["tipo"]){
+                    case "dataEmp":
+                        return $this->redirect(array('controller' => 'Emprestimos', 'action' => 'resultado',
+                            $this->data["Livro"]["tipo"],  str_replace("/","-",$this->data["Livro"]["dataEmp"])));
+                    case "ra":
+                        return $this->redirect(array('controller' => 'Emprestimos', 'action' => 'resultado',
+                            $this->data["Livro"]["tipo"],$this->data["Livro"]["ra"]));
+                        
+                }
+            }
+            self::getRAs();
+        }
+        
+        
+        
         public function add(){
             if ($this->data){
+                if (empty($this->data["Livro"]["Livro"])){ 
+                    $this->Session->setFlash(__('Selecione um livro!', null),
+                            'default');
+                    return $this->redirect(array('action' => 'add'));
+                    }
                 if($this->Emprestimo->save($this->data)){
                     $email = $this->Emprestimo->Viewaluno->query(
                             "SELECT email FROM ALUNOS WHERE id = ".$this->data['Emprestimo']['aluno_id']); 
@@ -18,8 +98,11 @@
                             'default', 
                              array('class' => 'notice success'));
                     //self::viewpdf($email[0][0]['email']);
-                    return $this->redirect(array('action' => 
-                        'viewpdf/'.$email[0][0]['email'].'/'.$this->Emprestimo->id));
+                    //return $this->redirect(array('action' => 
+                    //    'viewpdf/'.$email[0][0]['email'].'/'.$this->Emprestimo->id));
+                    $this->Session->setFlash(__('Registrado com sucesso!', null),
+                            'default', array('class' => 'notice success'));
+                return $this->redirect(array('action' => 'index'));
                 }
             }
             self::getAlunos();
@@ -59,7 +142,7 @@
                 $this->Session->setFlash(__('Devolução bem sucedida!', null),
                             'default', 
                              array('class' => 'notice success'));
-                $this->redirect(array('controller' => 'Emprestimos', 'action' => 'index'));
+                return $this->redirect($this->referer());
             }
         }
         
@@ -71,24 +154,24 @@
                 $this->Session->setFlash(__('Prazo Prorrogado!', null),
                             'default', 
                              array('class' => 'notice success'));
-                $this->redirect(array('controller' => 'Emprestimos', 'action' => 'index'));
+                return $this->redirect($this->referer());
             }
         }
         
         public function delete($id = null){
             if($id){
-                if($this->Emprestimolivros->delete($id)){
+                if($this->Emprestimo->delete($id)){
                     $this->Session->setFlash(__('Deletado com sucesso!', null),
-                            'default', 
-                             array('class' => 'notice'));
+                            'default', array('class' => 'notice'));
                 }
-                $this->redirect(array('controller' => 'Emprestimolivros', 'action' => 'index'));
+                return $this->redirect($this->referer());
             }
         }
         
         public function view($id = null){
             if($id){
-                $emprestimo = $this->Emprestimo->Viewlte->findById($id);
+                $emprestimo = $this->Viewlte->find('all',array('conditions' => 
+                    array('emprestimo_id' => $id)));
                 $this->set(compact("emprestimo"));
             }               
         }
@@ -102,16 +185,8 @@
             $this->render();
         }
        
-        
-        public function getLivro(){
-           $this->Emprestimolivro->Livro->Behaviors->load('Containable');
-           $livro = $this->Emprestimo->Livro->find('all');
-           $this->set(compact('livro'));
-           //pr($livro); exit(0);
-        }
-        
         public function getAlunos(){
-            $alunos = $this->Emprestimo->Viewaluno->find('list', array('fields'=>array('aluno_id','ra')));
+            $alunos = $this->Viewaluno->find('list', array('fields'=>array('aluno_id','ra')));
             if(isset($alunos)){
                 $this->set(compact('alunos'));
             }else{
@@ -122,14 +197,14 @@
         
         public function aluno_nome($id = null){
             if(!$id){ return "Não há cadastro";}
-            $a = $this->Emprestimo->Viewaluno->query("SELECT nome FROM Viewalunos WHERE aluno_id =".$id);
+            $a = $this->Viewaluno->query("SELECT nome FROM Viewalunos WHERE aluno_id =".$id);
             $this->set(compact('a'));
             $this->layout = "ajax";
         }
         
         public function livro_detalhes($id = null){
             if(!$id){ return "Não há cadastro";}
-            $l = $this->Emprestimo->Viewlivrosdetalhe->find("all",array(
+            $l = $this->Viewlivrosdetalhe->find("all",array(
                 'conditions' => array('Viewlivrosdetalhe.disponivel' => 'true', 
                     ' Viewlivrosdetalhe.id = ' => $id )));
             $this->set(compact('l'));
@@ -145,17 +220,27 @@
             $Email->message('teste gjhgjhj jhgh');
             $Email->subject('Comprovante empréstimo');
             if($Email->send()){
-                $this->Session->setFlash(__('Comprovante enviado para '.$email.' com sucesso.',
-                                null),
-                            'default', 
-                             array('class' => 'notice success'));
+                $this->Session->setFlash(__('Comprovante enviado para '.$email.' com sucesso.', null),
+                            'default', array('class' => 'notice success'));
                 return $this->redirect(array('action' => 'index'));
             }
         }
         
+        public function getNomes(){
+            $nomes = $this->Viewaluno->find('list',array('fields' => array( 'aluno_id', 'nome'),
+                                'order'=>'nome'));
+            $this->set(compact('nomes'));
+        }
+        
+        public function getRAs(){
+            $ras = $this->Viewaluno->find('list',array('fields' => array( 'aluno_id', 'ra'),
+                                'order'=>'ra'));
+            $this->set(compact('ras'));
+        }
+        
         public function getLivros(){
-            $livros = $this->Emprestimo->Livro->find('list', array('fields'=>array('id'),
-                'conditions'=>array('Livro.disponivel' => 'true')));
+            $livros = $this->Livro->find('list', array('fields'=>array('id'),
+                'conditions'=>array('disponivel' => 'true')));
             if($livros){
                 $this->set(compact('livros'));
             }else{

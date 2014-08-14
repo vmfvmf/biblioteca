@@ -1,11 +1,9 @@
 <?php
 $this->assign('menu-principal', $this->element('menu-principal'));
 echo $this->Html->script('jquery', false);
-//echo $this->Html->script('custom-combobox', false);
 echo $this->Html->script('jquery-ui', false);
 echo $this->Html->script('ui.multiselect', false);
 echo $this->Html->css('ui.multiselect', null, array('inline' => false));
-//echo $this->Html->css('custom-combobox', null, array('inline' => false));
 echo $this->Html->css('jquery-ui', null, array('inline' => false));
 
 $this->set("title_for_layout", 'Novo Empréstimo');
@@ -60,6 +58,29 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
                 $scrip = substr($scrip, 0, strlen($scrip)-1).'];';
                 $scrip .= '
                     $(function(){
+                        function updateLivroSelected(i){
+                            if(i > -1){
+                                    $.get("livro_detalhes/"+availableLivros[i],function(data,status){
+                                        $("#tb_livros tbody tr:last").after(data);
+                                        console.log(availableLivros[i]);
+                                        $("#livro_id").val("");
+                                        $("#LivroLivro option[value="+availableLivros[i]+"]").attr("selected","selected");
+                                        $(".rem-livro").click(function(){
+                                            /*console.log(*/
+                                            var chil = $(this).parent().parent().children()[0];
+                                            availableLivros.push($(chil).text());
+                                            console.log($(chil).text());
+                                            /*$("#LivroLivro option[value="+availableLivros[i]+"]").attr("selected",false);*/
+                                            $(this).parent().parent().remove();
+                                            $("#livro_id").focus();
+                                            return false;
+                                        });
+                                        availableLivros.splice(i, 1);
+                                    });
+                            }else{
+                                alert("Livro indisponível ou já selecionado.");
+                            }
+                        }
                         $( "#ra" ).autocomplete(
                         {
                             source:availableAlunos,
@@ -67,7 +88,9 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
                                 $( "#aluno_id" ).val(ui.item.value);
                                 $( "#ra" ).val( ui.item.label);
                                 $.get("aluno_nome/"+ui.item.value,function(data,status)
-                                  { $("#rel_div_a").html(data); } );
+                                  { $("#rel_div_a").html(data);
+                                    $( "#livro_id" ).focus();
+                                  } );
                                 return false;
                         },focus: function( event, ui ) {
                             $( "#ra" ).val( ui.item.label);
@@ -80,40 +103,30 @@ $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
                                             { $("#rel_div_a").html(data); } );
                                     }
                                 }
+                        }).keypress(function(){
+                            if ( event.which == 13 ) {
+                                event.preventDefault();
+                                $( "#livro_id" ).focus();
+                            }
                         });
                         $( "#livro_id" ).autocomplete(
                         {
                             source:availableLivros,
                             select: function( event, ui ) {
                                 var i = $.inArray(ui.item.label,availableLivros);
-                                if(i > -1){
-                                    $.get("livro_detalhes/"+ui.item.label,function(data,status){
-                                        $("#tb_livros tbody tr:last").after(data);
-                                        availableLivros.splice(i, 1);
-                                        $("#LivroLivro option[value="+ui.item.label+"]").attr("selected","selected");
-                                        $(".rem-livro").click(function(){
-                                            /*console.log(*/
-                                            var chil = $(this).parent().parent().children()[0];
-                                            availableLivros.push($(chil).text());
-                                            console.log($(chil).text());
-                                            $("#LivroLivro option[value="+ui.item.label+"]").attr("selected",false);
-                                            $(this).parent().parent().remove();
-                                            return false;
-                                        });
-                                    });
-                                }
+                                updateLivroSelected(i);
                                 return false;
                         },focus: function( event, ui ) {
                             $( "#livro_id" ).val( ui.item.label);
                             console.log(ui.item.label);
                             return false;}
-                        }).keyup(function(event) {
+                        }).keypress(function(event) {
                             if (event.keyCode == 13){
-                                $( "#livro_id" ).val("");
+                                event.preventDefault();
+                                var i = $.inArray($("#livro_id").val(),availableLivros);
+                                updateLivroSelected(i);
+                                $("#livros_id").val("");
                             }
-                            return false;
-                        }).keydown(function(event) {
-                            if (event.keyCode == 13) return false;
                         });
                     });';
         $this->Html->scriptStart(array('inline' => false));

@@ -2,13 +2,17 @@
     class Livro extends AppModel{
         
         public $name = "Livro";
-        public $helpers = array('Barcode');
+        public $helpers = array('Barcode','Biblioteca');
         public $belongsTo = array("Idioma","Titulo", "Editora");
         public $hasMany = array(
             "Viewlivrosdetalhe" => array(
                 'className' => 'Viewlivrosdetalhe',
                 'foreignKey' => 'id')
         );
+        
+        public $validate = array(
+            );
+        
         public $hasAndBelongsToMany = array(
                             "Emprestimo" => array(
                                 'className' => 'Emprestimo',
