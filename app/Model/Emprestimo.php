@@ -27,11 +27,6 @@
              )
         );
         
-        public function realizaDev($id){
-            return $this->query('UPDATE emprestimos_livros SET data_devolucao = now() WHERE '
-            . 'id = '.$id); 
-        }
-        
         public function prorrogaPrazo($id){
             return $this->query('UPDATE emprestimos_livros SET prazo_devolucao = (now() '
                     . '+ INTERVAL \'7 days\') WHERE '

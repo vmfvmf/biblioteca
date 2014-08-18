@@ -2,7 +2,7 @@
     class EmprestimosController extends AppController{
         
         public  $name = "Emprestimos";
-        public $uses = array("Livro","Viewaluno","Viewlivrosdetalhe","Emprestimo", "Viewlte");
+        public $uses = array("Livro","Viewaluno","Viewlivrosdetalhe","Emprestimo", "Viewlte", "Emprestimos_livro");
         
         public function emprestimos() {
             $this->paginate = array('limit' => 10);
@@ -136,12 +136,20 @@
         
         public function devolver($id = null){
             if($id){
-                if(!$this->Emprestimo->realizaDev($id)){
-                
+                $empL = $this->Emprestimos_livro->findById($id);
+                if($empL){
+                    $empL['Emprestimos_livro']['data_devolucao'] = date('d/m/Y', time());
+                    if($this->Emprestimos_livro->save($empL)){
+                        $this->Session->setFlash(__('Devolução bem sucedida!', null),
+                                'default', 
+                                 array('class' => 'notice success'));
+                        return $this->redirect($this->referer());
+
+                    }
                 }
-                $this->Session->setFlash(__('Devolução bem sucedida!', null),
+                $this->Session->setFlash(__('Não foi possível registrar devolução!', null),
                             'default', 
-                             array('class' => 'notice success'));
+                             array());
                 return $this->redirect($this->referer());
             }
         }

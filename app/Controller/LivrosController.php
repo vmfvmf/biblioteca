@@ -4,7 +4,7 @@ class LivrosController extends AppController {
 
     public $name = "Livros";
     var $components = array('Barcoder');
-    var $uses = array('Livro', 'Viewlivrosdetalhe','Viewtitulosdetalhe');
+    var $uses = array('Livro', 'Viewlivrosdetalhe','Viewtitulosdetalhe', 'Emprestimos_livro');
 
     public function todos() {
         $this->paginate = array('limit' => 10, 'recursive' => 1,
@@ -216,6 +216,12 @@ class LivrosController extends AppController {
                 'order' => array('disponivel' => 'desc')));
             if ($livro) {
                 $this->set(compact("livro"));
+                $id_emp_livro = $this->Emprestimos_livro->find('first',array(
+                    'conditions'=>array('livro_id'=>$id), 'fields' => 'max(id)'
+                ));
+                //pr($id_emp_livro);exit(0);
+                $id_emp_livro = $id_emp_livro[0]['max'];
+                $this->set(compact("id_emp_livro"));
             } else {
                 $this->Session->setFlash(__('Livro não encontrado!', null), 'default', array('class' => 'notice error'));
                 return $this->redirect(array('action' => 'index'));

@@ -19,6 +19,7 @@ $this->start('sidebar');
 <div id="main_div">
 <table>
     <tr>
+        <td></td>
             <td><b><?=$this->Paginator->sort('titulo','TÍTULO');?></b></td> 
             <td><b>LOCALIZAÇÃO</b></td>
             <td><b>AUTORES</b></td>
@@ -28,7 +29,8 @@ $this->start('sidebar');
     
 <?php foreach($titulos as $titulo){  ?>
         <tr>
-               <td><?=$this->Html->link($titulo['Viewtitulosdetalhe']['titulo'],array('controller' => 'Titulos', 'action' => 'view',$titulo['Viewtitulosdetalhe']['id'])); ?></td>
+            <td><?=$this->Biblioteca->DetalhesTitulo($titulo['Viewtitulosdetalhe']['id']);?></td>
+               <td><?=$titulo['Viewtitulosdetalhe']['titulo']; ?></td>
                <td><?=$titulo['Viewtitulosdetalhe']['localizacao']; ?></td>
                <td><?php
                                 $txt = "";

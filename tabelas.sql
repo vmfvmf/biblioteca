@@ -1,13 +1,19 @@
-﻿revoke all from biblioteca_admin
+﻿UPDATE emprestimos_livros SET data_devolucao = now() WHERE id = 174
+
+revoke all from biblioteca_admin
 drop group biblioteca_admin 
 select * from users
 /*create user biblioteca_user password '123'
 
 GRANT SELECT, INSERT ON users TO biblioteca_user
+select * from Viewlivrosdetalhes;
+GRANT SELECT, INSERT, UPDATE, DELETE ON alunos, users, livros, titulos, users, alunos,emprestimos,autors,assuntos,classificacaos, editoras, autors_titulos, 
+	idiomas,livros,localizacaos, titulos, Viewlivrosdetalhes, viewltes, emprestimos_livros,
+	classificacaos_titulos, assuntos_titulos, Viewtitulosdetalhes,
+	viewltes, viewalunos, enderecos TO biblioteca_user
 
-GRANT SELECT, INSERT, UPDATE, DELETE ON alunos, viewltes, viewalunos TO biblioteca_user
-
-GRANT SELECT,  UPDATE, USAGE ON users_id_seq TO biblioteca_user
+GRANT SELECT,  UPDATE, USAGE ON users_id_seq, autors_id_seq, editoras_id_seq, titulos_id_seq, enderecos_id_seq, localizacaos_id_seq,
+	idiomas_id_seq, assuntos_id_seq, classificacaos_id_seq, livros_id_seq, emprestimos_id_seq, emprestimos_livros_id_seq TO biblioteca_user
 	
 GRANT ALL ON ALL SEQUENCES IN SCHEMA public TO biblioteca_user
 GRANT ALL PRIVILEGES ON DATABASE biblioteca to biblioteca_user
@@ -35,18 +41,20 @@ drop table users
 select * from users
 select * from userbibliotecas
 
+create table enderecos(id serial primary key, logradouro varchar(40), 
+	numero varchar(8), bairro varchar(30), cidade varchar(30), cep varchar(8))
 
 CREATE TABLE users (id serial PRIMARY KEY, username VARCHAR(50),password VARCHAR(50),role VARCHAR(20),created TIMESTAMP DEFAULT NULL,
 	nome varchar(50), sobrenome varchar(50), endereco_id int, email varchar(60),modified TIMESTAMP DEFAULT NULL, 
 	    foreign key (endereco_id) references enderecos(id))
 	    
-create table titulos(id serial primary key, titulo varchar(255), localizacao_id int,
+create table titulos(id serial primary key, titulo varchar(255), resenha text,localizacao_id int,
 	constraint fk_livro_localizacao foreign key(localizacao_id) references localizacaos)
 
 select setval('livros_id_seq', 100000, true)
 
 create table livros(id serial primary key, titulo_id int, editora_id int, cod_barras varchar(100), 
-	disponivel boolean not null default(true),edicao varchar(20), situacao smallint, obs text, ano int, data_aquisicao date, 
+	disponivel boolean not null default(true),edicao varchar(20), situacao smallint, resenha text, ano int, data_aquisicao date, 
 	idioma_id int,  
 		constraint fk_livro_idioma foreign key(idioma_id) references idiomas,
 		constraint fk_livro_editora foreign key(editora_id) references editoras,
@@ -68,7 +76,6 @@ create table assuntos_titulos(assunto_id int,titulo_id int,
 		foreign key (assunto_id) references assuntos(id),
 		foreign key (titulo_id) references titulos(id))
 
-
 create table classificacaos(id serial primary key, classificacao varchar(80))
 create table localizacaos(id serial primary key, localizacao varchar(80))
 create table idiomas(id serial primary key, idioma varchar(80))
@@ -76,9 +83,8 @@ create table assuntos(id serial primary key, assunto varchar(80))
 create table autors(id serial primary key, autor varchar(80))
 create table editoras(id serial primary key, editora varchar(80))
 create table alunos(ra int, ano_serie int) inherits(Users)
-alter table alunos add primary key(id)
-create table enderecos(id serial primary key, logradouro varchar(40), 
-	numero varchar(8), bairro varchar(30), cidade varchar(30))
+alter table alunos add primary key (id)
+
 create table emprestimos(id serial primary key, aluno_id int not null, 
   data_emprestimo timestamp default now(), 
 		foreign key (aluno_id) references alunos(id))
@@ -111,9 +117,6 @@ select * from viewltes select * from emprestimos_livros
 drop trigger trg_username_free on users
 CREATE TRIGGER trg_username_free
 		BEFORE INSERT ON users
-		FOR EACH ROW EXECUTE PROCEDURE username_free();
-CREATE TRIGGER trg_username_free
-		BEFORE INSERT ON alunos
 		FOR EACH ROW EXECUTE PROCEDURE username_free();
 CREATE or replace FUNCTION username_free() RETURNS TRIGGER AS
 	$$
@@ -193,14 +196,15 @@ SELECT concat( t.titulo , ' - ',l.cod_barras) as "titulo", l.id as
 /* VIEW QUE CONTEM DADOS DO ALUNO E SEUS EMPRESTIMOS */
 drop view viewltes
 CREATE OR REPLACE VIEW ViewLTEs AS SELECT t.titulo, t.id as "titulo_id", 
-	el.livro_id as "livro_id", e.id as "emprestimo_id", e.aluno_id as "aluno_id", a.ra, a.email,
-	(a.nome || ' ' || a.sobrenome) as "aluno", e.data_emprestimo, el.data_devolucao, el.prazo_devolucao, el.id
+	el.livro_id as "livro_id", e.id as "emprestimo_id", e.aluno_id as "aluno_id",  a.email,
+	(a.nome || ' ' || a.sobrenome) as "aluno", a.username,e.data_emprestimo, el.data_devolucao, el.prazo_devolucao, el.id
 	FROM emprestimos_livros el
 	INNER JOIN emprestimos e ON e.id = el.emprestimo_id
 	INNER JOIN titulos t ON t.id = el.titulo_id
 	INNER JOIN alunos a ON a.id = e.aluno_id
 drop view viewalunos 
-CREATE OR REPLACE VIEW viewalunos AS SELECT id,id as "aluno_id",(nome || ' ' || sobrenome) as nome, username as "ra", email FROM alunos;
+CREATE OR REPLACE VIEW viewalunos AS SELECT a.id as aluno_id, a.id,(a.nome || ' ' || a.sobrenome) as nome, a.username as "ra", a.email,
+e.logradouro, e.numero, e.cep, e.cidade, e.bairro FROM alunos a INNER JOIN enderecos e ON a.endereco_id = e.id;
 			
 select count(*) from viewltes where aluno_id = 1 and titulo_id = 6
 
@@ -290,9 +294,9 @@ CREATE or replace FUNCTION count_titulos_disponiveis(int) RETURNS BIGINT AS
 select get_titulo_assuntos(21)
 select * from viewtitulosdetalhes
 
-
+drop view Viewtitulosdetalhes cascade
 CREATE OR REPLACE VIEW Viewtitulosdetalhes AS 
-	SELECT t.id as "id", t.titulo, l.localizacao,
+	SELECT t.id as "id", t.titulo, t.resenha,l.localizacao,
 	(select get_titulo_editoras(t.id)) as "editoras",
 	(select get_titulo_autores(t.id)) as "autores",
 	(select get_titulo_classificacaos(t.id)) as "classificacaos",
@@ -303,19 +307,18 @@ CREATE OR REPLACE VIEW Viewtitulosdetalhes AS
 
 drop view  Viewlivrosdetalhes 
 CREATE OR REPLACE VIEW Viewlivrosdetalhes AS
-	SELECT l.*, v.titulo, v.autores, v.classificacaos, v.assuntos, 
+	SELECT l.*, v.titulo, v.resenha,v.autores, v.classificacaos, v.assuntos, 
 	CASE WHEN NOT l.disponivel THEN 
 		(SELECT el.prazo_devolucao FROM emprestimos_livros el 
+			WHERE l.id = el.livro_id AND data_devolucao ISNULL),
+		(SELECT el.id FROM emprestimos_livros el 
 			WHERE l.id = el.livro_id AND data_devolucao ISNULL)
 		ELSE NULL END AS prazo_devolucao,
 	e.editora, i.idioma, v.localizacao
 	FROM livros l INNER JOIN editoras e ON e.id = l.editora_id
 		INNER JOIN idiomas i ON i.id = l.idioma_id
-		INNER JOIN viewtitulosdetalhes v ON l.titulo_id = v.id
+		INNER JOIN viewtitulosdetalhes v ON l.titulo_id = v.id;
 
-update emprestimos_livros set teste = prazo_devolucao
-
-select * from emprestimos_livros
 
 SELECT t.id FROM titulos t 
 	INNER JOIN autors_titulos ta ON t.id = ta.titulo_id WHERE ta.autor_id IN (5,15,14,3) 

@@ -15,6 +15,7 @@ $this->start('sidebar');
 <div id="main_div">
 <table>
     <tr>
+        <td></td>
             <td><b><?=$this->Paginator->sort('nome','ALUNO');?></b></td> 
             <td><b>RA</b></td>
             <td><b>EMAIL</b></td>
@@ -23,12 +24,12 @@ $this->start('sidebar');
     
 <?php foreach($alunos as $aluno){  ?>
         <tr>
+            <td><?= $this->Biblioteca->DetalhesAluno($aluno['Viewaluno']['aluno_id']); ?></td>
                <td><?=$aluno['Viewaluno']['nome']; ?></td>
                <td><?=$aluno['Viewaluno']['ra']?></td>
                <td><?=$aluno['Viewaluno']['email']?></td>
-               <td>
-                   <?= $this->Biblioteca->DetalhesAluno($aluno['Viewaluno']['aluno_id']); ?>        
-                  | <?= $this->Biblioteca->EditarAluno($aluno['Viewaluno']['aluno_id']); ?>                   
+               <td>        
+                  <?= $this->Biblioteca->EditarAluno($aluno['Viewaluno']['aluno_id']); ?>                   
                   | <?= $this->Biblioteca->ExcluirAluno($aluno['Viewaluno']['aluno_id']); ?> 
                     
                </td> 

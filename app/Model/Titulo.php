@@ -2,6 +2,7 @@
     class Titulo extends AppModel{
         
         public $name = "Titulo";
+        //public $helpers = array("Biblioteca");
         public $belongsTo = array("Localizacao");
         public $hasMany = array("Livro",
             "Viewtitulosdetalhe" => array(

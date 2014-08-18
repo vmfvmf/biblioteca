@@ -4,7 +4,8 @@
         public  $name = "Titulos";
         
         public function index() {
-            $this->paginate = array('limit' => 10,'contain' => array('Autor'), 'recursive' => 0);//, 'order' => array( 'Livro.' => 'asc'));
+            $this->paginate = array('limit' => 10,'contain' => array('Autor'), 'recursive' => 0, 
+                'order' => array( 'titulo' => 'asc'));
             $titulos = $this->paginate('Viewtitulosdetalhe');
                         
             $this->set(compact('titulos'));

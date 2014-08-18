@@ -4,17 +4,18 @@
         public  $name = "Alunos";
         public $uses = array("Aluno", "Viewaluno");
         
-        public function alunos() {
+        public function todos() {
             $this->paginate = array('limit' => 10);//, 'order' => array( 'Livro.' => 'asc'));
             $alunos = $this->paginate('Viewaluno');
                         
             $this->set(compact('alunos'));
         }
-        
+        //return $this->redirect($this->referer());
         public function add(){
             if ($this->data){
-                if($this->Aluno->save($this->data)){
+                if($this->Aluno->saveAll($this->data)){
                     $this->Aluno->saveField('role', 'user');
+                    $this->Aluno->saveField('password', $this->data['Aluno']['username']);
                     $this->Session->setFlash(__('Aluno cadastrado.', null),
                             'default', 
                              array('class' => 'notice success'));
@@ -54,14 +55,14 @@
                             'default', 
                              array('class' => 'notice'));
                 }
-                $this->redirect(array('controller' => 'Alunos', 'action' => 'index'));
+                return $this->redirect($this->referer());
             }
         }
         
         
-        public function view($id = null){
-            if($id){
-                $aluno = $this->Viewaluno->read(null, $id);
+        public function view($aluno_id = null){
+            if($aluno_id){
+                $aluno = $this->Viewaluno->read(null, $aluno_id);
                 $this->set(compact("aluno"));
             }
         }

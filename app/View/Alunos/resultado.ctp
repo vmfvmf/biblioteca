@@ -4,9 +4,7 @@ $this->set("title_for_layout", "Resultado da Busca");
 $this->extend('/Common/view');
 $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
         $this->Html->image('../img/arrow.png').
-        $this->Html->link(' ALUNOS ',array('controller' => 'Alunos', 'action' => 'alunos')).
-        $this->Html->image('../img/arrow.png').
-        $this->Html->link(' BUSCAR ',array('controller' => 'Alunos', 'action' => 'index')).
+        $this->Html->link(' ALUNOS ',array('controller' => 'Alunos', 'action' => 'index')).
         $this->Html->image('../img/arrow.png').'<b> RESULTADO </b>');
 
 echo $this->Html->script('jquery', false);

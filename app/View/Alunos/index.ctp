@@ -3,7 +3,7 @@ $this->assign('menu-principal', $this->element('menu-principal'));
 $this->set("title_for_layout", "Buscar Aluno"); 
 $this->extend('/Common/view');
 $this->assign('fastwork',$this->Html->link(' INÍCIO ','../')   .
-        $this->Html->image('../img/arrow.png').'<b> BUSCAR ALUNOS </b>');
+        $this->Html->image('../img/arrow.png').'<b> ALUNOS </b>');
 
 echo $this->Html->script('jquery', false);
 echo $this->Html->script('jquery-ui', false);
@@ -14,7 +14,7 @@ echo $this->Html->script('jquery-ui', false);
     ?>
     <li><?=$this->Html->link('Novo Aluno',array('controller' => 'Alunos', 'action' => 'add')); ?></li>
     <br/>
-    <li><?=$this->Html->link('Todos Alunos',array('controller' => 'Alunos', 'action' => 'alunos')); ?></li>
+    <li><?=$this->Html->link('Todos Alunos',array('controller' => 'Alunos', 'action' => 'todos')); ?></li>
     <?php $this->end(); ?>
 <div id="main_div">
     <div id="accordion"> 

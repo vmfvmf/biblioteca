@@ -34,15 +34,16 @@ class BibliotecaHelper extends HtmlHelper{
                         array('escape' => false, 'title' => "Deletar"), "Deseja excluir este aluno?");
     }
     
-    public function DetalhesTitulo($id_titulo){
-        return $this->Html->link($this->Html->image('icondetails.png'), 
-                        array('controller' => 'Titulos','action' => 'view',$id_titulo),
-                        array('escape' => false, 'title' => "Detalhes"));
-    }
     
     public function DetalhesLivro($id_livro){
         return $this->Html->link($this->Html->image('icondetails.png'), 
                         array('controller' => 'Livros','action' => 'view',$id_livro),
+                        array('escape' => false, 'title' => "Detalhes"));
+    }
+    
+    public function DetalhesTitulo($id_titulo){
+        return $this->Html->link($this->Html->image('icondetails.png'), 
+                        array('controller' => 'Titulos','action' => 'view',$id_titulo),
                         array('escape' => false, 'title' => "Detalhes"));
     }
     

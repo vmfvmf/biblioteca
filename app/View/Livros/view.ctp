@@ -11,14 +11,14 @@ if($this->Session->read('Auth.User.role') === 'sadmin' ||
 $this->start('sidebar');
 
 if(!$livro['Viewlivrosdetalhe']['disponivel']) 
-    echo '<li>'.$this->Biblioteca->DevolverLivroLink($livro['Viewlivrosdetalhe']['id']).'</li>';
+    echo '<li>'.$this->Biblioteca->DevolverLivroLink($id_emp_livro).'</li>';
     
     $date1 = date_create($this->Time->format($livro['Viewlivrosdetalhe']['prazo_devolucao'],"%Y/%m/%d"));
                              $date2 = new DateTime();
                              $date2->format("%Y/%m/%d");
                              $diff=date_diff($date1,$date2,false);
                              if($diff->days >= 0 && $diff->invert>0) echo " <br/><li> " .
-                                 $this->Biblioteca->ProrrogarPrazoLink($livro['Viewlivrosdetalhe']['id']). '</li>';
+                                 $this->Biblioteca->ProrrogarPrazoLink($id_emp_livro). '</li>';
 ?>
 <br/><li><?=$this->Biblioteca->NovoLivro();?></li>
 <br/><li><?=$this->Biblioteca->BuscarLivro();?></li>
@@ -66,6 +66,9 @@ if(!$livro['Viewlivrosdetalhe']['disponivel'])
     echo $txt; 
 ?>       
 </ul>
+<br/>
+<h3>Resenha</h3>
+<?=$livro['Viewlivrosdetalhe']['resenha'];?>
 <br><b>Localização:</b> <?=$livro['Viewlivrosdetalhe']['localizacao'];?>
 <br>
 <br>
@@ -75,7 +78,6 @@ if(!$livro['Viewlivrosdetalhe']['disponivel'])
             <td><b>ANO</b></td> 
             <td><b>EDITORA</b></td> 
             <td><b>IDIOMA</b></td>
-            <td><b>DISPONÍVEL</b></td>
             <td><b>PRAZO DEVOLUÇÃO</b></td>
     </tr>
         <tr>
@@ -83,10 +85,9 @@ if(!$livro['Viewlivrosdetalhe']['disponivel'])
                <td><?=$livro['Viewlivrosdetalhe']['ano']; ?></td>
                <td><?=$livro['Viewlivrosdetalhe']['editora']; ?></td>
                <td><?=$livro['Viewlivrosdetalhe']['idioma']; ?></td>
-               <td><?=$livro['Viewlivrosdetalhe']['disponivel']?"Sim":"Não"; ?></td>
                <td><?=$livro['Viewlivrosdetalhe']['prazo_devolucao']?
-                    $livro['Viewlivrosdetalhe']['prazo_devolucao'] : 
-                        '--------'; ?></td>
+                    $this->Time->format($livro['Viewlivrosdetalhe']['prazo_devolucao'], '%d/%m/%Y') : 
+                        'Disponível'; ?></td>
         </tr>
 
 </table>

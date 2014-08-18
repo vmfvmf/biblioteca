@@ -47,6 +47,9 @@ $this->assign('fastwork', $this->Html->link(' INÍCIO ','../')   .
     echo $txt; 
 ?>       
 </ul>
+<br/>
+<h3>Resenha</h3>
+<?=$titulo['Viewtitulosdetalhe']['resenha'];?>
 <br/><b>Localização:</b> <?=$titulo['Viewtitulosdetalhe']['localizacao'];?>
 <br>
 <br>
@@ -54,23 +57,22 @@ $this->assign('fastwork', $this->Html->link(' INÍCIO ','../')   .
 <br>
 <table style='clear: none !important; float:right; width:76%; margin: 0 auto !important'>
     <tr>
+        <td></td>
             <td><b>EDIÇÃO</b></td> 
             <td><b>ANO</b></td> 
             <td><b>EDITORA</b></td> 
             <td><b>IDIOMA</b></td>
-            <td><b>DISPONÍVEL</b></td>
             <td><b>PRAZO DEVOLUÇÃO</b></td>
     </tr>
     <?php foreach($livros as $livro){  ?>
         <tr>
+            <td><?=$this->Biblioteca->DetalhesLivro($livro[0]['id']);?></td>
                <td><?=$livro[0]['edicao']; ?></td>
                <td><?=$livro[0]['ano']; ?></td>
                <td><?=$livro[0]['editora']; ?></td>
                <td><?=$livro[0]['idioma']; ?></td>
-               <td><?=$livro[0]['disponivel']?"Sim":"Não"; ?></td>
-               <td><?=$livro[0]['prazo_devolucao']?
-                    $livro[0]['prazo_devolucao'] : 
-                        '--------'; ?></td>
+               <td><?=$livro[0]['disponivel']?'DISPONÍVEL':
+                    $this->Time->format($livro[0]['prazo_devolucao'], '%d/%m/%Y'); ?></td>
         </tr>
     <?php  }  ?>
 

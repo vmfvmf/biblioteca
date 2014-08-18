@@ -34,6 +34,7 @@ echo $this->Html->script('jquery-ui', false);
               'style' => 'clear: none !important; width:460px; height:200px;'
           )),
           $this->Form->input('localizacao_id',array('options'=>$localizacao, 'empty' => 'Selecione...')),
+          $this->Form->input('resenha',array('label' => 'Resenha')),      
           $this->Form->end('cadastrar');
      
         $this->Html->scriptStart(array('inline' => false));
